@@ -1,63 +1,78 @@
-// import React, { useEffect } from 'react';
-// import { View, Text, ActivityIndicator } from 'react-native';
-
-// export default function LoadingScreen({ navigation }: { navigation: any }) {
-//   useEffect(() => {
-//     setTimeout(() => {
-//       navigation.replace('Home'); // Replace to prevent going back to loading
-//     }, 2000); // Show for 2 seconds
-//   }, []);
-
-//   return (
-//     <View className="flex-1 items-center justify-center bg-black">
-//       <ActivityIndicator size="large" color="#fff" />
-//       <Text className="mt-4 text-lg text-white">Loading...</Text>
-//     </View>
-//   );
-// }
-
 import React, { useEffect, useState } from 'react';
-import { View, Text, Animated } from 'react-native';
+import { View, Text, Animated, SafeAreaView, Image, ActivityIndicator } from 'react-native';
+import { Container } from '../components/Container';
+import logo from '../assets/logo-white.png';
+import towergrass from '../assets/towergrass.png';
 
 export default function LoadingScreen({ navigation }: { navigation: any }) {
   const [progress, setProgress] = useState(0);
-  const animatedWidth = new Animated.Value(0);
+  const animatedWidth = new Animated.Value(0); // Animated width state
+
+  // useEffect(() => {
+  //   let interval = setInterval(() => {
+  //     setProgress((prev) => {
+  //       if (prev >= 100) {
+  //         clearInterval(interval);
+  //         navigation.replace('Home'); // Navigate when progress reaches 100%
+  //         return 100;
+  //       }
+
+  //       // Animate progress bar width smoothly
+  //       Animated.timing(animatedWidth, {
+  //         toValue: prev + 2, // Match progress state
+  //         duration: 100, // Smooth transition
+  //         useNativeDriver: false,
+  //       }).start();
+
+  //       return prev + 2; // Increase progress by 2%
+  //     });
+  //   }, 60);
+
+  //   return () => clearInterval(interval); // Clean up interval on unmount
+  // }, []);
 
   useEffect(() => {
-    let interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(interval);
-          navigation.replace('Home'); // Navigate when progress reaches 100%
-          return 100;
-        }
-        return prev + 2; // Increase by 2% every 300ms
-      });
-    }, 60);
+    // Simulate loading delay before navigating
+    const timeout = setTimeout(() => {
+      navigation.replace('Home');
+    }, 2000); // Adjust time as needed
 
-    // Animate the progress bar width
-    Animated.timing(animatedWidth, {
-      toValue: 100,
-      duration: 2000, // 2 seconds animation
-      useNativeDriver: false,
-    }).start();
-
-    return () => clearInterval(interval); // Clean up interval on unmount
+    return () => clearTimeout(timeout);
   }, []);
 
   return (
-    <View className="flex-1 items-center justify-center bg-black px-10">
-      <Text className="font-inknut mb-4 py-2 text-sm text-white"> {progress}%</Text>
-      <View className="h-1 w-full rounded bg-gray-700">
-        <Animated.View
-          style={{
-            width: `${progress}%`,
-            height: '100%',
-            backgroundColor: '#4CAF50',
-            borderRadius: 5,
-          }}
-        />
-      </View>
-    </View>
+    <SafeAreaView style={{ flex: 1 }}>
+      <Container>
+        <View className="pt-64" style={{ alignItems: 'center', marginBottom: 5 }}>
+          <Image
+            source={logo}
+            style={{ width: '100%', height: 100 }} // Adjusted size
+            resizeMode="contain"
+          />
+        </View>
+        <View style={{ width: '100%', alignItems: 'center' }}>
+          {/* <View style={{ height: 5, width: '80%', borderRadius: 5, backgroundColor: '#333' }}>
+            <Animated.View
+              style={{
+                width: animatedWidth.interpolate({
+                  inputRange: [0, 100],
+                  outputRange: ['0%', '100%'],
+                }),
+                height: '100%',
+                backgroundColor: '#4CAF50',
+                borderRadius: 5,
+              }}
+            />
+          </View>
+          <Text className="mt-2 py-2 font-inknut text-sm text-white">{progress}%</Text> */}
+          <ActivityIndicator size="large" color="#fff" />
+        </View>
+      </Container>
+      <Image
+        className="absolute bottom-0 -mb-1 h-[350px] w-full border-white"
+        source={towergrass}
+        resizeMode="contain"
+      />
+    </SafeAreaView>
   );
 }
