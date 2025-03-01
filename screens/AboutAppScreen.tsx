@@ -8,7 +8,7 @@ import React from 'react';
 
 import appIcon from '../assets/app-icon.png';
 import author from '../assets/author.png';
-import towergrass from '../assets/towergrass.png';
+import towergrass_small from '../assets/towergrass-small.png';
 
 const AboutScreen = () => {
   const navigation = useNavigation();
@@ -20,17 +20,18 @@ const AboutScreen = () => {
             <Ionicons name="arrow-back" size={30} color="#fff" />
           </TouchableOpacity>
 
-          <TouchableOpacity>
-            <View className="flex items-center justify-center">
-              <Text className="-mt-4 py-1 text-justify font-inknut text-lg text-white">
-                About the App
-              </Text>
-              <Image source={appIcon} className="m-7 h-[140px] w-[140px]" />
-            </View>
-          </TouchableOpacity>
+          <View className="flex items-center justify-center">
+            <Text className="max-xs:text-sm -mt-4 py-1 text-justify font-inknut text-lg text-white">
+              About the App
+            </Text>
+            <Image
+              source={appIcon}
+              className="max-xs:h-[110px] max-xs:w-[110px] mb-7 mt-5 h-[140px] w-[140px]"
+            />
+          </View>
 
           <ScrollView showsVerticalScrollIndicator={false}>
-            <Text className="py-5 text-justify font-inknut text-[12px] text-white">
+            <Text className="max-xs:text-[11px] py-5 text-justify font-inknut text-[12px] text-white">
               Balilihandumanan is a digital resource mobile application designed to teach the local
               history and cultural heritage of the municipality of Balilihan.  It uses a
               multifaceted approach, incorporating guided discussions, engaging activities such as
@@ -68,8 +69,8 @@ const AboutScreen = () => {
           </ScrollView>
         </Container>
         <Image
-          className="absolute bottom-0 -mb-1 h-[350px] w-full border-white"
-          source={towergrass}
+          className="max-xs:-mb-9 absolute bottom-0  -mb-1 h-[420px] w-full border-white"
+          source={towergrass_small}
           resizeMode="contain"
         />
       </SafeAreaView>

@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from './screens/HomeScreen';
 import AboutScreen from './screens/AboutScreen';
 import LoadingScreen from './screens/LoadingScreen';
-import Button1 from './screens/Button1';
+import Module_1 from './screens/modules/Module_1';
 import AboutApp from './screens/AboutAppScreen';
 import AboutAuthor from './screens/AboutAuthorScreen';
 
@@ -19,7 +19,7 @@ export default function AppNavigator() {
         <Stack.Screen name="About" component={AboutScreen} options={{ headerShown: false }} />
         <Stack.Screen name="AboutApp" component={AboutApp} options={{ headerShown: false }} />
         <Stack.Screen name="AboutAuthor" component={AboutAuthor} options={{ headerShown: false }} />
-        <Stack.Screen name="Button1" component={Button1} options={{ headerShown: false }} />
+        <Stack.Screen name="Module_1" component={Module_1} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { View, Text, Image, SafeAreaView, TouchableOpacity } from 'react-native';
+import { View, Text, Image, SafeAreaView, TouchableOpacity, ScrollView } from 'react-native';
 import { Container } from 'components/Container';
 import logo from '../assets/logo-white.png';
 import towergrass from '../assets/towergrass.png';
@@ -26,7 +26,7 @@ export default function App() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <Container>
-        <TouchableOpacity className="mt-24 items-end" onPress={() => navigation.navigate('About')}>
+        <TouchableOpacity className="mt-16 items-end" onPress={() => navigation.navigate('About')}>
           <Ionicons name="bulb-outline" size={30} color="#fff" />
         </TouchableOpacity>
 
@@ -39,31 +39,40 @@ export default function App() {
           />
         </View>
 
-        <View className="flex gap-5 py-4">
-          <IconButton
-            icon="people-outline"
-            text="Beginning: Town and its People"
-            onPress={() => navigation.navigate('Button1')}
-          />
+        <ScrollView>
+          <View className="flex gap-5 py-4">
+            <IconButton
+              icon="people-outline"
+              text="Beginning: Town and its People"
+              onPress={() => navigation.navigate('Module_1')}
+            />
 
-          <IconButton
-            icon="people-outline"
-            text="Balilihan and the Colonizers"
-            onPress={() => alert('Button Pressed!')}
-          />
+            <IconButton
+              icon="people-outline"
+              text="Balilihan’s Journey: Three
+                  Periods of Colonial influence"
+              onPress={() => alert('Button Pressed!')}
+            />
 
-          <IconButton
-            icon="time-outline"
-            text="Balilihan in the Postwar Era and Beyond"
-            onPress={() => alert('Button Pressed!')}
-          />
+            <IconButton
+              icon="time-outline"
+              text="Balilihan in the Postwar Era and Beyond"
+              onPress={() => alert('Button Pressed!')}
+            />
 
-          <IconButton
-            icon="heart-outline"
-            text="Balilihan’s Cultural Heritage"
-            onPress={() => alert('Button Pressed!')}
-          />
-        </View>
+            <IconButton
+              icon="heart-outline"
+              text="Balilihan’s Cultural Heritage"
+              onPress={() => alert('Button Pressed!')}
+            />
+
+            <IconButton
+              icon="heart-outline"
+              text="Assessment and Activities"
+              onPress={() => alert('Button Pressed!')}
+            />
+          </View>
+        </ScrollView>
 
         {/* Bottom Section (Tower Image) */}
         {/* <View className="relative h-[200px] w-full overflow-auto">
@@ -76,6 +85,12 @@ export default function App() {
 
         <StatusBar style="auto" />
       </Container>
+
+      {/* <Image
+        className="absolute bottom-0 -mb-1 h-[350px] w-full border-white"
+        source={towergrass}
+        resizeMode="contain"
+      /> */}
     </SafeAreaView>
   );
 }
