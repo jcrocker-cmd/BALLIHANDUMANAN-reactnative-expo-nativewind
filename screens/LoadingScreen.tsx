@@ -69,7 +69,7 @@ export default function LoadingScreen({ navigation }: { navigation: any }) {
         </View>
       </Container>
       <Image
-        className="absolute bottom-0 -mb-1 h-[350px] w-full border-white"
+        className="max-xs:-mb-8 absolute bottom-0 -mb-1 h-[350px] w-full border-white"
         source={towergrass}
         resizeMode="contain"
       />

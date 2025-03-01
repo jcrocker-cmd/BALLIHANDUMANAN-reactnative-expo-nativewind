@@ -4,7 +4,7 @@ import bg from '../assets/bg.png';
 export const Container = ({ children }: { children: React.ReactNode }) => {
   return (
     <ImageBackground source={bg} className="flex-1" resizeMode="cover">
-      <SafeAreaView className="flex-1 p-10">{children}</SafeAreaView>
+      <SafeAreaView className="flex-1 p-8">{children}</SafeAreaView>
     </ImageBackground>
   );
 };

@@ -22,8 +22,11 @@ const AboutScreen = () => {
 
           <TouchableOpacity onPress={() => navigation.navigate('AboutApp')}>
             <View className="flex items-center justify-center">
-              <Image source={appIcon} className="h-[120px] w-[120px]" />
-              <Text className="mt-5 py-2 text-justify font-inknut text-lg text-white">
+              <Image
+                source={appIcon}
+                className="max-xs:h-[100px] max-xs:w-[100px] h-[120px] w-[120px]"
+              />
+              <Text className="max-xs:text-sm mt-5 py-2 text-justify font-inknut text-lg text-white">
                 About the App
               </Text>
             </View>
@@ -31,11 +34,11 @@ const AboutScreen = () => {
 
           <TouchableOpacity onPress={() => navigation.navigate('AboutAuthor')}>
             <View className="mt-4 flex items-center justify-center">
-              <View className="h-[120px] w-[120px] overflow-hidden rounded-full">
+              <View className="max-xs:h-[100px] max-xs:w-[100px] h-[120px] w-[120px] overflow-hidden rounded-full">
                 <Image source={author} className="h-full w-full" />
               </View>
 
-              <Text className="mt-5 py-2 text-justify font-inknut text-lg text-white">
+              <Text className="max-xs:text-sm mt-5 py-2 text-justify font-inknut text-lg text-white">
                 The Author
               </Text>
             </View>
@@ -43,7 +46,7 @@ const AboutScreen = () => {
         </Container>
 
         <Image
-          className="absolute bottom-0 -mb-1 h-[350px] w-full border-white"
+          className="max-xs:-mb-9 absolute bottom-0 -mb-1 h-[350px] w-full border-white"
           source={towergrass}
           resizeMode="contain"
         />
