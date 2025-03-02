@@ -51,13 +51,13 @@ export default function App() {
               icon="people-outline"
               text="Balilihan’s Journey: Three
                   Periods of Colonial influence"
-              onPress={() => alert('Button Pressed!')}
+              onPress={() => navigation.navigate('Loading')}
             />
 
             <IconButton
               icon="time-outline"
               text="Balilihan in the Postwar Era and Beyond"
-              onPress={() => alert('Button Pressed!')}
+              onPress={() => navigation.navigate('Module_2')}
             />
 
             <IconButton
