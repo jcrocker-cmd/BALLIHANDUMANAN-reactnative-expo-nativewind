@@ -8,7 +8,7 @@ interface SubTitleProps {
 
 const SubTitle = ({ name }: SubTitleProps) => {
   return (
-    <View style={styles.container} className="py-6">
+    <View style={styles.container} className="py-4">
       <Text style={styles.text} className="font-inknut text-[15px] font-semibold">
         {name}
       </Text>
@@ -32,8 +32,8 @@ const styles = StyleSheet.create({
     //
   },
   icon: {
-    width: 32,
-    height: 32,
+    width: 30,
+    height: 30,
   },
 });
 

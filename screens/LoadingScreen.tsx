@@ -43,33 +43,30 @@ export default function LoadingScreen({ navigation }: { navigation: any }) {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <Container>
-        <View className="pt-64" style={{ alignItems: 'center', marginBottom: 5 }}>
+        <Text style={{ color: '#fff' }} className="py-2 pt-40 text-center font-inknut text-sm">
+          Learn and Discover Balilihan:{'\n'}Splendor behind the Greens
+        </Text>
+        <View
+          className=""
+          style={{ alignItems: 'center', marginBottom: 5, borderColor: 'white', borderWidth: 1 }}>
           <Image
             source={logo}
             style={{ width: '100%', height: 100 }} // Adjusted size
             resizeMode="contain"
           />
         </View>
+        <Text style={{ color: '#fff' }} className="py-2 text-center font-inknut text-base">
+          A Learning Kit for Teaching{'\n'}Local History and Cultural Heritage
+        </Text>
+        <Text style={{ color: '#fff' }} className="py-2 text-center font-inknut text-sm">
+          Municipality of Balilihan
+        </Text>
         <View style={{ width: '100%', alignItems: 'center' }}>
-          {/* <View style={{ height: 5, width: '80%', borderRadius: 5, backgroundColor: '#333' }}>
-            <Animated.View
-              style={{
-                width: animatedWidth.interpolate({
-                  inputRange: [0, 100],
-                  outputRange: ['0%', '100%'],
-                }),
-                height: '100%',
-                backgroundColor: '#4CAF50',
-                borderRadius: 5,
-              }}
-            />
-          </View>
-          <Text className="mt-2 py-2 font-inknut text-sm text-white">{progress}%</Text> */}
           <ActivityIndicator size="large" color="#fff" />
         </View>
       </Container>
       <Image
-        className="max-xs:-mb-8 absolute bottom-0 -mb-1 h-[350px] w-full border-white"
+        className="absolute bottom-0 -mb-1 h-[350px] w-full border-white max-xs:-mb-8"
         source={towergrass}
         resizeMode="contain"
       />

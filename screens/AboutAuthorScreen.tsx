@@ -23,13 +23,13 @@ const AboutScreen = () => {
             <Text className="-mt-4 py-1 text-justify font-inknut text-lg text-white">
               The Author
             </Text>
-            <View className="max-xs:h-[110px] max-xs:w-[110px] mb-7 mt-5 h-[140px] w-[140px] overflow-hidden rounded-full">
+            <View className="mb-7 mt-5 h-[140px] w-[140px] overflow-hidden rounded-full max-xs:h-[110px] max-xs:w-[110px]">
               <Image source={author} className="h-full w-full" />
             </View>
           </View>
 
           <ScrollView showsVerticalScrollIndicator={false}>
-            <Text className="max-xs:text-[11px] py-5 text-justify font-inknut text-[12px] text-white">
+            <Text className="px-5 py-5 text-justify font-inknut text-[12px] text-white max-xs:text-[11px]">
               Kristian Nikko Chatto Geangan is a licensed professional teacher and cultural advocate
               from Balilihan, Bohol. He holds a Master of Arts in Education - Cultural Education
               from Holy Name University (2025) and a Bachelor of Secondary Education - Social
@@ -43,9 +43,7 @@ const AboutScreen = () => {
               Chapter, actively promoting and preserving cultural heritage. His dedication earned
               him first place in the first-ever Bohol Sandugo Kulturo Competition in 2024.  Beyond
               teaching, Kristian Nikko is a freelance event and choral singer and adviser to the
-              HNHS Supreme Secondary Learner Government and Choir.
-              {'\n'}
-              {'\n'}
+              HNHS Supreme Secondary Learner Government and Choir.K
               {'\n'}
               {'\n'}
               {'\n'}
@@ -60,7 +58,7 @@ const AboutScreen = () => {
         </Container>
 
         <Image
-          className="max-xs:-mb-9 absolute bottom-0 -mb-1 h-[420px] w-full border-white"
+          className="absolute bottom-0 -mb-1 h-[420px] w-full border-white max-xs:-mb-9"
           source={towergrass_small}
           resizeMode="contain"
         />
