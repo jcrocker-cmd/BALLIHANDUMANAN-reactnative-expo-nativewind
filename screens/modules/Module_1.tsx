@@ -1,13 +1,12 @@
 import { View, Text, Image, SafeAreaView, ScrollView, TouchableOpacity, Modal } from 'react-native';
 import { NormalContainer } from '../../components/NormalContainer';
 import { useState } from 'react';
-import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { VideoView, useVideoPlayer } from 'expo-video';
 import Title from 'components/Title';
-import SubTitle from 'components/SubTitle';
 import CollapsibleSubTitle from 'components/CollapsibleSubTitle';
+import PdfViewer from 'components/PDFview';
 
 import pic_1 from '../../assets/module_1/pic_1.png';
 import pic_2 from '../../assets/module_1/pic_2.png';
@@ -17,19 +16,23 @@ import pic_5 from '../../assets/module_1/3. Mariano Ricafort_s signature - the 6
 import pic_6 from '../../assets/module_1/pic_6.png';
 import pic_7 from '../../assets/module_1/pic_7.png';
 import pic_8 from '../../assets/module_1/6. Map of Balilihan and Catigbian.jpg';
+import pic_9 from '../../assets/module_1/7. Drone shot of the poblacion in Balilihan.jpg';
+import pic_10 from '../../assets/module_1/8. Balili Grass.jpg';
+import pic_11 from '../../assets/module_1/9. Timeline.png';
+import banner from '../../assets/module_1/banner.png';
 // import pic_1 from '../../assets/module_1/1.a. Bohol Map (1852).jpg';
 import ImageViewing from 'react-native-image-viewing';
 // import video from '../../assets/videos/hymn-video.mp4';
-const videoSource = {
-  uri: 'https://www.youtube.com/watch?v=n6s5ohIrkHw',
-};
+// const videoSource = {
+//   uri: 'https://www.youtube.com/watch?v=n6s5ohIrkHw',
+// };
 
 const Module_1 = () => {
-  const navigation = useNavigation();
-  const player = useVideoPlayer(videoSource, (player) => {
-    player.loop = true;
-    player.play();
-  });
+  // const navigation = useNavigation();
+  // const player = useVideoPlayer(videoSource, (player) => {
+  //   player.loop = true;
+  //   player.play();
+  // });
 
   const [visibleIndex, setVisibleIndex] = useState(null); // Track which image is open
 
@@ -42,6 +45,9 @@ const Module_1 = () => {
     { uri: Image.resolveAssetSource(pic_6).uri },
     { uri: Image.resolveAssetSource(pic_7).uri },
     { uri: Image.resolveAssetSource(pic_8).uri },
+    { uri: Image.resolveAssetSource(pic_9).uri },
+    { uri: Image.resolveAssetSource(pic_10).uri },
+    { uri: Image.resolveAssetSource(pic_11).uri },
   ];
 
   // console.log(player);
@@ -49,21 +55,22 @@ const Module_1 = () => {
   return (
     <>
       <SafeAreaView style={{ flex: 1 }}>
-        <NormalContainer>
-          <TouchableOpacity onPress={() => navigation.goBack()} className="mb-8 pt-10">
-            <Ionicons name="arrow-back" size={30} color="#000" />
-          </TouchableOpacity>
-          <ScrollView showsVerticalScrollIndicator={false}>
-            <Title name="Beginning: Town and its People"></Title>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <View className="mb-4 h-[150px] w-full overflow-hidden">
+            <Image source={banner} className="h-full w-full" />
+          </View>
+          <NormalContainer>
+            <Title>Beginning: Town and its People</Title>
+            {/* _______________________________What I need to know?________________________________ */}
             <CollapsibleSubTitle name="What I need to know?">
               {/* <View style={{ height: 250, width: '100%' }} className="my-3">
-              <VideoView
-                player={player}
-                style={{ height: 250, width: '100%' }}
-                allowsFullscreen
-                allowsPictureInPicture
-              />
-            </View> */}
+                <VideoView
+                  player={player}
+                  style={{ height: 250, width: '100%' }}
+                  allowsFullscreen
+                  allowsPictureInPicture
+                />
+              </View> */}
               <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
                 Have you ever wondered how Balilihan, the town we know and love today, came to be?
                 How did it transition from a humble settlement to a thriving municipality?
@@ -79,8 +86,9 @@ const Module_1 = () => {
                 protect this invaluable legacy for future generations.
               </Text>
             </CollapsibleSubTitle>
-            <View className="mb-4 mt-4 h-[1px] w-full bg-[#0E8341]" />
+            <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
 
+            {/* _______________________________Let's Do This!________________________________ */}
             <CollapsibleSubTitle name="let’s do this!">
               <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px]">
                 A. Before we delve into the lesson, let’s test your knowledge of our barangays with
@@ -104,8 +112,9 @@ const Module_1 = () => {
                 {'\n'}• You can find this activity in the Quizzes/Activities section of the app
               </Text>
             </CollapsibleSubTitle>
-            <View className="mb-4 mt-4 h-[1px] w-full bg-[#0E8341]" />
+            <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
 
+            {/* _______________________________Journey to the Beginning________________________________ */}
             <CollapsibleSubTitle name="journey to the beginning">
               <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
                 After completing both activities, it’s time to watch a short video clip about the
@@ -196,10 +205,10 @@ const Module_1 = () => {
 
               <View className="mb-1 mt-4 flex w-full flex-row items-start">
                 <Text className="flex-1 py-1 pr-3 text-justify font-inknut text-[12px] leading-[20px]">
-                  Manuel Diamante, Balilihan's municipal president, strongly opposed this plan,
-                  voicing the people's discontent and warning of potential unrest if the annexation
-                  proceeded. Governor Clarinultimately decided against annexing Balilihan to
-                  Antequera.
+                  <Text style={{ color: '#0E8341' }}>Manuel Diamante</Text>, Balilihan's municipal
+                  president, strongly opposed this plan, voicing the people's discontent and warning
+                  of potential unrest if the annexation proceeded. Governor Clarinultimately decided
+                  against annexing Balilihan to Antequera.
                 </Text>
 
                 <TouchableOpacity
@@ -214,9 +223,10 @@ const Module_1 = () => {
                 of Catigbian was downgraded to a barrio under Act No. 370 of the Philippine
                 Commission, becoming part of Balilihan. Following this action,
                 Governor Clarin proposed a revised plan to the US authorities: instead
-                of Balilihan's demotion, Catigbian should be integrated into Balilihan. This
-                demonstrates a shift in strategy, from initially targeting Balilihan for annexation
-                to ultimately suggesting Catigbian's incorporation into Balilihan.
+                of Balilihan's demotion, <Text style={{ color: '#0E8341' }}>Catigbian</Text> should
+                be integrated into Balilihan. This demonstrates a shift in strategy, from initially
+                targeting Balilihan for annexation to ultimately
+                suggesting Catigbian's incorporation into Balilihan.
               </Text>
 
               <TouchableOpacity
@@ -228,30 +238,96 @@ const Module_1 = () => {
               <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
                 In a twist of fate, by 1949, Balilihan faced significant territorial loss
                 when Catigbian was granted its own town charter. This decision came despite strong
-                objections from Balilihan's Mayor, Balbino Chatto, and Gerardo Racho, who personally
-                traveled to Malacañang to appeal to President Elpidio Quirino. Their efforts to
+                objections from Balilihan's Mayor,
+                <Text style={{ color: '#0E8341' }}>Balbino Chatto</Text> , and 
+                <Text style={{ color: '#0E8341' }}>Gerardo Racho</Text>, who personally traveled to
+                Malacañang to appeal to President Elpidio Quirino. Their efforts to
                 retain Catigbian within Balilihan were unsuccessful, marking a significant change in
                 the region's administrative landscape.{'\n'}
                 {'\n'}Subsequent administrative divisions further shaped Balilihan's position. In
                 1907, Bohol's municipalities were divided into three legislative districts,
                 with Balilihan initially assigned to the Second District. The 1987 Philippine
                 Constitution led to further reapportionment of towns, resulting
-                in Balilihan's current placement in the First District of Bohol.{'\n'}
+                in Balilihan's current placement in the 
+                <Text style={{ color: '#0E8341' }}>First District of Bohol</Text>.{'\n'}
                 {'\n'}This demonstrates Balilihan's shifting administrative affiliations throughout
                 its history, reflecting the broader changes in the governance of the region.
               </Text>
             </CollapsibleSubTitle>
-            <View className="mb-4 mt-4 h-[1px] w-full bg-[#0E8341]" />
+            <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
 
-            <SubTitle name="try this!"></SubTitle>
-            {/* <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
-              Now it's time to put your historical knowledge to the test! Using what you've learned
-              about Balilihan's historical establishment, territorial changes, and annexations, try
-              to name the families who were among its first inhabitants or settlers.  Consult the
-              answer key to check your guesses
-            </Text> */}
+            {/* _______________________________Try This!________________________________ */}
+            <CollapsibleSubTitle name="try this!">
+              <Text
+                style={{ color: '#0E8341' }}
+                className="py-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
+                Now it's time to put your historical knowledge to the test! Using what you've
+                learned about Balilihan's historical establishment, territorial changes, and
+                annexations, try to name the families who were among its first inhabitants
+                or settlers.  Consult the answer key to check your guesses
+              </Text>
+              <TouchableOpacity
+                className="mb-4 mt-4 h-[240px] w-full overflow-hidden"
+                onPress={() => setVisibleIndex(8)}>
+                <Image source={pic_9} className="h-full w-full" />
+              </TouchableOpacity>
 
-            {/* Fullscreen Image Viewer */}
+              <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
+                <Text style={{ color: '#0E8341' }}>Balilihan</Text> is an interior town, located 22
+                kilometers northeast of Tagbilaran City, the capital of Bohol. The town is situated
+                on a low, rolling plateau with verdant hills, mostly covered in trees and
+                vegetation. The lowlands are usually converted into rice fields, while the hillsides
+                are typically planted with corn, root crops, and coconuts.
+                {'\n'}
+                {'\n'}Ever wondered about the name “Balilihan”?
+              </Text>
+
+              <View className="mb-1 mt-4 flex w-full flex-row items-start">
+                <TouchableOpacity
+                  className="h-[180px] w-[50%] overflow-hidden"
+                  onPress={() => setVisibleIndex(9)}>
+                  <Image source={pic_10} className="h-full w-full" />
+                </TouchableOpacity>
+                <Text className="flex-1 py-1 pl-3 text-justify font-inknut text-[12px] leading-[20px]">
+                  It’s linked to a species of grass locally known as "balili," a naturally abundant
+                  and excellent grazing food for large cattle such as carabaos, cows, and horses.
+                   Therefore, Balilihan simply implies an abundance of  balili  grass in the place.
+                </Text>
+              </View>
+            </CollapsibleSubTitle>
+            <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
+
+            {/* _______________________________Let's Reflect!________________________________ */}
+            <CollapsibleSubTitle name="let's reflect">
+              <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+                Reflect on what you’ve learned about Balilihan’s formal establishment, territorial
+                changes, and annexations by answering these guide questions:{'\n'}1. What were the
+                major challenges faced during the establishment of the municipality? What triumphs
+                and successes marked this period in Balilihan’s history?{'\n'}2. For you, how might
+                the original settlers of Balilihan have felt about territorial changes?{'\n'}3. What
+                lessons can be learned from the experience of establishing Balilihan as an
+                independent municipality?
+              </Text>
+            </CollapsibleSubTitle>
+            <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
+
+            {/* _______________________________Time to Shine!________________________________ */}
+            <CollapsibleSubTitle name="TIME TO SHINE!">
+              <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+                Create a timeline showcasing the key events in the origin of Balilihan, including
+                its creation, territorial changes, and annexations. Review the information you’ve
+                learned from the discussions. Organize your timeline using the format provided
+                below.
+              </Text>
+
+              <TouchableOpacity
+                className="mb-4 mt-4 h-[320px] w-full overflow-hidden"
+                onPress={() => setVisibleIndex(10)}>
+                <Image source={pic_11} className="h-full w-full" />
+              </TouchableOpacity>
+            </CollapsibleSubTitle>
+
+            {/* _______________________________Fullscreen Image Viewer________________________________ */}
             <Modal visible={visibleIndex !== null} transparent={true}>
               <ImageViewing
                 images={images}
@@ -260,8 +336,8 @@ const Module_1 = () => {
                 onRequestClose={() => setVisibleIndex(null)}
               />
             </Modal>
-          </ScrollView>
-        </NormalContainer>
+          </NormalContainer>
+        </ScrollView>
       </SafeAreaView>
     </>
   );

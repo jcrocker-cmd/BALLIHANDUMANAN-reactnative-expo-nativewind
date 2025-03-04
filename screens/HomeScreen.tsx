@@ -51,7 +51,7 @@ export default function App() {
               icon="people-outline"
               text="Balilihan’s Journey: Three
                   Periods of Colonial influence"
-              onPress={() => navigation.navigate('Loading')}
+              onPress={() => navigation.navigate('Module_2')}
             />
 
             <IconButton

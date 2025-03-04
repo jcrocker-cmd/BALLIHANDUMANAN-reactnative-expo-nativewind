@@ -2,16 +2,16 @@ import { View, Text } from 'react-native';
 import React from 'react';
 
 interface TitleProps {
-  name: string;
+  children: React.ReactNode;
 }
 
-const Title = ({ name }: TitleProps) => {
+const Title = ({ children }: TitleProps) => {
   return (
     <View>
       <Text
         className="py-2 text-center font-inknut
- text-lg color-[#0E8341]">
-        {name}
+ text-xl color-[#0E8341]">
+        {children}
       </Text>
     </View>
   );
