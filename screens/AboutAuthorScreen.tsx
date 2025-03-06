@@ -9,6 +9,9 @@ import React from 'react';
 import author from '../assets/author.png';
 import towergrass_small from '../assets/towergrass-small.png';
 
+import { Dimensions } from 'react-native';
+const { width, height } = Dimensions.get('window');
+
 const AboutScreen = () => {
   const navigation = useNavigation();
   return (
@@ -58,9 +61,13 @@ const AboutScreen = () => {
         </Container>
 
         <Image
-          className="absolute bottom-0 -mb-1 h-[420px] w-full border-white max-xs:-mb-9"
+          className="absolute bottom-0 w-full"
           source={towergrass_small}
-          resizeMode="contain"
+          style={{
+            width: width, // Full width
+            height: height * 0.5, // 50% of screen height (adjust as needed)
+          }}
+          resizeMode="cover" // Ensures it fully covers width & height
         />
       </SafeAreaView>
     </>

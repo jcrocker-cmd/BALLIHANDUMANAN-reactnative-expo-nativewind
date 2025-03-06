@@ -7,8 +7,10 @@ import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 
 import appIcon from '../assets/app-icon.png';
-import author from '../assets/author.png';
 import towergrass_small from '../assets/towergrass-small.png';
+
+import { Dimensions } from 'react-native';
+const { width, height } = Dimensions.get('window');
 
 const AboutScreen = () => {
   const navigation = useNavigation();
@@ -66,10 +68,20 @@ const AboutScreen = () => {
             </Text>
           </ScrollView>
         </Container>
-        <Image
-          className="absolute bottom-0 -mb-1  h-[420px] w-full border-white max-xs:-mb-9"
+        {/* <Image
+          className="absolute bottom-0 -mb-1 h-[420px] w-full border-white max-xs:-mb-9 max-md:-mb-4"
           source={towergrass_small}
           resizeMode="contain"
+        /> */}
+
+        <Image
+          className="absolute bottom-0 w-full"
+          source={towergrass_small}
+          style={{
+            width: width, // Full width
+            height: height * 0.5, // 50% of screen height (adjust as needed)
+          }}
+          resizeMode="cover" // Ensures it fully covers width & height
         />
       </SafeAreaView>
     </>
