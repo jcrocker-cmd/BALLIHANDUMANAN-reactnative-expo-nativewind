@@ -1,4 +1,13 @@
-import { View, Text, Image, SafeAreaView, ScrollView, TouchableOpacity, Modal } from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  SafeAreaView,
+  ScrollView,
+  TouchableOpacity,
+  Modal,
+  StatusBar,
+} from 'react-native';
 import { NormalContainer } from '../../components/NormalContainer';
 import { useState } from 'react';
 import React from 'react';
@@ -49,6 +58,7 @@ const Module_1 = () => {
   return (
     <>
       <SafeAreaView style={{ flex: 1 }}>
+        <StatusBar barStyle="light-content" backgroundColor="#1e1e1e" />
         <ScrollView showsVerticalScrollIndicator={false}>
           <View className="mb-4 h-[150px] w-full overflow-hidden">
             <Image source={banner} className="h-full w-full" />

@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
   text: {
     textTransform: 'uppercase',
     color: '#0E8341',
+    // paddingRight: 10,
     //
   },
   icon: {
