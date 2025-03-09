@@ -9,7 +9,7 @@ interface SubTitleProps {
 const SubTitle = ({ name }: SubTitleProps) => {
   return (
     <View style={styles.container} className="py-4">
-      <Text style={styles.text} className="font-inknut text-[15px] font-semibold">
+      <Text style={styles.text} className="font-inknut text-[15px]">
         {name}
       </Text>
       <Image source={icon} resizeMode="contain" style={styles.icon} />
