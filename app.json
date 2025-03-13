@@ -6,6 +6,9 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
+    "experimental": {
+      "newArchEnabled": true
+    },
     "experiments": {
       "tsconfigPaths": true
     },
