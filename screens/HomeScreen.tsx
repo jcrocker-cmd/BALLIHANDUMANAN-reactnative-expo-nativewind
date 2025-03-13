@@ -10,11 +10,15 @@ import { Ionicons } from '@expo/vector-icons';
 
 import { useFonts } from 'expo-font';
 import { Dimensions } from 'react-native';
-import AppLoading from 'expo-app-loading';
+import * as SplashScreen from 'expo-splash-screen';
+import { useCallback } from 'react';
 
 import icon from '../assets/bulb_icon_white.png';
 
 const { width, height } = Dimensions.get('window');
+
+// Prevent splash screen from hiding automatically
+SplashScreen.preventAutoHideAsync();
 
 export default function App() {
   const navigation = useNavigation();
@@ -26,12 +30,19 @@ export default function App() {
     InknutSemiBold: require('../assets/fonts/InknutAntiqua-SemiBold.ttf'),
   });
 
+  // Hide splash screen when fonts are loaded
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
+
   if (!fontsLoaded) {
-    return <AppLoading />;
+    return null; // Prevent rendering until fonts are loaded
   }
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1 }} onLayout={onLayoutRootView}>
       <Container>
         <TouchableOpacity className="mt-16 items-end" onPress={() => navigation.navigate('About')}>
           <Image source={icon} resizeMode="contain" style={{ width: 30, height: 30 }} />
@@ -52,8 +63,7 @@ export default function App() {
 
             <IconButton
               icon="people-outline"
-              text="Balilihan’s Journey: Three
-                  Periods of Colonial influence"
+              text="Balilihan’s Journey: Three Periods of Colonial influence"
               onPress={() => navigation.navigate('Module_2')}
             />
 
@@ -73,6 +83,12 @@ export default function App() {
               icon="heart-outline"
               text="Assessment and Activities"
               onPress={() => navigation.navigate('Quiz')}
+            />
+
+            <IconButton
+              icon="heart-outline"
+              text="Assessment and Activities"
+              onPress={() => navigation.navigate('Barangay')}
             />
           </View>
         </ScrollView>
