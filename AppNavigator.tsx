@@ -10,9 +10,10 @@ import Module_3 from './screens/modules/Module_3';
 import Module_4 from './screens/modules/Module_4';
 import AboutApp from './screens/AboutAppScreen';
 import AboutAuthor from './screens/AboutAuthorScreen';
-import QuizScreen from './assets/module_5/Quiz';
-import ResultScreen from './assets/module_5/Result';
-import Barangay from './assets/module_5/Barangay';
+import QuizScreen from './components/module_5/Quiz';
+import ResultScreen from './components/module_5/Result';
+import Barangay from './components/module_5/Barangay';
+import Module_5 from './screens/modules/Module_5';
 
 const Stack = createStackNavigator();
 
@@ -29,9 +30,10 @@ export default function AppNavigator() {
         <Stack.Screen name="Module_2" component={Module_2} options={{ headerShown: false }} />
         <Stack.Screen name="Module_3" component={Module_3} options={{ headerShown: false }} />
         <Stack.Screen name="Module_4" component={Module_4} options={{ headerShown: false }} />
+        <Stack.Screen name="Module_5" component={Module_5} options={{ headerShown: false }} />
         <Stack.Screen name="Quiz" component={QuizScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="Result" component={ResultScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="Barangay" component={Barangay} options={{ headerShown: false }} />
+        {/* <Stack.Screen name="Result" component={ResultScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="Barangay" component={Barangay} options={{ headerShown: false }} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );

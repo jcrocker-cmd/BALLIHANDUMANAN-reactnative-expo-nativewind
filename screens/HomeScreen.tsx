@@ -2,18 +2,14 @@ import { StatusBar } from 'expo-status-bar';
 import { View, Text, Image, SafeAreaView, TouchableOpacity, ScrollView } from 'react-native';
 import { Container } from 'components/Container';
 import logo from '../assets/logo-white.png';
-import towergrass_small from '../assets/towergrass-small.png';
+import icon from '../assets/bulb_icon_white.png';
 import IconButton from 'components/Button';
 
 import { useNavigation } from '@react-navigation/native';
-import { Ionicons } from '@expo/vector-icons';
-
 import { useFonts } from 'expo-font';
 import { Dimensions } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
 import { useCallback } from 'react';
-
-import icon from '../assets/bulb_icon_white.png';
 
 const { width, height } = Dimensions.get('window');
 
@@ -22,6 +18,10 @@ SplashScreen.preventAutoHideAsync();
 
 export default function App() {
   const navigation = useNavigation();
+  const navigateToModule = useCallback(
+    (module: string) => () => navigation.navigate(module),
+    [navigation]
+  );
 
   // Load local TTF font
   const [fontsLoaded] = useFonts({
@@ -58,37 +58,32 @@ export default function App() {
             <IconButton
               icon="people-outline"
               text="Beginning: Town and its People"
-              onPress={() => navigation.navigate('Module_1')}
+              onPress={navigateToModule('Module_1')}
             />
-
             <IconButton
               icon="people-outline"
               text="Balilihan’s Journey: Three Periods of Colonial influence"
-              onPress={() => navigation.navigate('Module_2')}
+              onPress={navigateToModule('Module_2')}
             />
-
             <IconButton
               icon="time-outline"
               text="Balilihan in the Postwar Era and Beyond"
-              onPress={() => navigation.navigate('Module_3')}
+              onPress={navigateToModule('Module_3')}
             />
-
             <IconButton
               icon="heart-outline"
               text="Balilihan’s Cultural Heritage"
-              onPress={() => navigation.navigate('Module_4')}
+              onPress={navigateToModule('Module_4')}
             />
-
             <IconButton
               icon="heart-outline"
               text="Assessment and Activities"
-              onPress={() => navigation.navigate('Quiz')}
+              onPress={navigateToModule('Module_5')}
             />
-
             <IconButton
               icon="heart-outline"
               text="Assessment and Activities"
-              onPress={() => navigation.navigate('Barangay')}
+              onPress={navigateToModule('Barangay')}
             />
           </View>
         </ScrollView>
