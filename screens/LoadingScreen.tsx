@@ -1,13 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {
-  View,
-  Text,
-  Animated,
-  SafeAreaView,
-  Image,
-  ActivityIndicator,
-  StatusBar,
-} from 'react-native';
+import React, { useEffect } from 'react';
+import { View, Text, SafeAreaView, Image, ActivityIndicator } from 'react-native';
 import { Container } from '../components/Container';
 import logo from '../assets/logo-loading.png';
 import towergrass from '../assets/towergrass.png';
@@ -16,9 +8,6 @@ import { Dimensions } from 'react-native';
 const { width, height } = Dimensions.get('window');
 
 export default function LoadingScreen({ navigation }: { navigation: any }) {
-  // const [progress, setProgress] = useState(0);
-  // const animatedWidth = new Animated.Value(0); // Animated width state
-
   useEffect(() => {
     // Simulate loading delay before navigating
     const timeout = setTimeout(() => {
