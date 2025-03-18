@@ -61,13 +61,13 @@ const AboutScreen = () => {
         </Container>
 
         <Image
-          className="absolute bottom-0 w-full"
+          className="absolute bottom-0 -mb-2 w-full"
           source={towergrass_small}
           style={{
-            width: width, // Full width
-            height: height * 0.5, // 50% of screen height (adjust as needed)
+            width: width,
+            height: height * 0.33,
           }}
-          resizeMode="cover" // Ensures it fully covers width & height
+          resizeMode="contain"
         />
       </SafeAreaView>
     </>

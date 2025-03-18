@@ -11,9 +11,9 @@
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "",
+      "image": "./assets/app-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#f2f3f4"
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {

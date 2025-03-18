@@ -1,4 +1,4 @@
-import { View, SafeAreaView, ScrollView, Image, StatusBar } from 'react-native';
+import { View, SafeAreaView, FlatList, Image, StatusBar } from 'react-native';
 import { NormalContainer } from '../../components/NormalContainer';
 import React from 'react';
 import Title from 'components/Title';
@@ -15,41 +15,41 @@ import Section_9 from 'components/module_4/Section_9';
 import Section_10 from 'components/module_4/Section_10';
 import Section_11 from 'components/module_4/Section_11';
 
+const sections = [
+  Section_1,
+  Section_2,
+  Section_3,
+  Section_4,
+  Section_5,
+  Section_6,
+  Section_7,
+  Section_8,
+  Section_9,
+  Section_10,
+  Section_11,
+];
+
+const ItemSeparator = () => <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />;
+
 const Module_4 = () => {
   return (
     <>
       <SafeAreaView style={{ flex: 1 }}>
         <StatusBar barStyle="light-content" />
 
-        <ScrollView showsVerticalScrollIndicator={false}>
-          <View className="mb-4 h-[130px] w-full overflow-hidden">
-            <Image source={banner} className="h-full w-full" />
-          </View>
-          <NormalContainer>
-            <Title>Balilihan’s Cultural Heritage</Title>
-            <Section_1 />
-            <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
-            <Section_2 />
-            <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
-            <Section_3 />
-            <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
-            <Section_4 />
-            <View className="mb-4 mt-4 h-[1px] w-full bg-[#0E8341]" />
-            <Section_5 />
-            <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
-            <Section_6 />
-            <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
-            <Section_7 />
-            <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
-            <Section_8 />
-            <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
-            <Section_9 />
-            <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
-            <Section_10 />
-            <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
-            <Section_11 />
-          </NormalContainer>
-        </ScrollView>
+        <View className="mb-4 h-[130px] w-full overflow-hidden">
+          <Image source={banner} className="h-full w-full" />
+        </View>
+        <NormalContainer>
+          <Title>Balilihan’s Cultural Heritage</Title>
+          <FlatList
+            data={sections}
+            keyExtractor={(_, index) => index.toString()}
+            renderItem={({ item: SectionComponent }) => <SectionComponent />}
+            ItemSeparatorComponent={ItemSeparator}
+            showsVerticalScrollIndicator={false}
+          />
+        </NormalContainer>
       </SafeAreaView>
     </>
   );
