@@ -5,7 +5,7 @@ import { useState, useMemo, useCallback } from 'react';
 import ImageViewer from 'components/common/ImageViewer';
 
 const Section_3 = () => {
-  const [visibleIndex, setVisibleIndex] = useState(null);
+  const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
   const onClose = useCallback(() => setVisibleIndex(null), []);
   const handlePress = useCallback((index: number) => () => setVisibleIndex(index), []);
   const images = useMemo(

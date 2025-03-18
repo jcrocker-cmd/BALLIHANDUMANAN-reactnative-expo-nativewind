@@ -5,12 +5,7 @@ import { TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-
-import appIcon from '../assets/about/app-icon.png';
-import authorIcon from '../assets/about/Sir Nikko New 2.png';
-import objectivesIcon from '../assets/about/Objective Icon.png';
-import sourcesIcon from '../assets/about/Sources Icon.png';
-import towergrass from '../assets/towergrass.png';
+import { useMemo } from 'react';
 
 const { width, height } = Dimensions.get('window');
 
@@ -20,6 +15,18 @@ const TEXT_SIZE = width * 0.031; // 4% of screen width
 
 const AboutScreen = () => {
   const navigation = useNavigation();
+
+  // 🖼️ Memoized Images (Prevents reloading on re-renders)
+  const images = useMemo(
+    () => ({
+      appIcon: require('../assets/about/app-icon.png'),
+      authorIcon: require('../assets/about/Sir Nikko New 2.png'),
+      objectivesIcon: require('../assets/about/Objective Icon.png'),
+      sourcesIcon: require('../assets/about/Sources Icon.png'),
+      towergrass: require('../assets/towergrass.png'),
+    }),
+    []
+  );
 
   return (
     <>
@@ -33,7 +40,7 @@ const AboutScreen = () => {
             <View className="mb-3 flex flex-row gap-8">
               <TouchableOpacity onPress={() => navigation.navigate('AboutApp')}>
                 <View className="flex items-center justify-center">
-                  <Image source={appIcon} style={{ width: ICON_SIZE, height: ICON_SIZE }} />
+                  <Image source={images.appIcon} style={{ width: ICON_SIZE, height: ICON_SIZE }} />
                   <Text
                     style={{ fontSize: TEXT_SIZE }}
                     className="py-2 text-center font-inknut text-white">
@@ -44,7 +51,10 @@ const AboutScreen = () => {
 
               <TouchableOpacity onPress={() => navigation.navigate('AboutApp')}>
                 <View className="flex items-center justify-center">
-                  <Image source={authorIcon} style={{ width: ICON_SIZE, height: ICON_SIZE }} />
+                  <Image
+                    source={images.authorIcon}
+                    style={{ width: ICON_SIZE, height: ICON_SIZE }}
+                  />
                   <Text
                     style={{ fontSize: TEXT_SIZE }}
                     className=" py-2 text-center font-inknut text-white">
@@ -57,7 +67,10 @@ const AboutScreen = () => {
             <View className="flex flex-row gap-8">
               <TouchableOpacity onPress={() => navigation.navigate('AboutApp')}>
                 <View className="flex items-center justify-center">
-                  <Image source={objectivesIcon} style={{ width: ICON_SIZE, height: ICON_SIZE }} />
+                  <Image
+                    source={images.objectivesIcon}
+                    style={{ width: ICON_SIZE, height: ICON_SIZE }}
+                  />
                   <Text
                     style={{ fontSize: TEXT_SIZE }}
                     className="py-2 text-center font-inknut text-white">
@@ -68,7 +81,10 @@ const AboutScreen = () => {
 
               <TouchableOpacity onPress={() => navigation.navigate('AboutApp')}>
                 <View className="flex items-center justify-center">
-                  <Image source={sourcesIcon} style={{ width: ICON_SIZE, height: ICON_SIZE }} />
+                  <Image
+                    source={images.sourcesIcon}
+                    style={{ width: ICON_SIZE, height: ICON_SIZE }}
+                  />
                   <Text
                     style={{ fontSize: TEXT_SIZE }}
                     className="py-2 text-center font-inknut text-white">
@@ -83,7 +99,7 @@ const AboutScreen = () => {
         {/* Towergrass Image */}
         <Image
           className="absolute bottom-0 -mb-1 w-full"
-          source={towergrass}
+          source={images.towergrass}
           style={{
             width: width,
             height: height * 0.41, // 41% of screen height

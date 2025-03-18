@@ -7,7 +7,9 @@
     "experiments": {
       "tsconfigPaths": true
     },
-    "plugins": ["expo-video"],
+    "plugins": [
+      "expo-video"
+    ],
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "splash": {
@@ -15,10 +17,16 @@
       "resizeMode": "contain",
       "backgroundColor": "#f2f3f4"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
-      "newArchEnabled": true
+      "newArchEnabled": true,
+      "bundleIdentifier": "com.johnnote.balilihandumanan",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {

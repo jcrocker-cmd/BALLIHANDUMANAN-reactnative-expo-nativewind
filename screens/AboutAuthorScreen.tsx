@@ -4,15 +4,20 @@ import { SafeAreaView, Image } from 'react-native';
 import { TouchableOpacity, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import { useMemo } from 'react';
 import React from 'react';
-
-import author from '../assets/author.png';
-import towergrass_small from '../assets/towergrass-small.png';
 
 import { Dimensions } from 'react-native';
 const { width, height } = Dimensions.get('window');
 
 const AboutScreen = () => {
+  const images = useMemo(
+    () => ({
+      authorIcon: require('../assets/about/Sir Nikko New 2.png'),
+      towergrass_small: require('../assets/towergrass-small.png'),
+    }),
+    []
+  );
   const navigation = useNavigation();
   return (
     <>
@@ -27,7 +32,7 @@ const AboutScreen = () => {
               The Author
             </Text>
             <View className="mb-7 mt-5 h-[140px] w-[140px] overflow-hidden rounded-full max-xs:h-[110px] max-xs:w-[110px]">
-              <Image source={author} className="h-full w-full" />
+              <Image source={images.authorIcon} className="h-full w-full" />
             </View>
           </View>
 
@@ -62,7 +67,7 @@ const AboutScreen = () => {
 
         <Image
           className="absolute bottom-0 -mb-2 w-full"
-          source={towergrass_small}
+          source={images.towergrass_small}
           style={{
             width: width,
             height: height * 0.33,

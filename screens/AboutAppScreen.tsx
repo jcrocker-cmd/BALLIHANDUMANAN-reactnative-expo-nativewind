@@ -4,15 +4,20 @@ import { SafeAreaView, Image } from 'react-native';
 import { TouchableOpacity, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import { useMemo } from 'react';
 import React from 'react';
-
-import appIcon from '../assets/app-icon.png';
-import towergrass_small from '../assets/towergrass-small.png';
 
 import { Dimensions } from 'react-native';
 const { width, height } = Dimensions.get('window');
 
 const AboutScreen = () => {
+  const images = useMemo(
+    () => ({
+      appIcon: require('../assets/app-icon.png'),
+      towergrass_small: require('../assets/towergrass-small.png'),
+    }),
+    []
+  );
   const navigation = useNavigation();
   return (
     <>
@@ -27,7 +32,7 @@ const AboutScreen = () => {
               About the App
             </Text>
             <Image
-              source={appIcon}
+              source={images.appIcon}
               className="mb-7 mt-5 h-[140px] w-[140px] max-xs:h-[110px] max-xs:w-[110px]"
             />
           </View>
@@ -70,7 +75,7 @@ const AboutScreen = () => {
         </Container>
         <Image
           className="absolute bottom-0 -mb-2 w-full"
-          source={towergrass_small}
+          source={images.towergrass_small}
           style={{
             width: width,
             height: height * 0.33,

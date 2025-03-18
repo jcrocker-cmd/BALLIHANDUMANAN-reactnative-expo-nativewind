@@ -2,7 +2,6 @@ import { View, Image, SafeAreaView, StatusBar, FlatList } from 'react-native';
 import { NormalContainer } from '../../components/NormalContainer';
 import React from 'react';
 import Title from 'components/Title';
-import banner from '../../assets/module_1/banner.png';
 import Section_1 from 'components/module_1/Section_1';
 import Section_2 from 'components/module_1/Section_2';
 import Section_3 from 'components/module_1/Section_3';
@@ -21,7 +20,7 @@ const Module_1 = () => {
 
       {/* Banner Outside NormalContainer */}
       <View className="mb-4 h-[130px] w-full overflow-hidden">
-        <Image source={banner} className="h-full w-full" />
+        <Image source={require('../../assets/module_1/banner.png')} className="h-full w-full" />
       </View>
 
       <NormalContainer>
