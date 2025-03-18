@@ -11,13 +11,13 @@ interface CollapsibleSubTitleProps {
 const CollapsibleSubTitle = ({ name, children }: CollapsibleSubTitleProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const animation = useRef(new Animated.Value(0)).current;
-  const [contentHeight, setContentHeight] = useState(0);
+  const contentHeightRef = useRef(0);
 
   const toggleCollapse = () => {
     Animated.timing(animation, {
-      toValue: isOpen ? 0 : contentHeight,
+      toValue: isOpen ? 0 : contentHeightRef.current,
       duration: 300,
-      useNativeDriver: false, // height animations must useNativeDriver: false
+      useNativeDriver: false, // Native driver doesn't support height animations
     }).start();
     setIsOpen(!isOpen);
   };
@@ -37,7 +37,11 @@ const CollapsibleSubTitle = ({ name, children }: CollapsibleSubTitleProps) => {
       {/* Animated Collapsible Content */}
       <Animated.View style={{ height: animation, overflow: 'hidden' }}>
         <View
-          onLayout={(event) => setContentHeight(event.nativeEvent.layout.height)}
+          onLayout={(event) => {
+            if (contentHeightRef.current === 0) {
+              contentHeightRef.current = event.nativeEvent.layout.height; // Store height once
+            }
+          }}
           style={styles.contentContainer}>
           {children}
         </View>
@@ -62,8 +66,8 @@ const styles = StyleSheet.create({
     height: 30,
   },
   contentContainer: {
-    position: 'absolute', // Prevents affecting layout when collapsed
     width: '100%',
+    position: 'absolute',
   },
 });
 

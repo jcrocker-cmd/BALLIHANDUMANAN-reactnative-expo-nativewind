@@ -2,7 +2,7 @@ import { View, Image, SafeAreaView, ScrollView, StatusBar } from 'react-native';
 import { NormalContainer } from '../../components/NormalContainer';
 import React from 'react';
 import Title from 'components/Title';
-import banner from '../../assets/module_3/banner.png';
+const banner = require('../../assets/module_3/banner.png');
 import Section_1 from 'components/module_3/Section_1';
 import Section_2 from 'components/module_3/Section_2';
 import Section_3 from 'components/module_3/Section_3';

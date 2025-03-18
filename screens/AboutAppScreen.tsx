@@ -4,15 +4,20 @@ import { SafeAreaView, Image } from 'react-native';
 import { TouchableOpacity, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import { useMemo } from 'react';
 import React from 'react';
-
-import appIcon from '../assets/app-icon.png';
-import towergrass_small from '../assets/towergrass-small.png';
 
 import { Dimensions } from 'react-native';
 const { width, height } = Dimensions.get('window');
 
 const AboutScreen = () => {
+  const images = useMemo(
+    () => ({
+      appIcon: require('../assets/app-icon.png'),
+      towergrass_small: require('../assets/towergrass-small.png'),
+    }),
+    []
+  );
   const navigation = useNavigation();
   return (
     <>
@@ -27,7 +32,7 @@ const AboutScreen = () => {
               About the App
             </Text>
             <Image
-              source={appIcon}
+              source={images.appIcon}
               className="mb-7 mt-5 h-[140px] w-[140px] max-xs:h-[110px] max-xs:w-[110px]"
             />
           </View>
@@ -68,20 +73,14 @@ const AboutScreen = () => {
             </Text>
           </ScrollView>
         </Container>
-        {/* <Image
-          className="absolute bottom-0 -mb-1 h-[420px] w-full border-white max-xs:-mb-9 max-md:-mb-4"
-          source={towergrass_small}
-          resizeMode="contain"
-        /> */}
-
         <Image
-          className="absolute bottom-0 w-full"
-          source={towergrass_small}
+          className="absolute bottom-0 -mb-2 w-full"
+          source={images.towergrass_small}
           style={{
-            width: width, // Full width
-            height: height * 0.5, // 50% of screen height (adjust as needed)
+            width: width,
+            height: height * 0.33,
           }}
-          resizeMode="cover" // Ensures it fully covers width & height
+          resizeMode="contain"
         />
       </SafeAreaView>
     </>

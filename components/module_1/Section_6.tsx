@@ -5,7 +5,7 @@ import { useState, useCallback, useMemo } from 'react';
 import ImageViewer from 'components/common/ImageViewer';
 
 const Section_6 = () => {
-  const [visibleIndex, setVisibleIndex] = useState(null);
+  const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
   const onClose = useCallback(() => setVisibleIndex(null), []);
   const handlePress = useCallback((index: number) => () => setVisibleIndex(index), []);
   const images = useMemo(() => [require('../../assets/module_1/9. Timeline.png')], []);

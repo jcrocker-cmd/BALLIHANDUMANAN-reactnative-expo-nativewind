@@ -5,7 +5,8 @@ import CollapsibleSubTitle from 'components/CollapsibleSubTitle';
 import ImageViewer from 'components/common/ImageViewer';
 
 const Section_6 = () => {
-  const [visibleIndex, setVisibleIndex] = useState(null);
+  const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
+
   const onClose = useCallback(() => setVisibleIndex(null), []);
   const handlePress = useCallback((index: number) => () => setVisibleIndex(index), []);
   const images = useMemo(

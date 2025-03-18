@@ -5,9 +5,10 @@ import CollapsibleSubTitle from 'components/CollapsibleSubTitle';
 import ImageViewer from 'components/common/ImageViewer';
 
 const Section_9 = () => {
-  const [visibleIndex, setVisibleIndex] = useState(null);
+  const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
   const onClose = useCallback(() => setVisibleIndex(null), []);
   const handlePress = useCallback((index: number) => () => setVisibleIndex(index), []);
+
   const images = useMemo(
     () => [
       require('../../assets/module_4/6. Other Cultural Assets/1.a Old Municipal Hall.jpg'),
@@ -371,11 +372,11 @@ const Section_9 = () => {
         </Text>
 
         <View className="mb-5 mt-3 flex w-full">
+          <TouchableOpacity className="h-[210px] w-full overflow-hidden" onPress={handlePress(39)}>
+            <Image source={images[39]} className="h-full w-full" />
+          </TouchableOpacity>
           <TouchableOpacity className="h-[210px] w-full overflow-hidden" onPress={handlePress(40)}>
             <Image source={images[40]} className="h-full w-full" />
-          </TouchableOpacity>
-          <TouchableOpacity className="h-[210px] w-full overflow-hidden" onPress={handlePress(41)}>
-            <Image source={images[41]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
         <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
@@ -387,17 +388,17 @@ const Section_9 = () => {
         </Text>
 
         <View className="mt-3 flex w-full">
+          <TouchableOpacity className="h-[200px] w-full overflow-hidden" onPress={handlePress(41)}>
+            <Image source={images[41]} className="h-full w-full" />
+          </TouchableOpacity>
           <TouchableOpacity className="h-[200px] w-full overflow-hidden" onPress={handlePress(42)}>
             <Image source={images[42]} className="h-full w-full" />
-          </TouchableOpacity>
-          <TouchableOpacity className="h-[200px] w-full overflow-hidden" onPress={handlePress(43)}>
-            <Image source={images[43]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
         <TouchableOpacity
           className="mb-5 h-[280px] w-full overflow-hidden"
-          onPress={handlePress(44)}>
-          <Image source={images[44]} className="h-full w-full" />
+          onPress={handlePress(43)}>
+          <Image source={images[43]} className="h-full w-full" />
         </TouchableOpacity>
 
         <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
@@ -409,8 +410,8 @@ const Section_9 = () => {
 
         <TouchableOpacity
           className="mb-5 mt-3 h-[320px] w-full overflow-hidden"
-          onPress={handlePress(45)}>
-          <Image source={images[45]} className="h-full w-full" />
+          onPress={handlePress(44)}>
+          <Image source={images[44]} className="h-full w-full" />
         </TouchableOpacity>
         <Text className=" text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Urna</Text>
@@ -420,11 +421,11 @@ const Section_9 = () => {
         </Text>
 
         <View className="mb-5 mt-3 flex w-full">
+          <TouchableOpacity className="h-[200px] w-full overflow-hidden" onPress={handlePress(45)}>
+            <Image source={images[45]} className="h-full w-full" />
+          </TouchableOpacity>
           <TouchableOpacity className="h-[200px] w-full overflow-hidden" onPress={handlePress(46)}>
             <Image source={images[46]} className="h-full w-full" />
-          </TouchableOpacity>
-          <TouchableOpacity className="h-[200px] w-full overflow-hidden" onPress={handlePress(47)}>
-            <Image source={images[47]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
         <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
@@ -437,8 +438,8 @@ const Section_9 = () => {
 
         <TouchableOpacity
           className="mb-5 mt-3 h-[280px] w-full overflow-hidden"
-          onPress={handlePress(48)}>
-          <Image source={images[48]} className="h-full w-full" />
+          onPress={handlePress(47)}>
+          <Image source={images[47]} className="h-full w-full" />
         </TouchableOpacity>
         <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Tagbo o Panagtapok sa Pagpanghinlo</Text>
@@ -449,8 +450,8 @@ const Section_9 = () => {
 
         <TouchableOpacity
           className="mb-5 mt-3 h-[320px] w-full overflow-hidden"
-          onPress={handlePress(49)}>
-          <Image source={images[49]} className="h-full w-full" />
+          onPress={handlePress(48)}>
+          <Image source={images[48]} className="h-full w-full" />
         </TouchableOpacity>
         <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Eladio I. Chatto</Text>
@@ -461,8 +462,8 @@ const Section_9 = () => {
 
         <TouchableOpacity
           className="mb-5 mt-3 h-[320px] w-full overflow-hidden"
-          onPress={handlePress(50)}>
-          <Image source={images[50]} className="h-full w-full" />
+          onPress={handlePress(49)}>
+          <Image source={images[49]} className="h-full w-full" />
         </TouchableOpacity>
         <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Lino Chatto Sr.</Text>
@@ -472,8 +473,8 @@ const Section_9 = () => {
 
         <TouchableOpacity
           className="mb-5 mt-3 h-[320px] w-full overflow-hidden"
-          onPress={handlePress(51)}>
-          <Image source={images[51]} className="h-full w-full" />
+          onPress={handlePress(50)}>
+          <Image source={images[50]} className="h-full w-full" />
         </TouchableOpacity>
         <Text className="mb-5 text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Hermogena R. Racho</Text>
