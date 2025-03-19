@@ -1,31 +1,47 @@
-import React from 'react';
-import { View, Image, SafeAreaView, StatusBar, Text, TouchableOpacity, Alert } from 'react-native';
-import * as FileSystem from 'expo-file-system'; // Import File System
-import banner from '../../assets/module_4/banner.png';
-import { AssesmentContainer } from 'components/AssesmentContainer';
+import React, { useState } from 'react';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  FlatList,
+  SafeAreaView,
+  StyleSheet,
+  StatusBar,
+  Image,
+} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { questions } from '../../assets/quiz/TakeTheQuizQueztions';
+import { Container } from 'components/Container';
 import { Ionicons } from '@expo/vector-icons';
+import banner from '../../assets/module_4/banner.png';
 
-const Module_5 = () => {
-  const navigation = useNavigation();
+// Define your navigation types
+type RootStackParamList = {
+  Quiz: undefined;
+  Result: { answers: (string | null)[] };
+};
 
-  // Function to download PDF
-  const downloadPDF = async (url, filename) => {
-    try {
-      const fileUri = FileSystem.documentDirectory + filename;
-      const { uri } = await FileSystem.downloadAsync(url, fileUri);
-      Alert.alert('Download Complete', `File saved to ${uri}`);
-    } catch (error) {
-      Alert.alert('Download Failed', 'Something went wrong.');
-      console.error(error);
-    }
+type QuizScreenNavigationProp = StackNavigationProp<RootStackParamList, 'TakeTheQuiz'>;
+
+const QuizScreen: React.FC = () => {
+  const navigation = useNavigation<QuizScreenNavigationProp>();
+  const [answers, setAnswers] = useState<(string | null)[]>(Array(questions.length).fill(null));
+
+  const selectAnswer = (index: number, option: string): void => {
+    const newAnswers = [...answers];
+    newAnswers[index] = option;
+    setAnswers(newAnswers);
+  };
+
+  const handleSubmit = (): void => {
+    navigation.navigate('TakeTheQuizResultScreen', { answers });
   };
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar barStyle="light-content" />
-
-      {/* Banner */}
+      {/* Banner  */}
       <View className="relative h-[130px] w-full overflow-hidden">
         <Image source={banner} className="h-full w-full" />
         <TouchableOpacity
@@ -36,52 +52,58 @@ const Module_5 = () => {
         <Text
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/3 py-1 font-inknut text-[16px] text-white"
           style={{
-            textShadowColor: 'black',
-            textShadowOffset: { width: 2, height: 2 },
-            textShadowRadius: 8,
+            textShadowColor: 'black', // Outline color
+            textShadowOffset: { width: 2, height: 2 }, // Stroke position
+            textShadowRadius: 8, // Spread
           }}>
-          Assessment and Activities
+          Take The Quiz
         </Text>
       </View>
+      <Container>
+        <FlatList
+          showsVerticalScrollIndicator={false}
+          data={questions}
+          keyExtractor={(item, index) => `question-${index}`}
+          renderItem={({ item, index }) => (
+            <View style={styles.questionContainer}>
+              <Text style={styles.question} className="py-1 font-inknut text-base text-white">
+                {index + 1}. {item.question}
+              </Text>
+              {item.options.map((option) => (
+                <TouchableOpacity
+                  key={option}
+                  onPress={() => selectAnswer(index, option)}
+                  style={[styles.option, answers[index] === option && styles.selectedOption]}>
+                  <Text
+                    style={styles.optionText}
+                    className="text font-inknut text-[13px] text-[#0E8341]">
+                    {option}
+                  </Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+          )}
+        />
 
-      {/* Gradient Background & PDF Buttons */}
-      <AssesmentContainer>
-        <View className="flex-1 items-center gap-4">
-          <TouchableOpacity
-            className="w-[95%] rounded-lg bg-white px-6 py-3"
-            onPress={() => downloadPDF('https://example.com/pdf1.pdf', 'Module_1.pdf')}>
-            <Text className="py-1 text-center font-inknut text-[14px] text-green-800">
-              Download Module 1 PDF
-            </Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            className="w-[95%] rounded-lg bg-white px-6 py-3"
-            onPress={() => downloadPDF('https://example.com/pdf2.pdf', 'Module_2.pdf')}>
-            <Text className="py-1 text-center font-inknut text-[14px] text-green-800">
-              Download Module 2 PDF
-            </Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            className="w-[95%] rounded-lg bg-white px-6 py-3"
-            onPress={() => downloadPDF('https://example.com/pdf3.pdf', 'Module_3.pdf')}>
-            <Text className="py-1 text-center font-inknut text-[14px] text-green-800">
-              Download Module 3 PDF
-            </Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            className="w-[95%] rounded-lg bg-white px-6 py-3"
-            onPress={() => downloadPDF('https://example.com/pdf4.pdf', 'Module_4.pdf')}>
-            <Text className="py-1 text-center font-inknut text-[14px] text-green-800">
-              Download Module 4 PDF
-            </Text>
-          </TouchableOpacity>
-        </View>
-      </AssesmentContainer>
+        <TouchableOpacity onPress={handleSubmit} className="rounded-lg bg-blue-500 p-3">
+          <Text className="text-center font-inknut text-white">Submit</Text>
+        </TouchableOpacity>
+      </Container>
     </SafeAreaView>
   );
 };
 
-export default Module_5;
+const styles = StyleSheet.create({
+  questionContainer: { marginBottom: 40 },
+  question: { marginBottom: 10 },
+  option: {
+    backgroundColor: '#fff',
+    padding: 10,
+    marginTop: 5,
+    borderRadius: 5,
+  },
+  selectedOption: { backgroundColor: '#FFF800' },
+  optionText: { textAlign: 'center' },
+});
+
+export default QuizScreen;
