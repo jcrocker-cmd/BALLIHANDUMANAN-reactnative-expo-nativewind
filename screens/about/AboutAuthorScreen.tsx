@@ -1,5 +1,5 @@
 import { View, Text } from 'react-native';
-import { Container } from '../components/Container';
+import { Container } from '../../components/Container';
 import { SafeAreaView, Image } from 'react-native';
 import { TouchableOpacity, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
@@ -13,8 +13,8 @@ const { width, height } = Dimensions.get('window');
 const AboutScreen = () => {
   const images = useMemo(
     () => ({
-      authorIcon: require('../assets/about/Sir Nikko New 2.png'),
-      towergrass_small: require('../assets/towergrass-small.png'),
+      authorIcon: require('../../assets/about/Sir Nikko New 2.png'),
+      towergrass_small: require('../../assets/towergrass-small.png'),
     }),
     []
   );
@@ -31,9 +31,10 @@ const AboutScreen = () => {
             <Text className="-mt-4 py-1 text-justify font-inknut text-lg text-white">
               The Author
             </Text>
-            <View className="mb-7 mt-5 h-[140px] w-[140px] overflow-hidden rounded-full max-xs:h-[110px] max-xs:w-[110px]">
-              <Image source={images.authorIcon} className="h-full w-full" />
-            </View>
+            <Image
+              source={images.authorIcon}
+              className="mb-7 mt-5 h-[140px] w-[140px] max-xs:h-[110px] max-xs:w-[110px]"
+            />
           </View>
 
           <ScrollView showsVerticalScrollIndicator={false}>

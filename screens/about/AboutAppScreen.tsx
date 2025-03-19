@@ -1,5 +1,5 @@
 import { View, Text } from 'react-native';
-import { Container } from '../components/Container';
+import { Container } from '../../components/Container';
 import { SafeAreaView, Image } from 'react-native';
 import { TouchableOpacity, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
@@ -13,8 +13,8 @@ const { width, height } = Dimensions.get('window');
 const AboutScreen = () => {
   const images = useMemo(
     () => ({
-      appIcon: require('../assets/app-icon.png'),
-      towergrass_small: require('../assets/towergrass-small.png'),
+      appIcon: require('../../assets/app-icon.png'),
+      towergrass_small: require('../../assets/towergrass-small.png'),
     }),
     []
   );
@@ -38,7 +38,7 @@ const AboutScreen = () => {
           </View>
 
           <ScrollView showsVerticalScrollIndicator={false}>
-            <Text className="px-5 py-5 text-justify font-inknut text-[12px] text-white max-xs:text-[11px]">
+            <Text className="px-5 py-5 text-justify font-inknut text-[12px] text-white">
               Balilihandumanan is a digital resource mobile application designed to teach the local
               history and cultural heritage of the municipality of Balilihan.  It uses a
               multifaceted approach, incorporating guided discussions, engaging activities such as

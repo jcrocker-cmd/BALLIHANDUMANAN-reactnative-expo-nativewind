@@ -49,7 +49,7 @@ const AboutScreen = () => {
                 </View>
               </TouchableOpacity>
 
-              <TouchableOpacity onPress={() => navigation.navigate('AboutApp')}>
+              <TouchableOpacity onPress={() => navigation.navigate('AboutAuthor')}>
                 <View className="flex items-center justify-center">
                   <Image
                     source={images.authorIcon}
@@ -65,7 +65,7 @@ const AboutScreen = () => {
             </View>
 
             <View className="flex flex-row gap-8">
-              <TouchableOpacity onPress={() => navigation.navigate('AboutApp')}>
+              <TouchableOpacity onPress={() => navigation.navigate('Objectives')}>
                 <View className="flex items-center justify-center">
                   <Image
                     source={images.objectivesIcon}
@@ -79,7 +79,7 @@ const AboutScreen = () => {
                 </View>
               </TouchableOpacity>
 
-              <TouchableOpacity onPress={() => navigation.navigate('AboutApp')}>
+              <TouchableOpacity onPress={() => navigation.navigate('Sources')}>
                 <View className="flex items-center justify-center">
                   <Image
                     source={images.sourcesIcon}
