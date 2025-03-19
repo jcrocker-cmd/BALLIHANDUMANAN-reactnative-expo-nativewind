@@ -8,12 +8,13 @@
       "tsconfigPaths": true
     },
     "plugins": [
-      "expo-video"
+      "expo-video",
+      "expo-asset"
     ],
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/app-icon.png",
+      "image": "./assets/app-icon-start.png",
       "resizeMode": "contain",
       "backgroundColor": "#f2f3f4"
     },

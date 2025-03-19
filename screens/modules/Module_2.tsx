@@ -1,6 +1,7 @@
-import { View, Image, SafeAreaView, ScrollView, StatusBar } from 'react-native';
+import { View, Image, SafeAreaView, ScrollView, StatusBar, TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { NormalContainer } from '../../components/NormalContainer';
-import { useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import Title from 'components/Title';
 import banner from '../../assets/module_2/banner.png';
@@ -15,13 +16,19 @@ import Section_8 from 'components/module_2/Section_8';
 import Section_9 from 'components/module_2/Section_9';
 
 const Module_2 = () => {
+  const navigation = useNavigation();
   return (
     <>
       <SafeAreaView style={{ flex: 1 }}>
         <StatusBar barStyle="light-content" />
         <ScrollView showsVerticalScrollIndicator={false}>
-          <View className="mb-4 h-[130px] w-full overflow-hidden">
-            <Image source={banner} className="h-full w-full" resizeMode="cover" />
+          <View className="relative mb-4 h-[130px] w-full overflow-hidden">
+            <Image source={banner} className="h-full w-full" />
+            <TouchableOpacity
+              onPress={() => navigation.goBack()}
+              className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/30 p-2">
+              <Ionicons name="arrow-back" size={30} color="#fff" />
+            </TouchableOpacity>
           </View>
           <NormalContainer>
             <Title>Balilihan’s Journey: Three{'\n'}Periods of Colonial Influence</Title>
