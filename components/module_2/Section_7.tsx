@@ -7,7 +7,7 @@ const Section_7 = () => {
     <>
       {/* _______________________________LET’S REFLECT!________________________________ */}
       <CollapsibleSubTitle name="LET’S REFLECT!">
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance pb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px]">
           Reflect on Balilihan’s experiences during the Spanish, American, and Japanese colonial
           periods. Consider the lasting impacts of each period and how they shaped the town’s
           identity and development. Here are the guide questions:{'\n'}

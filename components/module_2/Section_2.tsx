@@ -7,7 +7,7 @@ const Section_2 = () => {
     <>
       {/* _______________________________Let's Do This!________________________________ */}
       <CollapsibleSubTitle name="let’s do this!">
-        <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="pb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px]">
           Before we dive into the history of Balilihan and the colonizers, let's have some fun! Get
           ready for "<Text style={{ color: '#0E8341' }}>Guess that Era!</Text>"  • Head over to the
           Quiz/Activity section of the app to participate.{'\n'}

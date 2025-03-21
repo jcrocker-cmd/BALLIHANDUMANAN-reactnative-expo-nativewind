@@ -2,8 +2,7 @@
   "expo": {
     "name": "balilihandumanan",
     "slug": "balilihandumanan",
-    "version": "1.1.0",
-    "jsEngine": "hermes",
+    "version": "1.0.3",
     "experiments": {
       "tsconfigPaths": true
     },
@@ -22,25 +21,20 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true,
-      "newArchEnabled": true,
-      "bundleIdentifier": "com.johnnote.balilihandumanan",
-      "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
-      }
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.johnnote.balilihandumanan",
-      "newArchEnabled": true
+      "package": "com.jcrocker.balilihandumanan"
     },
     "extra": {
       "eas": {
-        "projectId": "ba3d344e-8c3e-445c-b3c1-99a6c55b83ff"
+        "projectId": "45b241db-394b-478a-ab21-07e79b3d543b"
       }
-    }
+    },
+    "owner": "jcrocker"
   }
 }

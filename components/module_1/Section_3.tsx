@@ -3,6 +3,7 @@ import React from 'react';
 import CollapsibleSubTitle from 'components/CollapsibleSubTitle';
 import { useState, useMemo, useCallback } from 'react';
 import ImageViewer from 'components/common/ImageViewer';
+import { WebView } from 'react-native-webview';
 
 const Section_3 = () => {
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
@@ -32,11 +33,13 @@ const Section_3 = () => {
           what you’ve learned.
         </Text>
         {/* Clickable Image */}
-        <TouchableOpacity
-          className="mb-7 mt-5 h-[230px] w-full overflow-hidden"
-          onPress={handlePress(0)}>
-          <Image source={images[0]} className="h-full w-full" />
-        </TouchableOpacity>
+        <View style={{ height: 205, width: '100%', marginVertical: 12 }} className="mb-5">
+          <WebView
+            source={{ uri: 'https://www.youtube.com/embed/fO_u70isy5c' }}
+            allowsFullscreenVideo
+            style={{ height: '100%', width: '100%' }}
+          />
+        </View>
 
         <Text className="py-1 text-center font-inknut text-[12px] uppercase  leading-[24px]">
           BALILIHAN’S FORMAL ESTABLISHMENT,  TERRITORIAL CHANGES, AND ANNEXATIONS

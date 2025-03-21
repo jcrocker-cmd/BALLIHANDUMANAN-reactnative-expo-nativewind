@@ -207,7 +207,7 @@ const Section_8 = () => {
           a cherished tradition, celebrating Balilihan's history, culture, and community spirit.
         </Text>
 
-        <View className="-mt-3 flex flex-row">
+        <View className="-mt-3 mb-5 flex flex-row">
           <TouchableOpacity className="h-[280px] w-[50%] overflow-hidden" onPress={handlePress(25)}>
             <Image source={images[25]} className="h-full w-full" />
           </TouchableOpacity>

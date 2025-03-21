@@ -7,8 +7,9 @@ import { NormalContainer } from 'components/NormalContainer';
 
 // Define your navigation types
 type RootStackParamList = {
-  Quiz: undefined;
-  Result: { answers: (string | null)[] };
+  GuessEraQuizScreen: undefined;
+  Module_5: undefined;
+  GuessEraResultScreen: { answers: (string | null)[] };
 };
 
 type ResultScreenNavigationProp = StackNavigationProp<RootStackParamList, 'GuessEraResultScreen'>;
@@ -44,9 +45,14 @@ const ResultScreen: React.FC = () => {
             </View>
           ))}
           <TouchableOpacity
-            onPress={() => navigation.navigate('GuessEraQuizScreen')}
-            className="rounded-lg bg-blue-500 p-3">
-            <Text className="text-center font-bold text-white">Try Again</Text>
+            className="mt-5 rounded-lg bg-[#0E8341] py-3"
+            onPress={() => navigation.navigate('GuessEraQuizScreen')}>
+            <Text className="text-center font-inknut text-[14px] text-white">Try Again</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            className="mt-2 rounded-lg bg-[#0E8341] py-3"
+            onPress={() => navigation.navigate('Module_5')}>
+            <Text className="text-center font-inknut text-[14px] text-white">Exit</Text>
           </TouchableOpacity>
         </ScrollView>
       </SafeAreaView>

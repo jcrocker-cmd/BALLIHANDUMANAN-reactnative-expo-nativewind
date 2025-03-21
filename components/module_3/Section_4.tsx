@@ -36,7 +36,7 @@ const Section_4 = () => {
           <Image source={images[1]} className="h-full w-full" />
         </TouchableOpacity>
 
-        <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
+        <Text className="pb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
           This renewed hope was powerfully symbolized on Independence Day, July 4, 1946, when all
           the children, including those born during the war ("war babies"), gathered in the town
           plaza around the Rizal monument, representing a bright new future for the next generation.

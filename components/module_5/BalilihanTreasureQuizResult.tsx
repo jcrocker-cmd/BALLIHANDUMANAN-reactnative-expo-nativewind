@@ -1,19 +1,30 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView, SafeAreaView } from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  ScrollView,
+  SafeAreaView,
+  Image,
+} from 'react-native';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { questions } from '../../assets/quiz/BarangayQueztions';
+import { questions } from '../../assets/quiz/BalilihanTreasureQueztions';
 import { NormalContainer } from 'components/NormalContainer';
 
-// Define your navigation types
+// Define RootStackParamList type
 type RootStackParamList = {
-  BarangayQuizScreen: undefined;
+  BalilihanTreasureQuizScreen: undefined;
   Module_5: undefined;
-  BarangayResultScreen: { answers: (string | null)[] };
+  BalilihanTreasureQuizScreenResult: { answers: (string | null)[] };
 };
 
-type ResultScreenNavigationProp = StackNavigationProp<RootStackParamList, 'BarangayResultScreen'>;
-type ResultScreenRouteProp = RouteProp<RootStackParamList, 'BarangayResultScreen'>;
+type ResultScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'BalilihanTreasureQuizScreenResult'
+>;
+type ResultScreenRouteProp = RouteProp<RootStackParamList, 'BalilihanTreasureQuizScreenResult'>;
 
 const ResultScreen: React.FC = () => {
   const navigation = useNavigation<ResultScreenNavigationProp>();
@@ -31,10 +42,13 @@ const ResultScreen: React.FC = () => {
           </Text>
           {questions.map((item, index) => (
             <View key={`result-${index}`} style={styles.resultItem}>
-              <Text style={styles.question} className="py-1 font-inknut text-sm">
-                {index + 1}. {item.question}
-              </Text>
-              <Text style={styles.correctAnswer} className="py-1 font-inknut text-sm">
+              <View style={styles.imageContainer}>
+                <Image
+                  source={typeof item.image === 'string' ? { uri: item.image } : item.image}
+                  style={styles.image}
+                />
+              </View>
+              <Text style={styles.correctAnswer} className="py-1 pt-8 font-inknut text-sm">
                 Correct: {item.correctAnswer}
               </Text>
               <Text
@@ -46,7 +60,7 @@ const ResultScreen: React.FC = () => {
           ))}
           <TouchableOpacity
             className="mt-5 rounded-lg bg-[#0E8341] py-3"
-            onPress={() => navigation.navigate('BarangayQuizScreen')}>
+            onPress={() => navigation.navigate('BalilihanTreasureQuizScreen')}>
             <Text className="text-center font-inknut text-[14px] text-white">Try Again</Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -71,6 +85,17 @@ const styles = StyleSheet.create({
   correctAnswer: { color: 'green' },
   correct: { color: 'green' },
   wrong: { color: 'red' },
+  imageContainer: {
+    width: '100%',
+    height: 230, // Fixed height
+    overflow: 'hidden', // Ensures no content goes beyond container
+    borderRadius: 20,
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover', // Makes the image cover the whole area while keeping aspect ratio
+  },
 });
 
 export default ResultScreen;

@@ -3,39 +3,45 @@ import {
   View,
   Text,
   TextInput,
-  Button,
   Image,
   StyleSheet,
-  Alert,
+  TouchableOpacity,
   SafeAreaView,
   StatusBar,
   ScrollView,
 } from 'react-native';
 import { AssesmentContainer } from 'components/AssesmentContainer';
 import banner from '../../assets/module_4/banner.png';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
+import { Ionicons } from '@expo/vector-icons';
 
 // List of barangays for the quiz
 const barangays = [
-  { id: 1, name: 'Barangay 1' },
-  { id: 2, name: 'Barangay 2' },
-  { id: 3, name: 'Barangay 3' },
-  { id: 4, name: 'Barangay 4' },
-  { id: 5, name: 'Barangay 5' },
-  { id: 6, name: 'Barangay 6' },
-  { id: 7, name: 'Barangay 7' },
-  { id: 8, name: 'Barangay 8' },
-  { id: 9, name: 'Barangay 9' },
-  { id: 10, name: 'Barangay 10' },
+  { id: 1, name: 'Cantomimbo' },
+  { id: 2, name: 'Sagasa' },
+  { id: 3, name: 'Boyog Proper' },
+  { id: 4, name: 'Hanopol Norte' },
+  { id: 5, name: 'Tagustusan' },
+  { id: 6, name: 'Del Carmen Norte' },
+  { id: 7, name: 'Cabad' },
+  { id: 8, name: 'Cantalid' },
+  { id: 9, name: 'Baucan Sur' },
+  { id: 10, name: 'Boctol' },
 ];
 
+type RootStackParamList = {
+  BalilihanExplorerHome: undefined;
+  BalilihanExplorer_2_Result: { answers: (string | null)[]; score: number };
+};
+
 export default function App() {
+  const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   const [currentIndex, setCurrentIndex] = useState(0); // Tracks the current barangay index
   const [answer, setAnswer] = useState(''); // Stores the user's answer
   const [score, setScore] = useState(0); // Stores the user's score
   const [timeLeft, setTimeLeft] = useState(120); // 2-minute timer (120 seconds)
+  const [userAnswers, setUserAnswers] = useState<(string | null)[]>([]);
 
   // Format the time as MM:SS
   const formatTime = (seconds: number) => {
@@ -45,43 +51,41 @@ export default function App() {
   };
 
   useEffect(() => {
-    // Decrease the timer every second
     if (timeLeft > 0) {
       const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
       return () => clearTimeout(timer);
     } else {
-      // When the timer runs out, show an alert and restart
-      Alert.alert("Time's up!", `Final Score: ${score}`, [{ text: 'Restart', onPress: resetGame }]);
+      navigation.navigate('BalilihanExplorer_2_Result', { answers: userAnswers, score });
     }
   }, [timeLeft]);
 
   const handleGuess = () => {
-    // Check if the answer is correct (case insensitive)
-    if (answer.trim().toLowerCase() === barangays[currentIndex].name.toLowerCase()) {
-      setScore(score + 1); // Increase score if correct
+    const userAnswer = answer.trim() || null;
+    setUserAnswers((prev) => [...prev, userAnswer]);
+
+    if (userAnswer?.toLowerCase() === barangays[currentIndex].name.toLowerCase()) {
+      setScore(score + 1);
     }
-    setAnswer(''); // Reset input field
-    nextQuestion(); // Move to next question
+
+    setAnswer('');
+    nextQuestion();
   };
 
   const nextQuestion = () => {
     if (currentIndex < barangays.length - 1) {
       setCurrentIndex(currentIndex + 1);
     } else {
-      // If all barangays are answered, show final score
-      Alert.alert('Quiz Complete!', `Final Score: ${score}`, [
-        { text: 'Restart', onPress: resetGame },
-      ]);
+      // Navigate to the results screen when the quiz is done
+      navigation.navigate('BalilihanExplorer_2_Result', { answers: userAnswers, score });
     }
   };
 
   const resetGame = () => {
     setCurrentIndex(0);
-    setScore(0);
+    const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
     setTimeLeft(120); // Reset to 2 minutes (120 seconds)
     setAnswer('');
   };
-  const navigation = useNavigation();
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -90,16 +94,25 @@ export default function App() {
       <View className="relative h-[130px] w-full overflow-hidden">
         <Image source={banner} className="h-full w-full" />
         <TouchableOpacity
-          onPress={() => navigation.goBack()}
+          onPress={() => navigation.navigate('BalilihanExplorerHome')}
           className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/30 p-2">
           <Ionicons name="arrow-back" size={30} color="#fff" />
         </TouchableOpacity>
+        <Text
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/4 py-1 font-inknut text-[16px] text-white"
+          style={{
+            textShadowColor: 'black', // Outline color
+            textShadowOffset: { width: 2, height: 2 }, // Stroke position
+            textShadowRadius: 8, // Spread
+          }}>
+          Guess That Barangay!
+        </Text>
       </View>
 
       <ScrollView>
         <AssesmentContainer>
           <View style={styles.container}>
-            <Text className="font-inknutSemiBold text-[18px]">Guess the Barangay!</Text>
+            {/* <Text className="font-inknutSemiBold text-[18px]">Guess the Barangay!</Text> */}
             <Image source={require('../../assets/module_5/BRGY MAP 2.png')} style={styles.map} />
             <Text style={styles.timer} className="font-inknut">
               Time Left: {formatTime(timeLeft)}
@@ -117,7 +130,7 @@ export default function App() {
             />
             <TouchableOpacity
               style={styles.button}
-              className="rounded-lg py-10"
+              className="rounded-lg py-4"
               onPress={handleGuess}>
               <Text className="text-center font-inknut text-[#FFF800]">Submit</Text>
             </TouchableOpacity>

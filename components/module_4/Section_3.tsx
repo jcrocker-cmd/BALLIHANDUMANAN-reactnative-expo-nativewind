@@ -7,7 +7,7 @@ const Section_3 = () => {
     <>
       {/* _______________________________JOURNEY TO THE TREASURES________________________________ */}
       <CollapsibleSubTitle name="JOURNEY TO THE TREASURES">
-        <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
+        <Text className="-pb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
           Before we explore Balilihan's unique cultural heritage, let's understand what cultural
           heritage means. It's everything—both tangible and intangible—that a community values and
           passes down through generations.{'\n'}

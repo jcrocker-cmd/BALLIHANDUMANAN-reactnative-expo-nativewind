@@ -7,7 +7,7 @@ const Section_11 = () => {
     <>
       {/* _______________________________TIME TO SHINE!________________________________ */}
       <CollapsibleSubTitle name="TIME TO SHINE!">
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-2 text-justify font-inknut text-[12px] leading-[24px]">
           Get ready to make history! Balilihan's Bicentennial Celebration—200 years of heritage,
           resilience, and faith—is fast approaching! In 2028, the Sumad Festival will be bigger and
           brighter than ever, and your team will design the program that makes it unforgettable.

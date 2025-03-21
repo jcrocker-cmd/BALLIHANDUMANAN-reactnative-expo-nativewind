@@ -3,6 +3,7 @@ import React from 'react';
 import { useState, useMemo, useCallback } from 'react';
 import CollapsibleSubTitle from 'components/CollapsibleSubTitle';
 import ImageViewer from 'components/common/ImageViewer';
+import { WebView } from 'react-native-webview';
 
 const Section_5 = () => {
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
@@ -52,13 +53,15 @@ const Section_5 = () => {
           spiritual and political guides throughout the years.
         </Text>
 
-        <TouchableOpacity
-          className="mb-4 mt-4 h-[230px] w-full overflow-hidden"
-          onPress={handlePress(0)}>
-          <Image source={images[0]} className="h-full w-full" />
-        </TouchableOpacity>
+        <View style={{ height: 205, width: '100%', marginVertical: 12 }}>
+          <WebView
+            source={{ uri: 'https://www.youtube.com/embed/zgApN1jv4vs' }}
+            allowsFullscreenVideo
+            style={{ height: 250, width: '100%' }}
+          />
+        </View>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-2 text-justify font-inknut text-[12px] leading-[24px]">
           Their enduring legacies—evident in the landmarks and traditions they left behind—stand as
           testaments to their tireless efforts, sacrifices, and unwavering dedication to the people
           of Balilihan.{'\n'}
@@ -68,7 +71,7 @@ const Section_5 = () => {
           for greater achievements. This continuous improvement spirit defines Balilihan, a
           community forever moving towards a brighter future.
         </Text>
-        <View className="mb-5 mt-2">
+        <View className="mb-4 mt-2">
           <TouchableOpacity className="h-[230px] w-full overflow-hidden" onPress={handlePress(1)}>
             <Image source={images[1]} className="h-full w-full" />
           </TouchableOpacity>
@@ -77,7 +80,7 @@ const Section_5 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-2 text-justify font-inknut text-[12px] leading-[24px]">
           According to the Philippine Statistics Authority, the municipality boasts a substantial
           population of 18,694 as of 2020. Improvements in education and healthcare have
           significantly shaped Balilihan's social landscape. Community-based organizations and
@@ -103,7 +106,7 @@ const Section_5 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-2 text-justify font-inknut text-[12px] leading-[24px]">
           Balilihan's vibrant cultural life is reflected in its annual celebrations.
           The Sumad Festival, held every September 29th, commemorates the town's founding.
         </Text>
@@ -114,7 +117,7 @@ const Section_5 = () => {
           <Image source={images[8]} className="h-full w-full" />
         </TouchableOpacity>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-2 text-justify font-inknut text-[12px] leading-[24px]">
           Religious festivities include the fiesta honoring Our Lady of Mount Carmel on July 16th
           and the celebration in honor of the Santo Niño at the Hanopol barrio on January 16th.
         </Text>
@@ -128,7 +131,7 @@ const Section_5 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-2 text-justify font-inknut text-[12px] leading-[24px]">
           These events unite the community, fostering a strong sense of shared identity and cultural
           pride, with the nightly activities adding a special dimension to the celebrations.{'\n'}
           Furthermore, Balilihan's rich heritage is preserved and celebrated through several sites
@@ -138,7 +141,7 @@ const Section_5 = () => {
           ongoing development of Balilihan's cultural tourism potential.
         </Text>
 
-        <View className="mb-5 mt-2">
+        <View className="mb-5 mt-3">
           <TouchableOpacity className="h-[230px] w-full overflow-hidden" onPress={handlePress(11)}>
             <Image source={images[11]} className="h-full w-full" />
           </TouchableOpacity>
@@ -147,14 +150,14 @@ const Section_5 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-2 text-justify font-inknut text-[12px] leading-[24px]">
           Balilihan's economy is built on a foundation of agriculture, with rice, corn,
           and livestock farming, and basket weaving forming its core. However, recognizing the
           potential for growth beyond agriculture, the municipality is actively developing its
           tourism sector.
         </Text>
 
-        <View className="mb-5 mt-2">
+        <View className="mb-5 mt-3">
           <TouchableOpacity className="h-[150px] w-full overflow-hidden" onPress={handlePress(13)}>
             <Image source={images[13]} className="h-full w-full" />
           </TouchableOpacity>
@@ -271,7 +274,7 @@ const Section_5 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance pb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px]">
           These accolades demonstrate Balilihan's dedication to effective governance, community
           well-being, and public safety.
         </Text>

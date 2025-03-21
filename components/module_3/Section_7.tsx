@@ -7,7 +7,7 @@ const Section_7 = () => {
     <>
       {/* _______________________________LET’S REFLECT!________________________________ */}
       <CollapsibleSubTitle name="LET’S REFLECT!">
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance pb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px]">
           After exploring Balilihan’s history in postwar, current conditions, and its municipal
           identity, take some time for personal reflection. Consider these questions to deepen your
           understanding and connect the information to your own experiences and perspectives.{'\n'}

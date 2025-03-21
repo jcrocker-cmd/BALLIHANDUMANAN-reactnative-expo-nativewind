@@ -55,7 +55,7 @@ const Section_6 = () => {
           onPress={handlePress(1)}>
           <Image source={images[1]} className="h-full w-full" />
         </TouchableOpacity>
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance pb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px]">
           Balilihan also played a significant role in the resistance movement, with Captain Lino I.
           Chatto and others actively participating. The Balilihan Bohol Regiment further contributed
           by supplying food—rice, corn, grits, chickens, and other provisions—to soldiers stationed

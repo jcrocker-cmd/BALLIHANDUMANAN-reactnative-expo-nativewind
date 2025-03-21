@@ -14,7 +14,7 @@ const Section_2 = () => {
           and listen attentively to the lyrics, allowing the music to resonate within you.
         </Text>
 
-        <View style={{ height: 250, width: '100%', marginVertical: 12 }}>
+        <View style={{ height: 205, width: '100%', marginVertical: 12 }}>
           <WebView
             source={{ uri: 'https://www.youtube.com/embed/Mo-xlvY8Kts' }}
             allowsFullscreenVideo
@@ -55,7 +55,7 @@ const Section_2 = () => {
           Balilihan sa kahangturan.
         </Text>
 
-        <Text className="mt-4 py-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
+        <Text className="pb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
           After you've watched and listened to the hymn, take a moment to reflect on these guide
           questions:{'\n'}
           {'\n'}1. What emotions are expressed in the hymn, and what parts of the lyrics touch you
