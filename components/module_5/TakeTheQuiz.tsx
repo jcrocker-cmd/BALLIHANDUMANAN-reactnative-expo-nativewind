@@ -18,8 +18,8 @@ import banner from '../../assets/module_4/banner.png';
 
 // Define your navigation types
 type RootStackParamList = {
-  Quiz: undefined;
-  Result: { answers: (string | null)[] };
+  TakeTheQuiz: undefined;
+  TakeTheQuizResultScreen: { answers: (string | null)[] };
 };
 
 type QuizScreenNavigationProp = StackNavigationProp<RootStackParamList, 'TakeTheQuiz'>;
@@ -50,7 +50,7 @@ const QuizScreen: React.FC = () => {
           <Ionicons name="arrow-back" size={30} color="#fff" />
         </TouchableOpacity>
         <Text
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/3 py-1 font-inknut text-[16px] text-white"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/4 py-1 font-inknut text-[16px] text-white"
           style={{
             textShadowColor: 'black', // Outline color
             textShadowOffset: { width: 2, height: 2 }, // Stroke position
@@ -85,8 +85,8 @@ const QuizScreen: React.FC = () => {
           )}
         />
 
-        <TouchableOpacity onPress={handleSubmit} className="rounded-lg bg-blue-500 p-3">
-          <Text className="text-center font-inknut text-white">Submit</Text>
+        <TouchableOpacity onPress={handleSubmit} className="rounded-lg bg-[#0E8341] p-3">
+          <Text className="text-center font-inknut text-[#FFF800]">Submit</Text>
         </TouchableOpacity>
       </Container>
     </SafeAreaView>

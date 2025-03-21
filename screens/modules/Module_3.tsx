@@ -41,10 +41,10 @@ const Module_3 = () => {
             <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
             <Section_2 />
             <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
-            <Section_3 />
+            {/* <Section_3 />
             <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
             <Section_4 />
-            <View className="mb-4 mt-4 h-[1px] w-full bg-[#0E8341]" />
+            <View className="mb-4 mt-2 h-[1px] w-full bg-[#0E8341]" />
             <Section_5 />
             <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
             <Section_6 />
@@ -53,7 +53,7 @@ const Module_3 = () => {
             <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
             <Section_8 />
             <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
-            <Section_9 />
+            <Section_9 /> */}
           </NormalContainer>
         </ScrollView>
       </SafeAreaView>

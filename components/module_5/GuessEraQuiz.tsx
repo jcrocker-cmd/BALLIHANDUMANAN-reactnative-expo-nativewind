@@ -18,8 +18,8 @@ import { useMemo } from 'react';
 
 // Define your navigation types
 type RootStackParamList = {
-  Quiz: undefined;
-  Result: { answers: (string | null)[] };
+  GuessEraQuizScreen: undefined;
+  GuessEraResultScreen: { answers: (string | null)[] };
 };
 
 type QuizScreenNavigationProp = StackNavigationProp<RootStackParamList, 'GuessEraQuizScreen'>;
@@ -118,8 +118,8 @@ const QuizScreen: React.FC = () => {
           )}
         />
 
-        <TouchableOpacity onPress={handleSubmit} className="rounded-lg bg-blue-500 p-3">
-          <Text className="text-center font-inknut text-white">Submit</Text>
+        <TouchableOpacity onPress={handleSubmit} className="rounded-lg bg-[#0E8341] p-3">
+          <Text className="text-center font-inknut text-[#FFF800]">Submit</Text>
         </TouchableOpacity>
       </Container>
     </SafeAreaView>

@@ -7,8 +7,8 @@ import { NormalContainer } from 'components/NormalContainer';
 
 // Define your navigation types
 type RootStackParamList = {
-  Quiz: undefined;
-  Result: { answers: (string | null)[] };
+  TakeTheQuizScreen: undefined;
+  TakeTheQuizResultScreen: { answers: (string | null)[] };
 };
 
 type ResultScreenNavigationProp = StackNavigationProp<

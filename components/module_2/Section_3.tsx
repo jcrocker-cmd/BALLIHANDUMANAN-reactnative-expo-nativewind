@@ -35,7 +35,7 @@ const Section_3 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
+        <Text className="-mb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
           <Text style={{ color: '#0E8341' }}>Colonization</Text> is the process by which one nation
           or power establishes and maintains political, economic, and social control over another
           territory and its people. This often involves the displacement of indigenous populations,

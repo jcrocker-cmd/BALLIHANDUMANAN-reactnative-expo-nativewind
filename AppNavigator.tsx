@@ -8,6 +8,7 @@ import Module_1 from './screens/modules/Module_1';
 import Module_2 from './screens/modules/Module_2';
 import Module_3 from './screens/modules/Module_3';
 import Module_4 from './screens/modules/Module_4';
+import Module_5 from './screens/modules/Module_5';
 import AboutApp from './screens/about/AboutAppScreen';
 import AboutAuthor from './screens/about/AboutAuthorScreen';
 import ObjectiveScreen from 'screens/about/ObjectiveScreen';
@@ -20,10 +21,15 @@ import GuessEraQuizScreen from 'components/module_5/GuessEraQuiz';
 import GuessEraResultScreen from 'components/module_5/GuessEraQuizResult';
 import BalilihanExplorerHome from './components/module_5/BalilihanExplorerHome';
 import BalilihanExplorer_1 from './components/module_5/BalilihanExplorer_1';
+import BalilihanExplorer_1_Result from 'components/module_5/BalilihanExplorer_1_Result';
+import BalilihanExplorer_2_Result from 'components/module_5/BalilihanExplorer_2_Result';
+import BalilihanExplorer_3_Result from 'components/module_5/BalilihanExplorer_3_Result';
 import BalilihanExplorer_2 from './components/module_5/BalilihanExplorer_2';
 import BalilihanExplorer_3 from './components/module_5/BalilihanExplorer_3';
+import BalilihanTreasureQuizScreen from 'components/module_5/BalilihanTreasureQuiz';
+import BalilihanTreasureQuizScreenResult from 'components/module_5/BalilihanTreasureQuizResult';
 import SampleLessonExemplar from 'components/module_5/SampleLessonExemplar';
-import Module_5 from './screens/modules/Module_5';
+import AnswerKeysScreen from 'components/module_5/AnswerKeys';
 
 const Stack = createStackNavigator();
 
@@ -33,7 +39,6 @@ export default function AppNavigator() {
       <Stack.Navigator
         initialRouteName="Loading"
         screenOptions={{
-          headerShown: false,
           animation: 'none', // Explicitly set no animation
         }}>
         <Stack.Screen name="Loading" component={LoadingScreen} options={{ headerShown: false }} />
@@ -92,6 +97,7 @@ export default function AppNavigator() {
           component={BalilihanExplorer_1}
           options={{ headerShown: false }}
         />
+
         <Stack.Screen
           name="BalilihanExplorer_2"
           component={BalilihanExplorer_2}
@@ -100,6 +106,21 @@ export default function AppNavigator() {
         <Stack.Screen
           name="BalilihanExplorer_3"
           component={BalilihanExplorer_3}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="BalilihanExplorer_1_Result"
+          component={BalilihanExplorer_1_Result}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="BalilihanExplorer_2_Result"
+          component={BalilihanExplorer_2_Result}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="BalilihanExplorer_3_Result"
+          component={BalilihanExplorer_3_Result}
           options={{ headerShown: false }}
         />
 
@@ -112,6 +133,21 @@ export default function AppNavigator() {
         <Stack.Screen
           name="SampleLessonExemplar"
           component={SampleLessonExemplar}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="BalilihanTreasureQuizScreen"
+          component={BalilihanTreasureQuizScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="BalilihanTreasureQuizScreenResult"
+          component={BalilihanTreasureQuizScreenResult}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="AnswerKeysScreen"
+          component={AnswerKeysScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

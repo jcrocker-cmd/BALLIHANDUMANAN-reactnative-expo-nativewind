@@ -75,7 +75,7 @@ const Section_5 = () => {
           </Text>
         </View>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance pb-2 pt-1 text-justify font-inknut text-[12px] leading-[24px]">
           From what has been said, Balilihan was not born in a bed of roses but out of a cradle of
           thorns and bruises. <Text style={{ color: '#0E8341' }}>World War II</Text>
            brought a new wave of hardship to Balilihan. The Japanese established a garrison in the

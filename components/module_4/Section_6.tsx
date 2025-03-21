@@ -213,7 +213,7 @@ const Section_6 = () => {
           <Image source={images[23]} className="h-full w-full" />
         </TouchableOpacity>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="-pb-5 text-balance pt-2 text-justify font-inknut text-[12px] leading-[24px]">
           Official Turnover of the newly-rehabilitated Plaza Rizal, with the Old Municipal Hall and
           the Our Lady of Mt. Carmel Parish, from the National Museum represented by Director
           General Jeremy Barnes to LGU Balilihan.{'\n'}

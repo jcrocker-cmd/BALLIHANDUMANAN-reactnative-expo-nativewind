@@ -7,7 +7,7 @@ const Section_10 = () => {
     <>
       {/* _______________________________LET’S REFLECT!________________________________ */}
       <CollapsibleSubTitle name="LET’S REFLECT!">
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance pb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px]">
           After learning about Balilihan's rich cultural heritage, take some time for reflection
           using the following guide questions:{'\n'}
           1. What aspects of Balilihan's history and culture resonated most with you, and why?
