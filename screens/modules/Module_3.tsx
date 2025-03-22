@@ -41,10 +41,10 @@ const Module_3 = () => {
             <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
             <Section_2 />
             <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
-            {/* <Section_3 />
+            <Section_3 />
             <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
             <Section_4 />
-            <View className="mb-4 mt-2 h-[1px] w-full bg-[#0E8341]" />
+            {/* <View className="mb-4 mt-2 h-[1px] w-full bg-[#0E8341]" />
             <Section_5 />
             <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
             <Section_6 />

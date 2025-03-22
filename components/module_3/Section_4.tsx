@@ -3,23 +3,36 @@ import React from 'react';
 import { useState, useMemo, useCallback } from 'react';
 import CollapsibleSubTitle from 'components/CollapsibleSubTitle';
 import ImageViewer from 'components/common/ImageViewer';
+import FastImage from 'expo-fast-image';
 
 const Section_4 = () => {
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
   const onClose = useCallback(() => setVisibleIndex(null), []);
   const handlePress = useCallback((index: number) => () => setVisibleIndex(index), []);
   const images = useMemo(
-    () => [require('../../assets/module_3/pic_1.png'), require('../../assets/module_3/pic_2.png')],
+    () => [
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742557985/5.a_Turnover_and_Acceptance_Ceremonies_in_2017_kh83qy.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742557986/4.Destruction_of_the_Belfry_after_the_2013_Bohol_Earthquake_hanqqx.jpg',
+      },
+    ],
     []
   );
+
   return (
     <>
       {/* _______________________________BALILIHAN DURING THE POST-WAR________________________________ */}
       <CollapsibleSubTitle name="BALILIHAN DURING THE POST-WAR">
         <TouchableOpacity
           className="mb-4 mt-4 h-[240px] w-full overflow-hidden"
-          onPress={() => handlePress(0)}>
-          <Image source={images[0]} className="h-full w-full" />
+          onPress={handlePress(0)}>
+          <FastImage
+            source={images[0]}
+            style={{ width: '100%', height: '100%' }}
+            resizeMode="cover"
+          />
         </TouchableOpacity>
 
         <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
@@ -32,8 +45,12 @@ const Section_4 = () => {
 
         <TouchableOpacity
           className="mb-4 mt-4 h-[240px] w-full overflow-hidden"
-          onPress={() => handlePress(1)}>
-          <Image source={images[1]} className="h-full w-full" />
+          onPress={handlePress(1)}>
+          <FastImage
+            source={images[1]}
+            style={{ width: '100%', height: '100%' }}
+            resizeMode="cover"
+          />
         </TouchableOpacity>
 
         <Text className="pb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">

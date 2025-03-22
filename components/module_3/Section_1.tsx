@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from 'react-native';
-import GoogleMapsWebView from 'components/GoogleMaps';
+// import GoogleMapsWebView from 'components/GoogleMaps';
 import CollapsibleSubTitle from '../CollapsibleSubTitle';
 
 const Section_1 = () => {
@@ -20,7 +20,7 @@ const Section_1 = () => {
           cultivate a sense of pride and responsibility towards Balilihan's continued growth and
           betterment.
         </Text>
-        <GoogleMapsWebView />
+        {/* <GoogleMapsWebView /> */}
       </CollapsibleSubTitle>
     </>
   );

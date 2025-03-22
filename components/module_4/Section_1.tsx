@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from 'react-native';
-import GoogleMapsWebView from 'components/GoogleMaps';
+// import GoogleMapsWebView from 'components/GoogleMaps';
 import CollapsibleSubTitle from '../CollapsibleSubTitle';
 
 const Section_1 = () => {
@@ -15,7 +15,7 @@ const Section_1 = () => {
           intangible, and exploring their significance to the community. You'll learn why protecting
           these treasures is vital, not just for Balilihan's present, but for its future.
         </Text>
-        <GoogleMapsWebView />
+        {/* <GoogleMapsWebView /> */}
       </CollapsibleSubTitle>
     </>
   );

@@ -8,6 +8,12 @@ const Section_4 = () => {
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
   const onClose = useCallback(() => setVisibleIndex(null), []);
   const handlePress = useCallback((index: number) => () => setVisibleIndex(index), []);
+
+  const [visibleImages, setVisibleImages] = useState<{ [key: number]: boolean }>({});
+
+  const onImageVisible = (index: number) => {
+    setVisibleImages((prev) => ({ ...prev, [index]: true }));
+  };
   const images = useMemo(
     () => [
       require('../../assets/module_4/1. Belfry/1.Old Photo Belfry 2.jpg'),
@@ -30,11 +36,21 @@ const Section_4 = () => {
       {/* _______________________________BALILIHAN BELFRY________________________________ */}
       <CollapsibleSubTitle name="BALILIHAN BELFRY">
         <View className="mb-5 mt-2 flex w-full flex-row">
-          <TouchableOpacity className="h-[250px] w-1/2 overflow-hidden" onPress={handlePress(0)}>
-            <Image source={images[0]} className="h-full w-full" />
+          <TouchableOpacity
+            className="h-[250px] w-1/2 overflow-hidden"
+            onPress={handlePress(0)}
+            onLayout={() => onImageVisible(0)}>
+            {visibleImages[0] && (
+              <Image source={images[0]} className="h-full w-full object-contain" />
+            )}
           </TouchableOpacity>
-          <TouchableOpacity className="h-[250px] w-1/2 overflow-hidden" onPress={handlePress(1)}>
-            <Image source={images[1]} className="h-full w-full" />
+          <TouchableOpacity
+            className="h-[250px] w-1/2 overflow-hidden"
+            onPress={handlePress(1)}
+            onLayout={() => onImageVisible(1)}>
+            {visibleImages[1] && (
+              <Image source={images[1]} className="h-full w-full object-contain" />
+            )}
           </TouchableOpacity>
         </View>
         <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
@@ -49,8 +65,13 @@ const Section_4 = () => {
         </Text>
 
         <View className="mb-1 mt-2 flex w-full flex-row items-start">
-          <TouchableOpacity className="h-[250px] w-[45%] overflow-hidden" onPress={handlePress(2)}>
-            <Image source={images[2]} className="h-full w-full" />
+          <TouchableOpacity
+            className="h-[250px] w-[45%] overflow-hidden"
+            onPress={handlePress(2)}
+            onLayout={() => onImageVisible(2)}>
+            {visibleImages[2] && (
+              <Image source={images[2]} className="h-full w-full object-contain" />
+            )}
           </TouchableOpacity>
           <Text className="flex-1 py-1 pl-3 text-justify font-inknut text-[12px] leading-[20px]">
             This quadrilateral tower made of {'\n'}cut coral stone, transported from Baclayon by
@@ -68,21 +89,41 @@ const Section_4 = () => {
             It withstood numerous typhoons until the devastating 7.2 magnitude earthquake of October
             15, 2013, caused its collapse.
           </Text>
-          <TouchableOpacity className="h-[200px] w-[45%] overflow-hidden" onPress={handlePress(3)}>
-            <Image source={images[3]} className="h-full w-full" />
+          <TouchableOpacity
+            className="h-[200px] w-[45%] overflow-hidden"
+            onPress={handlePress(3)}
+            onLayout={() => onImageVisible(3)}>
+            {visibleImages[3] && (
+              <Image source={images[3]} className="h-full w-full object-contain" />
+            )}
           </TouchableOpacity>
         </View>
 
         <View className="mb-5 flex flex-row">
-          <TouchableOpacity className="h-[240px] w-[40%] overflow-hidden" onPress={handlePress(4)}>
-            <Image source={images[4]} className="h-full w-full" />
+          <TouchableOpacity
+            className="h-[240px] w-[40%] overflow-hidden"
+            onPress={handlePress(4)}
+            onLayout={() => onImageVisible(4)}>
+            {visibleImages[4] && (
+              <Image source={images[4]} className="h-full w-full object-contain" />
+            )}
           </TouchableOpacity>
           <View className="w-[60%]">
-            <TouchableOpacity className="h-[120px] w-full overflow-hidden" onPress={handlePress(5)}>
-              <Image source={images[5]} className="h-full w-full" />
+            <TouchableOpacity
+              className="h-[120px] w-full overflow-hidden"
+              onPress={handlePress(5)}
+              onLayout={() => onImageVisible(5)}>
+              {visibleImages[5] && (
+                <Image source={images[5]} className="h-full w-full object-contain" />
+              )}
             </TouchableOpacity>
-            <TouchableOpacity className="h-[120px] w-full overflow-hidden" onPress={handlePress(7)}>
-              <Image source={images[6]} className="h-full w-full" />
+            <TouchableOpacity
+              className="h-[120px] w-full overflow-hidden"
+              onPress={handlePress(7)}
+              onLayout={() => onImageVisible(6)}>
+              {visibleImages[6] && (
+                <Image source={images[6]} className="h-full w-full object-contain" />
+              )}
             </TouchableOpacity>
           </View>
         </View>
@@ -95,11 +136,21 @@ const Section_4 = () => {
         </Text>
 
         <View className="mb-5 mt-2">
-          <TouchableOpacity className="h-[230px] w-full overflow-hidden" onPress={handlePress(7)}>
-            <Image source={images[7]} className="h-full w-full" />
+          <TouchableOpacity
+            className="h-[230px] w-full overflow-hidden"
+            onPress={handlePress(7)}
+            onLayout={() => onImageVisible(7)}>
+            {visibleImages[7] && (
+              <Image source={images[7]} className="h-full w-full object-contain" />
+            )}
           </TouchableOpacity>
-          <TouchableOpacity className="h-[230px] w-full overflow-hidden" onPress={handlePress(8)}>
-            <Image source={images[8]} className="h-full w-full" />
+          <TouchableOpacity
+            className="h-[230px] w-full overflow-hidden"
+            onPress={handlePress(8)}
+            onLayout={() => onImageVisible(8)}>
+            {visibleImages[8] && (
+              <Image source={images[8]} className="h-full w-full object-contain" />
+            )}
           </TouchableOpacity>
         </View>
 
@@ -112,19 +163,30 @@ const Section_4 = () => {
         </Text>
 
         <View className="-mt-2 mb-5 flex flex-row">
-          <TouchableOpacity className="h-[260px] w-[40%] overflow-hidden" onPress={handlePress(9)}>
-            <Image source={images[9]} className="h-full w-full" />
+          <TouchableOpacity
+            className="h-[260px] w-[40%] overflow-hidden"
+            onPress={handlePress(9)}
+            onLayout={() => onImageVisible(9)}>
+            {visibleImages[9] && (
+              <Image source={images[9]} className="h-full w-full object-contain" />
+            )}
           </TouchableOpacity>
           <View className="w-[60%]">
             <TouchableOpacity
               className="h-[130px] w-full overflow-hidden"
-              onPress={handlePress(10)}>
-              <Image source={images[10]} className="h-full w-full" />
+              onPress={handlePress(10)}
+              onLayout={() => onImageVisible(10)}>
+              {visibleImages[10] && (
+                <Image source={images[10]} className="h-full w-full object-contain" />
+              )}
             </TouchableOpacity>
             <TouchableOpacity
               className="h-[130px] w-full overflow-hidden"
-              onPress={handlePress(11)}>
-              <Image source={images[11]} className="h-full w-full" />
+              onPress={handlePress(11)}
+              onLayout={() => onImageVisible(11)}>
+              {visibleImages[11] && (
+                <Image source={images[11]} className="h-full w-full object-contain" />
+              )}
             </TouchableOpacity>
           </View>
         </View>
