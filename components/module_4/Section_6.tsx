@@ -41,7 +41,7 @@ const Section_6 = () => {
     <>
       {/* _______________________________BALILIHAN MUNICIPAL PLAZA & PARK________________________________ */}
       <CollapsibleSubTitle name={`BALILIHAN MUNICIPAL PLAZA\n& PARK`}>
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>The Balilihan Municipal Plaza and Park </Text>
           (also known as Plaza Rizal or Balilihan Plaza) serves as its vibrant heart, a green escape
           attracting visitors with its lush landscaping. Lined with beautifully trimmed gumamela and
@@ -66,7 +66,7 @@ const Section_6 = () => {
           The Balilihan Plaza before and after the restoration.
         </Text>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           Rectangular plots of balili and bermuda grass divide the space, which is surrounded by a
           mix of residential homes and important community buildings.
         </Text>
@@ -80,10 +80,10 @@ const Section_6 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-3 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-3 text-justify font-inknut text-[11px] leading-[24px]">
           These include the municipal health building, a senior citizen center, a daycare center,
           Carmel Academy (the town's oldest secondary school), and the Our Lady of Mount Carmel
-          ParishChurch. A portion of land in front of the church, donated to the parish, is
+          Parish Church. A portion of land in front of the church, donated to the parish, is
           separated from the plaza by the main street.
         </Text>
 
@@ -115,7 +115,7 @@ const Section_6 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-2 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-2 text-justify font-inknut text-[11px] leading-[24px]">
           Balilihan's town plaza offers a variety of recreational amenities, including a kiosk,
           veterans' mark, lawn tennis court, and children's playground. This green space provides
           vital connections to nature, encouraging physical activity and community engagement.
@@ -146,7 +146,7 @@ const Section_6 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           Another built heritage found in the plaza is the Rizal Monument. It is a tribute to the
           martyrdom of Dr. Jose Rizal, constructed before the Second World War.
         </Text>
@@ -166,7 +166,7 @@ const Section_6 = () => {
           <Image source={images[17]} className="h-full w-full" />
         </TouchableOpacity>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           Initiated by former town Mayor Blas Asunto in 1918, its construction took nearly eight
           years, culminating in its inauguration on September 21, 1926, under the leadership of then
           Municipal Mayor Eduardo Racho. The monument features a life-sized bronze sculpture of
@@ -202,7 +202,7 @@ const Section_6 = () => {
           Vintage photos at the Balilihan Plaza in 1960’s.
         </Text>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           Under former Mayor Eladio I. Chatto Sr., significant beautification projects were
           undertaken, including constructing cemented roads, planting banaba trees, and establishing
           the tennis court in 1983.
@@ -217,7 +217,7 @@ const Section_6 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           Balilihan's town plaza achieved national recognition in 1969-1970, winning first prize in
           a regional beautification and cleanliness contest. This prestigious award significantly
           boosted the town's popularity throughout the province, attracting many visitors from
@@ -230,7 +230,7 @@ const Section_6 = () => {
           <Image source={images[23]} className="h-full w-full" />
         </TouchableOpacity>
 
-        <Text className="-pb-5 text-balance pt-2 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance pb-5 pt-2 text-justify font-inknut text-[11px] leading-[24px]">
           Official Turnover of the newly-rehabilitated Plaza Rizal, with the Old Municipal Hall and
           the Our Lady of Mt. Carmel Parish, from the National Museum represented by Director
           General Jeremy Barnes to LGU Balilihan.{'\n'}

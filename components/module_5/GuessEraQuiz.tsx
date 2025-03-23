@@ -64,10 +64,10 @@ const QuizScreen: React.FC = () => {
         <TouchableOpacity
           onPress={() => navigation.goBack()}
           className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/30 p-2">
-          <Ionicons name="arrow-back" size={30} color="#fff" />
+          <Ionicons name="arrow-back" size={25} color="#fff" />
         </TouchableOpacity>
         <Text
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/4 py-1 font-inknut text-[16px] text-white"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/4 py-1 font-inknut text-[14px] text-white"
           style={{
             textShadowColor: 'black', // Outline color
             textShadowOffset: { width: 2, height: 2 }, // Stroke position
@@ -80,10 +80,10 @@ const QuizScreen: React.FC = () => {
         <FlatList
           ListHeaderComponent={
             <View>
-              <Text className="mb-2 text-center font-inknutSemiBold text-[16px] text-white">
+              <Text className="mb-2 text-center font-inknutSemiBold text-[14px] text-white">
                 GUESS THAT ERA!
               </Text>
-              <Text className="mb-5 py-1 font-inknut text-base text-white">
+              <Text className="mb-5 py-1 font-inknut text-[12px] leading-[22px] text-white">
                 Read each event description carefully and identify which period of occupation
                 (Spanish, American, or Japanese) it describes. To answer each item, they must choose
                 the correct flag by selecting the appropriate option:
@@ -94,7 +94,9 @@ const QuizScreen: React.FC = () => {
                     <TouchableOpacity className="h-[60px] w-[80%] overflow-hidden">
                       <Image source={images.spain} className="h-full w-full" />
                     </TouchableOpacity>
-                    <Text className="py-2 text-center font-inknut text-white">Spanish</Text>
+                    <Text className="py-2 text-center font-inknut text-[12px] text-white ">
+                      Spanish
+                    </Text>
                   </View>
                 </View>
 
@@ -103,7 +105,9 @@ const QuizScreen: React.FC = () => {
                     <TouchableOpacity className="h-[60px] w-[80%] overflow-hidden">
                       <Image source={images.us} className="h-full w-full" />
                     </TouchableOpacity>
-                    <Text className="py-2 text-center font-inknut text-white">American</Text>
+                    <Text className="py-2 text-center font-inknut text-[12px] text-white ">
+                      American
+                    </Text>
                   </View>
                 </View>
                 <View className="w-1/3">
@@ -111,7 +115,9 @@ const QuizScreen: React.FC = () => {
                     <TouchableOpacity className="h-[60px] w-[80%] overflow-hidden">
                       <Image source={images.japan} className="h-full w-full" />
                     </TouchableOpacity>
-                    <Text className="py-2 text-center font-inknut text-white">Japanese</Text>
+                    <Text className="py-2 text-center font-inknut text-[12px] text-white ">
+                      Japanese
+                    </Text>
                   </View>
                 </View>
               </View>
@@ -122,7 +128,9 @@ const QuizScreen: React.FC = () => {
           keyExtractor={(item, index) => `question-${index}`}
           renderItem={({ item, index }) => (
             <View style={styles.questionContainer}>
-              <Text style={styles.question} className="py-1 font-inknut text-base text-white">
+              <Text
+                style={styles.question}
+                className="py-1 font-inknut text-[12px] leading-[22px] text-white">
                 {index + 1}. {item.question}
               </Text>
               {item.options.map((option) => (
@@ -132,7 +140,7 @@ const QuizScreen: React.FC = () => {
                   style={[styles.option, answers[index] === option && styles.selectedOption]}>
                   <Text
                     style={styles.optionText}
-                    className="text font-inknut text-[13px] text-[#0E8341]">
+                    className="text font-inknut text-[12px] text-[#0E8341]">
                     {option}
                   </Text>
                 </TouchableOpacity>
@@ -142,7 +150,7 @@ const QuizScreen: React.FC = () => {
         />
 
         <TouchableOpacity onPress={handleSubmit} className="rounded-lg bg-[#0E8341] p-3">
-          <Text className="text-center font-inknut text-[#FFF800]">Submit</Text>
+          <Text className="text-center font-inknut text-[12px] text-[#FFF800]">Submit</Text>
         </TouchableOpacity>
       </Container>
     </SafeAreaView>

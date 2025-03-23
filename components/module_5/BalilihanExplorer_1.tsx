@@ -51,6 +51,7 @@ export default function App() {
       setAnswer('');
       setScore(0);
       setUserAnswers([]);
+      setTimeLeft(120); // Reset the timer
     }, [])
   );
 
@@ -62,13 +63,21 @@ export default function App() {
   };
 
   useEffect(() => {
+    let timer: NodeJS.Timeout;
+
     if (timeLeft > 0) {
-      const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
-      return () => clearTimeout(timer);
+      timer = setInterval(() => {
+        setTimeLeft((prev) => prev - 1);
+      }, 1000);
     } else {
-      navigation.navigate('BalilihanExplorer_1_Result', { answers: userAnswers, score });
+      navigation.reset({
+        index: 0,
+        routes: [{ name: 'BalilihanExplorer_1_Result', params: { answers: userAnswers, score } }],
+      });
     }
-  }, [timeLeft]);
+
+    return () => clearInterval(timer);
+  }, [timeLeft, navigation, userAnswers, score]);
 
   const handleGuess = () => {
     if (currentIndex >= barangays.length) {
@@ -113,10 +122,10 @@ export default function App() {
         <TouchableOpacity
           onPress={() => navigation.navigate('BalilihanExplorerHome')}
           className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/30 p-2">
-          <Ionicons name="arrow-back" size={30} color="#fff" />
+          <Ionicons name="arrow-back" size={25} color="#fff" />
         </TouchableOpacity>
         <Text
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/4 py-1 font-inknut text-[16px] text-white"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/4 py-1 font-inknut text-[14px] text-white"
           style={{
             textShadowColor: 'black', // Outline color
             textShadowOffset: { width: 2, height: 2 }, // Stroke position
@@ -131,10 +140,10 @@ export default function App() {
           <View style={styles.container}>
             {/* <Text className="font-inknutSemiBold text-[18px]">Guess the Barangay!</Text> */}
             <Image source={require('../../assets/module_5/BRGY MAP 1.png')} style={styles.map} />
-            <Text style={styles.timer} className="font-inknut">
+            <Text style={styles.timer} className="font-inknut text-[14px]">
               Time Left: {formatTime(timeLeft)}
             </Text>
-            <Text style={styles.question} className="font-inknut text-[16px]">
+            <Text style={styles.question} className="font-inknut text-[14px]">
               Which barangay is #{barangays[currentIndex].id}?
             </Text>
             <TextInput
@@ -153,7 +162,7 @@ export default function App() {
               className="rounded-lg py-4"
               onPress={handleGuess}
               disabled={currentIndex >= barangays.length}>
-              <Text className="text-center font-inknut text-[#FFF800]">Submit</Text>
+              <Text className="text-center font-inknut text-[14px] text-[#FFF800]">Submit</Text>
             </TouchableOpacity>
 
             {/* <Text style={styles.score}>Score: {score}</Text> */}
@@ -178,7 +187,6 @@ const styles = StyleSheet.create({
     // borderWidth: 1,
   },
   timer: {
-    fontSize: 16,
     color: 'red',
   },
   question: {
@@ -194,8 +202,8 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: '#0E8341',
     borderRadius: 8, // Adjust this value as needed
-    paddingVertical: 10,
-    paddingHorizontal: 50,
+    paddingVertical: 5,
+    paddingHorizontal: 40,
     alignItems: 'center', // Centers text inside the button
   },
   score: {

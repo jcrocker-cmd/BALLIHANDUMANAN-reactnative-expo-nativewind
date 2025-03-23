@@ -7,7 +7,7 @@ const Section_3 = () => {
     <>
       {/* _______________________________JOURNEY TO THE TREASURES________________________________ */}
       <CollapsibleSubTitle name="JOURNEY TO THE TREASURES">
-        <Text className="-pb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
+        <Text className="-pb-5 pt-2 text-justify font-inknut text-[11px] leading-[24px] max-xs:text-base">
           Before we explore Balilihan's unique cultural heritage, let's understand what cultural
           heritage means. It's everything—both tangible and intangible—that a community values and
           passes down through generations.{'\n'}
@@ -18,10 +18,10 @@ const Section_3 = () => {
           <Text style={{ color: '#0E8341' }}>Natural Heritage</Text> - Environments, landscapes, and
           natural resources like land and water.{'\n'}•{' '}
           <Text style={{ color: '#0E8341' }}>Built/Immovable Heritage</Text> - Structures like
-          schools, government buildings, markets, bridges, parks, houses, and religious sites. •
-          Movable Heritage - Things created by people, like paintings, sculptures, furniture,
-          religious artifacts, and examples of traditional crafts (farming, fishing, baking,
-          carpentry, etc.).{'\n'}
+          schools, government buildings, markets, bridges, parks, houses, and religious sites.{'\n'}
+          • <Text style={{ color: '#0E8341' }}>Movable Heritage</Text> - Things created by people,
+          like paintings, sculptures, furniture, religious artifacts, and examples of traditional
+          crafts (farming, fishing, baking, carpentry, etc.).{'\n'}
           {'\n'}
           <Text style={{ color: '#0E8341' }}>Intangible Heritage </Text>is less about physical
           things and more about practices, beliefs, and knowledge such as

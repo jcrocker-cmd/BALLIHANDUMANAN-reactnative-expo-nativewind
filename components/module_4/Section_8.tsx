@@ -44,7 +44,7 @@ const Section_8 = () => {
     <>
       {/* _______________________________SUMAD FESTIVAL________________________________ */}
       <CollapsibleSubTitle name="SUMAD FESTIVAL">
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           Balilihan's <Text style={{ color: '#0E8341' }}>Sumad Festival</Text>, celebrated annually
           on September 29th, commemorates the municipality's founding. "Sumad", locally means
           “anniversary”, signifies the accumulation of wisdom and experience over the years,
@@ -76,7 +76,7 @@ const Section_8 = () => {
           The Balilihan Sumad celebration then and now.
         </Text>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           Officially declared Balilihan Day (or Sumad) in 1993 through Resolution No.
           93-23-A—sponsored by Hon. Ambrosio L. Bayud, adopted on March 22, 1993, attested by Vice
           Mayor Dominisio Chatto, and approved by then-Mayor Edgar M. Chatto, with SB Secretary
@@ -102,10 +102,10 @@ const Section_8 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           This evolved into a two-day event (1994-1997), incorporating an agro-industrial fair, a
-          beauty pageant ("Mutya ng Balilihan"), and a community awards ceremony. In 1998, the
-          SumadFestival expanded to a week-long celebration based on Section 122, Chapter 9 of the
+          beauty pageant ("Mutya ng Balilihan"), and a community awards ceremony. In 1998, the Sumad
+          Festival expanded to a week-long celebration based on Section 122, Chapter 9 of the
           Municipal Environment Code, adopted by the Sangguniang Bayan on March 25, 1998, attested
           by Vice Mayor Dominisio Chatto (presiding officer), and approved by Mayor Eladio I. Chatto
           on April 13, 1998.
@@ -138,7 +138,7 @@ const Section_8 = () => {
           The annual Balilihan Sumad Agro-Fair.
         </Text>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           Today, the festival attracts both local and international tourists, featuring an agro-fair
           showcasing each barangay's agricultural products, a Sumad Festival King and Queen pageant
           (with agriculture-themed costumes), a fun run, a food bazaar ("Painit Festival"), a
@@ -199,7 +199,7 @@ const Section_8 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           The festival holds a particularly poignant significance since the passing of Balilihan's
           longest-serving mayor, Eladio I. Chatto ("Tiyo Kiking"), on September 29, 2001, during the
           173rd Foundation Day celebration.
@@ -223,7 +223,7 @@ const Section_8 = () => {
           </View>
         </View>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           In 2009, Republic Act No. 9706—sponsored by Congressman Edgar M. Chatto and passed by the
           House of Representatives on December 3, 2008, and the Senate on May 26, 2009—officially
           declared September 29th a special non-working public holiday in Balilihan, signed into law

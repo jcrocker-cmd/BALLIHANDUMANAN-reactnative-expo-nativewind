@@ -8,7 +8,7 @@ const Section_1 = () => {
       {/* _______________________________What I need to know?________________________________ */}
       <CollapsibleSubTitle name="What I need to know?">
         <View style={{ flex: 1 }}>
-          <Text className="pb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
+          <Text className="pb-5 pt-2 text-justify font-inknut text-[11px] leading-[24px] max-xs:text-base">
             This chapter delves into the historical experiences of Balilihan that reflects the
             broader patterns of colonization that have profoundly shaped the Philippines into what
             it is today. We will examine the significant events that shaped Balilihan during the

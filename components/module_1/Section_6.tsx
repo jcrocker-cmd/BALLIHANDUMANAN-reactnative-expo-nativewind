@@ -14,7 +14,7 @@ const Section_6 = () => {
       {/* _______________________________Time to Shine!________________________________ */}
       <CollapsibleSubTitle name="TIME TO SHINE!">
         <View style={{ flex: 1 }}>
-          <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+          <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
             Create a timeline showcasing the key events in the origin of Balilihan, including its
             creation, territorial changes, and annexations. Review the information you’ve learned
             from the discussions. Organize your timeline using the format provided below.

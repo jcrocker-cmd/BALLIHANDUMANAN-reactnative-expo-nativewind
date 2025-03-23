@@ -8,7 +8,7 @@ const Section_2 = () => {
     <>
       {/* _______________________________Let's Do This!________________________________ */}
       <CollapsibleSubTitle name="let’s do this!">
-        <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="py-2 text-justify font-inknut text-[11px] leading-[24px]">
           To begin our exploration of Balilihan's postwar history and beyond, we invite you to
           listen to the moving hymn, "Balilihan sa Kahangturan." Watch the video presentation below
           and listen attentively to the lyrics, allowing the music to resonate within you.
@@ -27,7 +27,7 @@ const Section_2 = () => {
           “Balilihan sa Kahangturan”
         </Text>
         <Text
-          className="py-2 text-center font-inknut text-[12px] leading-[24px]"
+          className="py-2 text-center font-inknut text-[11px] leading-[24px]"
           style={{ color: '#0E8341' }}>
           Kabalilhan diha sa imong ngalan,{'\n'}
           Duyog ang kusog sa yanong buhilaman,{'\n'}
@@ -55,7 +55,7 @@ const Section_2 = () => {
           Balilihan sa kahangturan.
         </Text>
 
-        <Text className="pb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
+        <Text className="pb-5 pt-2 text-justify font-inknut text-[11px] leading-[24px] max-xs:text-base">
           After you've watched and listened to the hymn, take a moment to reflect on these guide
           questions:{'\n'}
           {'\n'}1. What emotions are expressed in the hymn, and what parts of the lyrics touch you

@@ -29,7 +29,7 @@ const Section_4 = () => {
           Japanese occupation in the Philippines.
         </Text>
 
-        <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
+        <Text className="py-2 text-justify font-inknut text-[11px] leading-[24px] max-xs:text-base">
           The liberation from Japanese rule was met with joyous celebrations. People emerged from
           their mountain hideouts, eager to embrace freedom under American tutelage. A spirit of
           rebuilding swept through the community; everyone worked tirelessly to repair their homes
@@ -53,7 +53,7 @@ const Section_4 = () => {
           1946.
         </Text>
 
-        <Text className="pb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
+        <Text className="pb-5 pt-2 text-justify font-inknut text-[11px] leading-[24px] max-xs:text-base">
           This renewed hope was powerfully symbolized on Independence Day, July 4, 1946, when all
           the children, including those born during the war ("war babies"), gathered in the town
           plaza around the Rizal monument, representing a bright new future for the next generation.

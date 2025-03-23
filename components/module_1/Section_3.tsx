@@ -28,7 +28,7 @@ const Section_3 = () => {
       {/* _______________________________Journey to the Beginning________________________________ */}
       <CollapsibleSubTitle name="journey to the beginning">
         <View style={{ flex: 1 }}>
-          <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
+          <Text className="py-2 text-justify font-inknut text-[11px] leading-[24px] max-xs:text-base">
             After completing both activities, it’s time to watch a short video clip about the town’s
             origins and how it was started. Afterward, please share your thoughts and reflections on
             what you’ve learned.
@@ -43,7 +43,7 @@ const Section_3 = () => {
           />
         </View>
         <View style={{ flex: 1 }}>
-          <Text className="py-1 text-center font-inknut text-[12px] uppercase  leading-[24px]">
+          <Text className="py-1 text-center font-inknut text-[11px] uppercase  leading-[24px]">
             BALILIHAN’S FORMAL ESTABLISHMENT, TERRITORIAL CHANGES, AND ANNEXATIONS
           </Text>
         </View>
@@ -59,7 +59,7 @@ const Section_3 = () => {
           </TouchableOpacity>
           <View className="flex-1 pl-3">
             <View style={{ flex: 1 }}>
-              <Text className="py-1 text-justify font-inknut text-[12px] leading-[20px]">
+              <Text className="py-1 text-justify font-inknut text-[11px] leading-[20px]">
                 Balilihan's history is intertwined with the evolving political landscape of the
                 Philippines. Initially, under Spanish rule, Bohol fell under the jurisdiction of
                 Cebu. Balilihan, a significant <Text style={{ fontStyle: 'italic' }}>pueblo</Text>{' '}
@@ -70,7 +70,7 @@ const Section_3 = () => {
           </View>
         </View>
         <View style={{ flex: 1 }}>
-          <Text className="py-1 text-justify font-inknut text-[12px] leading-[24px]">
+          <Text className="py-1 text-justify font-inknut text-[11px] leading-[24px]">
             However, on September 1, 1847, Spanish authorities established Bohol as a separate
             province independent from Cebu. Only 22 of Bohol's towns were created during that time,
             including Balilihan.
@@ -82,7 +82,7 @@ const Section_3 = () => {
           <Image source={images[3]} className="h-full w-full" />
         </TouchableOpacity>
         <View>
-          <Text className="py-1 text-justify font-inknut text-[12px] leading-[24px] ">
+          <Text className="py-1 text-justify font-inknut text-[11px] leading-[24px] ">
             <Text style={{ color: '#0E8341' }}>Baclayon</Text> was the first town the Spaniards
             built in Bohol. Originally, the town of Baclayon was much bigger and included what are
             now Balilihan, Alburquerque, Catigbian, Corella, Sikatuna, and San Isidro.
@@ -100,7 +100,7 @@ const Section_3 = () => {
         </View>
         <View className="flex-1">
           <View style={{ flex: 1 }}>
-            <Text className="py-1 text-justify font-inknut text-[12px] leading-[24px]">
+            <Text className="py-1 text-justify font-inknut text-[11px] leading-[24px]">
               Around 1827,{' '}
               <Text style={{ color: '#0E8341' }}>Governor-General Mariano Ricafort</Text> wanted
               people to govern themselves, so new towns were made. Balilihan became its town around
@@ -119,7 +119,7 @@ const Section_3 = () => {
           </TouchableOpacity>
           <View className="flex-1 pl-3">
             <View style={{ flex: 1 }}>
-              <Text className="py-1 text-justify font-inknut text-[12px] leading-[20px]">
+              <Text className="py-1 text-justify font-inknut text-[11px] leading-[20px]">
                 In 1901, <Text style={{ color: '#0E8341' }}>Jose Aniceto B. Clarin</Text>, Bohol's
                 first civil governor, announced his intention to annex Balilihan and make it a
                 barrio of Antequera, effectively abolishing Balilihan as a town.
@@ -130,7 +130,7 @@ const Section_3 = () => {
         <View className="mb-4 mt-4 flex w-full flex-row items-start">
           <View className="flex-1 pr-3">
             <View style={{ flex: 1 }}>
-              <Text className="py-1 text-justify font-inknut text-[12px] leading-[20px]">
+              <Text className="py-1 text-justify font-inknut text-[11px] leading-[20px]">
                 <Text style={{ color: '#0E8341' }}>Manuel Diamante</Text>, Balilihan's municipal
                 president, strongly opposed this plan, voicing the people's discontent and warning
                 of potential unrest if the annexation proceeded. Governor Clarin ultimately decided
@@ -144,7 +144,7 @@ const Section_3 = () => {
         </View>
         <View className="mb-3 flex-1">
           <View style={{ flex: 1 }}>
-            <Text className=" py-1 text-justify font-inknut text-[12px] leading-[24px]">
+            <Text className=" py-1 text-justify font-inknut text-[11px] leading-[24px]">
               However, as a consequence of this initial plan, the neighboring town of Catigbian was
               downgraded to a barrio under Act No. 370 of the Philippine Commission, becoming part
               of Balilihan. Following this action, Governor Clarin proposed a revised plan to the US
@@ -162,7 +162,7 @@ const Section_3 = () => {
         </TouchableOpacity>
         <View className="flex-1">
           <View style={{ flex: 1 }}>
-            <Text className="mb-5 py-1 text-justify font-inknut text-[12px] leading-[24px]">
+            <Text className="mb-5 py-1 text-justify font-inknut text-[11px] leading-[24px]">
               In a twist of fate, by 1949, Balilihan faced significant territorial loss when
               Catigbian was granted its own town charter. This decision came despite strong
               objections from Balilihan's Mayor,{' '}

@@ -8,7 +8,7 @@ const Section_1 = () => {
     <>
       {/* _______________________________What I need to know?________________________________ */}
       <CollapsibleSubTitle name="What I need to know?">
-        <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
+        <Text className="py-2 text-justify font-inknut text-[11px] leading-[24px] max-xs:text-base">
           This chapter explores Balilihan's life after World War II's devastation and examining its
           current social, economic, and political development. We will investigate significant
           events, key figures,and leaders who shaped its progress, the adoption of its official

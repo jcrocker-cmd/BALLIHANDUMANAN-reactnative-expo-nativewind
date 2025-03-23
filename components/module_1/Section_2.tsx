@@ -8,7 +8,7 @@ const Section_2 = () => {
       {/* _______________________________Let's Do This!________________________________ */}
       <CollapsibleSubTitle name="let’s do this!">
         <View style={{ flex: 1 }}>
-          <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px]">
+          <Text className="py-2 text-justify font-inknut text-[11px] leading-[24px]">
             A. Before we delve into the lesson, let’s test your knowledge of our barangays with a
             fun activity called <Text style={{ color: '#0E8341' }}>“Guess that Barangay!</Text>
             {'\n'}• Head over to the{' '}

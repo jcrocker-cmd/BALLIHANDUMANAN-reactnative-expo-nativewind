@@ -82,7 +82,7 @@ const Section_9 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Balilihan Old Municipal Hall{'\n'}</Text>
           (Del Carmen Sur){'\n'} Declared as an Important Cultural Property by the National Museum
           of the Philippines.
@@ -94,7 +94,7 @@ const Section_9 = () => {
           <Image source={images[3]} className="h-full w-full" />
         </TouchableOpacity>
 
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Balilihan Central Elementary School{'\n'}</Text>
           (Del Carmen Weste){'\n'}A century-old Gabaldon Building (a name from Assemblyman Isauro
           Gabaldon, the Father of Philippine Public Education).
@@ -114,7 +114,7 @@ const Section_9 = () => {
           <Image source={images[6]} className="h-full w-full" />
         </TouchableOpacity>
 
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Ancestral Houses in Balilihan{'\n'}</Text>
           Diamante House (Del Carmen Weste), Jaum House{'\n'}(Datag Norte), and Ocon House (Cabad)
           were built during the Spanish and American colonial period.
@@ -140,7 +140,7 @@ const Section_9 = () => {
           <Image source={images[11]} className="h-full w-full" />
         </TouchableOpacity>
 
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Cemeteries in Balilihan{'\n'}</Text>
           Old Cemetery (Del Carmen Weste), Abaca Cemetery (Del Carmen Sur), SambagCemetery (Del
           Carmen Sur), Bod Cemetery (Cogon), & Datag Cemetery (HanopolEste)
@@ -160,7 +160,7 @@ const Section_9 = () => {
           <Image source={images[14]} className="h-full w-full" />
         </TouchableOpacity>
 
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Camugao Falls </Text>(San Isidro){'\n'}
           The tallest waterfall in the municipality (30 meters).
         </Text>
@@ -175,7 +175,7 @@ const Section_9 = () => {
           onPress={handlePress(16)}>
           <Image source={images[16]} className="h-full w-full" />
         </TouchableOpacity>
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Niluksuan Falls </Text>(Sal-ing){'\n'}
           This waterfall, though short in height, resembles a cascade of shimmering, transparent
           curtains.
@@ -191,7 +191,7 @@ const Section_9 = () => {
           onPress={handlePress(18)}>
           <Image source={images[18]} className="h-full w-full" />
         </TouchableOpacity>
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Bugwak Spring </Text>(Sto. Niño){'\n'}
           It is named "Bugwak" due to the powerful pressure of water that bursts forth from the
           lower surface of the mountainside spring.
@@ -207,7 +207,7 @@ const Section_9 = () => {
           onPress={handlePress(20)}>
           <Image source={images[20]} className="h-full w-full" />
         </TouchableOpacity>
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Magsija Swimming Pool </Text>(Magsija){'\n'}
           Located along the highway, it is a man-made pool, fed by a nearby spring, that offers cool
           and fresh water.
@@ -230,7 +230,7 @@ const Section_9 = () => {
             </TouchableOpacity>
           </View>
         </View>
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Andoy Cave </Text>(Hanopol Norte){'\n'}
           The cave is called Andoy, named after its former landowner, Fernando Paanod.
         </Text>
@@ -245,7 +245,7 @@ const Section_9 = () => {
           onPress={handlePress(25)}>
           <Image source={images[25]} className="h-full w-full" />
         </TouchableOpacity>
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Camagong-ong Cave </Text>(Maslog){'\n'}
           Camagong-ong Cave brings an enchanting and fascinating ambiance while doing the laundry
           and fetching water for the house consumption of the locals.
@@ -259,8 +259,8 @@ const Section_9 = () => {
             <Image source={images[27]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
-          <Text style={{ color: '#0E8341' }}>Manlawe Peak or Bud Manlawe </Text>(Cogon)
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
+          <Text style={{ color: '#0E8341' }}>Manlaui Peak or Bud Manlawe </Text>(Cogon)
           {'\n'}
           Standing tall at approximately 900 feet, this mountain is the highest point in the
           municipality.
@@ -271,7 +271,7 @@ const Section_9 = () => {
           onPress={handlePress(28)}>
           <Image source={images[28]} className="h-full w-full" />
         </TouchableOpacity>
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Bantayan River </Text>(Cabad)
           {'\n'}
           The area of the Bantayan River serves as a connecting point between the Abatan River and
@@ -291,7 +291,7 @@ const Section_9 = () => {
             <Image source={images[31]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>
             Balilihan Association of Women for Development (BAWOD)
           </Text>
@@ -306,10 +306,10 @@ const Section_9 = () => {
           onPress={handlePress(32)}>
           <Image source={images[32]} className="h-full w-full" />
         </TouchableOpacity>
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Kumparsa</Text>
-          {'\n'}A well-known traditional Filipino stringed ensemble that local musicians in
-          DatagNorte, Balilihan play.
+          {'\n'}A well-known traditional Filipino stringed ensemble that local musicians in Datag
+          Norte, Balilihan play.
         </Text>
 
         <TouchableOpacity
@@ -317,7 +317,7 @@ const Section_9 = () => {
           onPress={handlePress(33)}>
           <Image source={images[33]} className="h-full w-full" />
         </TouchableOpacity>
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Bingka ni Manang Kikay</Text>
           {'\n'}A traditional rice cake that has been a beloved Balilihan delicacy for over 60
           years, enjoyed especially on market days, Sundays, and special occasions.
@@ -334,7 +334,7 @@ const Section_9 = () => {
           <Image source={images[35]} className="h-full w-full" />
         </TouchableOpacity>
 
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Tinunuang Uwang, Ugang, and Bebe</Text>
           {'\n'}
           Traditionally cooked in coconut milk (tinunuan), the “uwang” (river shrimp), and “ugang ug
@@ -347,7 +347,7 @@ const Section_9 = () => {
           <Image source={images[36]} className="h-full w-full" />
         </TouchableOpacity>
 
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Basket Weaving in Balilihan</Text>
           {'\n'}
           Basket weaving in Dorol, a barangay boundary in the municipality of Antequera (Basket
@@ -362,7 +362,7 @@ const Section_9 = () => {
             <Image source={images[38]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Prosesyon sa Santo Entierro</Text>
           {'\n'}
           Each Good Friday, Catholic devotees in Balilihan solemnly participate in the Santo
@@ -377,7 +377,7 @@ const Section_9 = () => {
             <Image source={images[40]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Sugat and Hugos</Text>
           {'\n'}
           The "Sugat," or "Encounter of Mary and Jesus," a cherished annual tradition and highlight
@@ -399,7 +399,7 @@ const Section_9 = () => {
           <Image source={images[43]} className="h-full w-full" />
         </TouchableOpacity>
 
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Furniture and Tableware</Text>
           {'\n'}
           These furniture and tableware pieces were used by local leaders during the American and
@@ -411,7 +411,7 @@ const Section_9 = () => {
           onPress={handlePress(44)}>
           <Image source={images[44]} className="h-full w-full" />
         </TouchableOpacity>
-        <Text className=" text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className=" text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Urna</Text>
           {'\n'}
           It is intricately carved wooden housings for Santos (religious icons), which are commonly
@@ -426,7 +426,7 @@ const Section_9 = () => {
             <Image source={images[46]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Binisayang Pagpanambaw</Text>
           {'\n'}
           Local healers in Balilihan utilize an empowered coconut oil, created from chopped
@@ -439,7 +439,7 @@ const Section_9 = () => {
           onPress={handlePress(47)}>
           <Image source={images[47]} className="h-full w-full" />
         </TouchableOpacity>
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Tagbo o Panagtapok sa Pagpanghinlo</Text>
           {'\n'}
           In Balilihan, the community practice of "Tagbo," initiated by barangay officials for
@@ -451,7 +451,7 @@ const Section_9 = () => {
           onPress={handlePress(48)}>
           <Image source={images[48]} className="h-full w-full" />
         </TouchableOpacity>
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Eladio I. Chatto</Text>
           {'\n'}
           The Assemblyman of Bohol from 1984 to 1986 and the longest-serving mayor in the
@@ -463,7 +463,7 @@ const Section_9 = () => {
           onPress={handlePress(49)}>
           <Image source={images[49]} className="h-full w-full" />
         </TouchableOpacity>
-        <Text className="text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Lino Chatto Sr.</Text>
           {'\n'}
           The longest-serving governor in the province of Bohol (11 years – 1967 to 1978)
@@ -474,7 +474,7 @@ const Section_9 = () => {
           onPress={handlePress(50)}>
           <Image source={images[50]} className="h-full w-full" />
         </TouchableOpacity>
-        <Text className="mb-5 text-balance py-1 text-center font-inknut text-[12px] leading-[24px]">
+        <Text className="mb-5 text-balance py-1 text-center font-inknut text-[11px] leading-[24px]">
           <Text style={{ color: '#0E8341' }}>Hermogena R. Racho</Text>
           {'\n'}
           She was part of the Women’s Auxiliary Service (WAS) in Bohol during the Second World War.

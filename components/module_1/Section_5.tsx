@@ -8,7 +8,7 @@ const Section_5 = () => {
       {/* _______________________________Let's Reflect!________________________________ */}
       <CollapsibleSubTitle name="let's reflect">
         <View style={{ flex: 1 }}>
-          <Text className=" text-balance pb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px]">
+          <Text className=" text-balance pb-5 pt-2 text-justify font-inknut text-[11px] leading-[24px]">
             Reflect on what you’ve learned about Balilihan’s formal establishment, territorial
             changes, and annexations by answering these guide questions:{'\n'}1. What were the major
             challenges faced during the establishment of the municipality? What triumphs and

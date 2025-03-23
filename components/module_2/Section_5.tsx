@@ -20,8 +20,8 @@ const Section_5 = () => {
   return (
     <>
       {/* _______________________________BALILIHAN DURING AMERICAN OCCUPATION!________________________________ */}
-      <CollapsibleSubTitle name="BALILIHAN DURING AMERICAN OCCUPATION">
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+      <CollapsibleSubTitle name={'BALILIHAN DURING AMERICAN\nOCCUPATION'}>
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           The brutality of the Spanish colonial period in Balilihan, sadly, wasn't unique. The early
           American occupation proved equally harsh.{'\n'}
           On November 12, 1899, during the Philippine-American War, Balilihan eagerly awaited the
@@ -39,7 +39,7 @@ const Section_5 = () => {
           The arrival of American troops in Balilihan.
         </Text>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           However, this welcoming reception was short-lived. Upon arrival, the American troops
           immediately rounded up everyone —<Text style={{ color: '#0E8341' }}>Capitan Antonio</Text>{' '}
           Racho, municipal secretary
@@ -61,7 +61,7 @@ const Section_5 = () => {
           The burning of the town by the American troops.
         </Text>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           The flames quickly immersed Balilihan, including the church, municipal building, schools,
           and private houses, leaving behind a scene of destruction. The only structure that was
           spared was the Spanish belfry.{'\n'}
@@ -83,20 +83,13 @@ const Section_5 = () => {
           </View>
 
           {/* Justified Text */}
-          <Text className="flex-1 py-1 pl-3 text-justify font-inknut text-[12px] leading-[20px]">
+          <Text className="flex-1 py-1 pl-3 text-justify font-inknut text-[11px] leading-[20px]">
             Streets were built, peace and order were restored, and the population of the town center
             (población) grew significantly, as new homes were constructed. This era marked a turning
             point, a time when the community began to heal and rebuild, laying the foundation for a
             brighter future.
           </Text>
         </View>
-
-        <Text className="text-balance pb-2 pt-1 text-justify font-inknut text-[12px] leading-[24px]">
-          From what has been said, Balilihan was not born in a bed of roses but out of a cradle of
-          thorns and bruises. <Text style={{ color: '#0E8341' }}>World War II </Text>
-          brought a new wave of hardship to Balilihan. The Japanese established a garrison in the
-          town, forcing residents into hiding in the mountains for safety.
-        </Text>
       </CollapsibleSubTitle>
       {/* _______________________________Fullscreen Image Viewer________________________________ */}
       <ImageViewer images={images} visibleIndex={visibleIndex} onClose={onClose} />

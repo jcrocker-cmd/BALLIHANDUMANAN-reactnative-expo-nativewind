@@ -8,7 +8,7 @@ const Section_5 = () => {
       {/* _______________________________Explore More!________________________________ */}
       <CollapsibleSubTitle name="Explore More!">
         <View style={{ flex: 1 }}>
-          <Text className=" text-balance pb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px]">
+          <Text className=" text-balance pb-5 pt-2 text-justify font-inknut text-[11px] leading-[24px]">
             Having established the context of Balilihan and its people, we now move on to examine
             the pivotal chapter detailing Balilihan's interaction with the colonizers. You’ll learn
             about the changes brought by the colonizers and the life and challenges faced by the

@@ -29,7 +29,7 @@ const Section_7 = () => {
     <>
       {/* _______________________________KAWASAN FALLS________________________________ */}
       <CollapsibleSubTitle name="KAWASAN FALLS">
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           Kawasan Falls is a renowned tourist destination waterfall in Bohol. Kawasan, meaning "to
           embark" in Visayan, derives its name from its historical role as a bustling barter center.
         </Text>
@@ -45,7 +45,7 @@ const Section_7 = () => {
 
         {/* Wrap the text inside a View and apply margin */}
         <View style={{ flex: 1 }}>
-          <Text className="py-1 text-justify font-inknut text-[12px] leading-[22px]">
+          <Text className="py-1 text-justify font-inknut text-[11px] leading-[22px]">
             Located about a kilometer upstream from the Bantayan docking area along the Abatan River
             (known as Bantayan River by the locals), and bordering the barangays of Cabad, Candasig,
             and Dorol (though administered by Cabad), Kawasan Falls is approximately four kilometers
@@ -62,7 +62,7 @@ const Section_7 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           From the Kawasan Tourism Complex, visitors descend a cemented stairway to the falls,
           enjoying breathtaking river views and cottages. The falls feature a 25-meter cascade into
           a natural pool, surrounded by lush tropical vegetation and rugged cliffs.
@@ -85,7 +85,7 @@ const Section_7 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           It is easily accessible by any type of vehicle, thanks to a newly constructed concrete
           road. Visitors can enjoy swimming in the pool at the base of the falls, do a fun paddle
           activity at the Bantayan River, and appreciate the tranquil atmosphere and clean air.
@@ -101,7 +101,7 @@ const Section_7 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           It is important to note that the 7.2 magnitude earthquake that struck Bohol in 2013
           significantly altered the falls' original structure, damaging a previously existing cave
           system.

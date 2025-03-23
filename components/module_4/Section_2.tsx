@@ -7,7 +7,7 @@ const Section_2 = () => {
     <>
       {/* _______________________________Let's Do This!________________________________ */}
       <CollapsibleSubTitle name="let’s do this!">
-        <Text className="-pb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="-pb-5 pt-2 text-justify font-inknut text-[11px] leading-[24px]">
           Before we begin this chapter's exploration of Balilihan's cultural heritage, let's test
           your knowledge{'\n'}
           {'\n'}• Complete the "Uncover Balilihan's Treasures" activity within the Balilihandumanan

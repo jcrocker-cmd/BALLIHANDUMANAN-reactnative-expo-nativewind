@@ -20,8 +20,8 @@ const Section_6 = () => {
   return (
     <>
       {/* _______________________________BALILIHAN DURING JAPANESE OCCUPATION________________________________ */}
-      <CollapsibleSubTitle name="BALILIHAN DURING JAPANESE OCCUPATION">
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+      <CollapsibleSubTitle name={'BALILIHAN DURING JAPANESE\nOCCUPATION'}>
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           From what has been said, Balilihan was not born in a bed of roses but out of a cradle of
           thorns and bruises. <Text style={{ color: '#0E8341' }}>World War II </Text>
           brought a new wave of hardship to Balilihan. The Japanese established a garrison in the
@@ -29,7 +29,7 @@ const Section_6 = () => {
         </Text>
 
         <TouchableOpacity
-          className="mt-4 h-[220px] w-full overflow-hidden"
+          className="mt-4 h-[180px] w-[80%] self-center overflow-hidden"
           onPress={handlePress(0)}>
           <Image source={images[0]} className="h-full w-full" />
         </TouchableOpacity>
@@ -37,7 +37,7 @@ const Section_6 = () => {
         <Text className="mb-3 text-center font-inknut text-[11px]" style={{ color: '#B08923' }}>
           Forces of the invading Japanese Imperial Army in Bohol.
         </Text>
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           Balilihan became a refuge for displaced people from other areas, all enduring a life of
           hardship and deprivation. Innocent civilians were often captured, tortured, and killed by
           the Japanese on mere suspicion of supporting the guerilla resistance.
@@ -49,10 +49,12 @@ const Section_6 = () => {
           collaborators was established in the barrio of
           <Text style={{ color: '#0E8341' }}> Hanopol.</Text>
           {'\n'}
-          However, the presence of the Bolo Battalion, under the command of Captains Balbino Chatto
-          and Angel Racho, helped to mitigate the fear and brutality. The Women's Auxiliary Service
-          (WAS), led by Captains Lutgarda Diez, Teofila A. Racho, and Hermogena Diez, bravely took
-          on the responsibility of feeding the camp's inmates.{'\n'}
+          However, the presence of the<Text style={{ color: '#0E8341' }}> Bolo Battalion</Text>,
+          under the command of Captains Balbino Chatto and Angel Racho, helped to mitigate the fear
+          and brutality. The
+          <Text style={{ color: '#0E8341' }}> Women's Auxiliary Service (WAS)</Text>, led by
+          Captains Lutgarda Diez, Teofila A. Racho, and Hermogena Diez, bravely took on the
+          responsibility of feeding the camp's inmates.{'\n'}
         </Text>
 
         <View className="flex w-full flex-row">
@@ -75,7 +77,7 @@ const Section_6 = () => {
           the Women’s Auxiliary Service (right).
         </Text>
 
-        <Text className="text-balance pb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance pb-5 pt-2 text-justify font-inknut text-[11px] leading-[24px]">
           Balilihan also played a significant role in the resistance movement, with Captain Lino I.
           Chatto and others actively participating. The Balilihan Bohol Regiment further contributed
           by supplying food—rice, corn, grits, chickens, and other provisions—to soldiers stationed

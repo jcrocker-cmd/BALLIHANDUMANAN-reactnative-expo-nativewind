@@ -23,7 +23,7 @@ const Section_4 = () => {
   return (
     <>
       {/* _______________________________BALILIHAN DURING SPANISH OCCUPATION________________________________ */}
-      <CollapsibleSubTitle name="BALILIHAN DURING SPANISH OCCUPATION">
+      <CollapsibleSubTitle name={'BALILIHAN DURING SPANISH\nOCCUPATION'}>
         <TouchableOpacity
           className="mt-4 h-[240px] w-full overflow-hidden"
           onPress={handlePress(0)}>
@@ -34,10 +34,10 @@ const Section_4 = () => {
           A Spanish garrison in the Philippines.
         </Text>
 
-        <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
+        <Text className="py-2 text-justify font-inknut text-[11px] leading-[24px] max-xs:text-base">
           In 1828, as the Bohol Rebellion under Dagohoy was nearing its end, the settlement of
-          Balilihanwas established to accommodate the growing number of Dagohoy insurrectos (rebels)
-          defecting to the Spaniards. They established a military garrison in{' '}
+          Balilihan was established to accommodate the growing number of Dagohoy insurrectos
+          (rebels) defecting to the Spaniards. They established a military garrison in{' '}
           <Text style={{ color: '#0E8341' }}>Datag</Text> to discourage further rebel support. When
           the Dagohoy Revolt finally ended in 1829, both town and parish were established to
           accommodate 2,100 former Dagohoy rebels.
@@ -49,7 +49,7 @@ const Section_4 = () => {
           <Image source={images[1]} className="h-full w-full" />
         </TouchableOpacity>
 
-        <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
+        <Text className="py-2 text-justify font-inknut text-[11px] leading-[24px] max-xs:text-base">
           Near this garrison, in a place called{' '}
           <Text style={{ color: '#0E8341' }}>"Bay sa Iring"</Text> (House of Cats), about two
           kilometers from the Spanish garrison, a Spanish friar,
@@ -58,16 +58,21 @@ const Section_4 = () => {
         </Text>
 
         <TouchableOpacity
-          className="-mt-2 h-[230px] w-full overflow-hidden"
+          className="mb-2 mt-3 h-[230px] w-full overflow-hidden"
           onPress={handlePress(2)}>
           <Image source={images[2]} className="h-full w-full" />
         </TouchableOpacity>
 
-        <Text className="mb-3 text-center font-inknut text-[11px]" style={{ color: '#B08923' }}>
-          A Spanish garrison in the Philippines.
+        <Text
+          className="mb-3 py-1 text-center font-inknut text-[11px]"
+          style={{
+            color: '#B08923',
+            lineHeight: 18, // Tight spacing
+          }}>
+          Fray Tomas as he appointed Serafino Pongase{'\n'}as the first gobernadorcillo.
         </Text>
 
-        <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
+        <Text className="py-2 text-justify font-inknut text-[11px] leading-[24px] max-xs:text-base">
           Gaining their unanimous support, Fray Tomas appointed
           <Text style={{ color: '#0E8341' }}> Serafino Pongase</Text> as the first gobernadorcillo
           (municipal mayor), marking September 29, 1828, as the official founding date of Balilihan.
@@ -91,7 +96,7 @@ const Section_4 = () => {
           The historic springs: Tan Pero (left) and Abaca (right).
         </Text>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           High atop a hill stands Balilihan's lone surviving testament to its Spanish past, the
           Spanish belfry. Built in 1835 by
           <Text style={{ color: '#0E8341' }}> Recollect Father Antonio Cortes </Text>
@@ -103,14 +108,14 @@ const Section_4 = () => {
           <TouchableOpacity className="h-[200px] w-[50%] overflow-hidden" onPress={handlePress(5)}>
             <Image source={images[5]} className="h-full w-full" />
           </TouchableOpacity>
-          <Text className="flex-1 py-1 pl-3 text-justify font-inknut text-[12px] leading-[20px]">
+          <Text className="flex-1 py-1 pl-3 text-justify font-inknut text-[11px] leading-[20px]">
             The tower itself is a blend of adobe and coral stones, each piece carried on foot from
             the distant rock deposits of the mother town Baclayon, a testament to the physical labor
             that went into creating this enduring landmark.
           </Text>
         </View>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           However, in 1888, this move didn't satisfy
           <Text style={{ color: '#0E8341' }}> Fray Benito Grayoa</Text>, the succeeding friar, who
           desired to transfer the seat of the pueblo in
@@ -126,10 +131,10 @@ const Section_4 = () => {
         </TouchableOpacity>
 
         <Text className="mb-3 text-center font-inknut text-[11px]" style={{ color: '#B08923' }}>
-          A punishment inflicted by Fray Grayoa on Tan Tome..
+          A punishment inflicted by Fray Grayoa on Tan Tome.
         </Text>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           Fray Grayoa's response was brutal where he imprisoned and then cruelly punished Tan Tome,
           dragging him through the streets behind his horse. This act of violence instilled fear,
           causing many residents to flee Balilihan to other provinces like Leyte, Surigao, and

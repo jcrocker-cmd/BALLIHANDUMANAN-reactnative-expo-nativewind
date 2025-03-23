@@ -20,7 +20,7 @@ const Section_3 = () => {
     <>
       {/* _______________________________Journey to the History________________________________ */}
       <CollapsibleSubTitle name="journey to the History">
-        <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
+        <Text className="py-2 text-justify font-inknut text-[11px] leading-[24px] max-xs:text-base">
           Before we begin, let's clarify what colonization means.  
         </Text>
         <View className="mt-2">
@@ -39,7 +39,7 @@ const Section_3 = () => {
         </Text>
 
         <View style={{ flex: 1 }}>
-          <Text className="-mb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
+          <Text className="-mb-5 pt-2 text-justify font-inknut text-[11px] leading-[24px] max-xs:text-base">
             <Text style={{ color: '#0E8341' }}>Colonization</Text> is the process by which one
             nation or power establishes and maintains political, economic, and social control over
             another territory and its people. This often involves the displacement of indigenous

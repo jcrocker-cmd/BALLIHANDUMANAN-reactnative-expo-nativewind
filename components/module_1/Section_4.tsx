@@ -23,11 +23,11 @@ const Section_4 = () => {
         <View style={{ flex: 1 }}>
           <Text
             style={{ textAlign: 'justify', color: '#0E8341' }}
-            className="py-2  font-inknut text-[12px] leading-[24px] max-xs:text-base">
+            className="py-2  font-inknut text-[11px] leading-[24px] max-xs:text-base">
             Now it's time to put your historical knowledge to the test! Using what you've learned
             about Balilihan's historical establishment, territorial changes, and annexations, try to
             name the families who were among its first inhabitants or settlers. Consult the answer
-            key to check your guesses
+            key to check your guesses.
           </Text>
           <TouchableOpacity
             className="mb-4 mt-4 h-[240px] w-full overflow-hidden"
@@ -39,7 +39,7 @@ const Section_4 = () => {
         <View style={{ flex: 1 }}>
           <Text
             style={{ textAlign: 'justify' }}
-            className="py-2 font-inknut text-[12px] leading-[24px] max-xs:text-base">
+            className="py-2 font-inknut text-[11px] leading-[24px] max-xs:text-base">
             <Text style={{ color: '#0E8341' }}>Balilihan</Text> is an interior town, located 22
             kilometers northeast of Tagbilaran City, the capital of Bohol. The town is situated on a
             low, rolling plateau with verdant hills, mostly covered in trees and vegetation. The
@@ -56,7 +56,7 @@ const Section_4 = () => {
           </TouchableOpacity>
 
           <View className="flex-1 pl-3">
-            <Text className="py-1 text-justify font-inknut text-[12px] leading-[20px]">
+            <Text className="py-1 text-justify font-inknut text-[11px] leading-[20px]">
               It’s linked to a species of grass locally known as "balili", a naturally abundant and
               excellent grazing food for large cattle such as carabaos, cows, and horses. Therefore,
               Balilihan simply implies an abundance of balili grass in the place.
