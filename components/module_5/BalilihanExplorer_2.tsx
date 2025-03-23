@@ -15,6 +15,7 @@ import banner from '../../assets/module_4/banner.png';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { Ionicons } from '@expo/vector-icons';
+import { useFocusEffect } from '@react-navigation/native';
 
 // List of barangays for the quiz
 const barangays = [
@@ -43,6 +44,15 @@ export default function App() {
   const [timeLeft, setTimeLeft] = useState(120); // 2-minute timer (120 seconds)
   const [userAnswers, setUserAnswers] = useState<(string | null)[]>([]);
 
+  useFocusEffect(
+    React.useCallback(() => {
+      setCurrentIndex(0);
+      setAnswer('');
+      setScore(0);
+      setUserAnswers([]);
+    }, [])
+  );
+
   // Format the time as MM:SS
   const formatTime = (seconds: number) => {
     const minutes = Math.floor(seconds / 60);
@@ -60,10 +70,15 @@ export default function App() {
   }, [timeLeft]);
 
   const handleGuess = () => {
+    if (currentIndex >= barangays.length) {
+      return; // Avoid accessing out of bounds
+    }
+
     const userAnswer = answer.trim() || null;
     setUserAnswers((prev) => [...prev, userAnswer]);
 
-    if (userAnswer?.toLowerCase() === barangays[currentIndex].name.toLowerCase()) {
+    // Check if user answer matches current barangay
+    if (userAnswer?.toLowerCase() === barangays[currentIndex]?.name.toLowerCase()) {
       setScore(score + 1);
     }
 
@@ -75,16 +90,17 @@ export default function App() {
     if (currentIndex < barangays.length - 1) {
       setCurrentIndex(currentIndex + 1);
     } else {
-      // Navigate to the results screen when the quiz is done
-      navigation.navigate('BalilihanExplorer_2_Result', { answers: userAnswers, score });
+      // Navigate to the results and reset the stack
+      navigation.reset({
+        index: 0,
+        routes: [
+          {
+            name: 'BalilihanExplorer_2_Result',
+            params: { answers: userAnswers, score },
+          },
+        ],
+      });
     }
-  };
-
-  const resetGame = () => {
-    setCurrentIndex(0);
-    const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
-    setTimeLeft(120); // Reset to 2 minutes (120 seconds)
-    setAnswer('');
   };
 
   return (

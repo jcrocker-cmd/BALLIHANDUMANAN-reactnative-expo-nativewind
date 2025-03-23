@@ -15,6 +15,7 @@ import { questions } from '../../assets/quiz/TakeTheQuizQueztions';
 import { Container } from 'components/Container';
 import { Ionicons } from '@expo/vector-icons';
 import banner from '../../assets/module_4/banner.png';
+import { useFocusEffect } from '@react-navigation/native';
 
 // Define your navigation types
 type RootStackParamList = {
@@ -37,6 +38,12 @@ const QuizScreen: React.FC = () => {
   const handleSubmit = (): void => {
     navigation.navigate('TakeTheQuizResultScreen', { answers });
   };
+
+  useFocusEffect(
+    React.useCallback(() => {
+      setAnswers(Array(questions.length).fill(null));
+    }, [])
+  );
 
   return (
     <SafeAreaView style={{ flex: 1 }}>

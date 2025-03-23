@@ -30,7 +30,7 @@ const Section_7 = () => {
       {/* _______________________________KAWASAN FALLS________________________________ */}
       <CollapsibleSubTitle name="KAWASAN FALLS">
         <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
-          Kawasan Falls is a renowned tourist destination waterfall in Bohol. Kawasan, meaning "to
+          Kawasan Falls is a renowned tourist destination waterfall in Bohol. Kawasan, meaning "to
           embark" in Visayan, derives its name from its historical role as a bustling barter center.
         </Text>
 
@@ -43,12 +43,15 @@ const Section_7 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
-          Located about a kilometer upstream from the Bantayan docking area along
-          the Abatan River(known as Bantayan River by the locals), and bordering the barangays
-          of Cabad, Candasig, and Dorol (though administered by Cabad), Kawasan Falls is
-          approximately four kilometers from Balilihan's municipal hall.
-        </Text>
+        {/* Wrap the text inside a View and apply margin */}
+        <View style={{ flex: 1 }}>
+          <Text className="py-1 text-justify font-inknut text-[12px] leading-[22px]">
+            Located about a kilometer upstream from the Bantayan docking area along the Abatan River
+            (known as Bantayan River by the locals), and bordering the barangays of Cabad, Candasig,
+            and Dorol (though administered by Cabad), Kawasan Falls is approximately four kilometers
+            from Balilihan's municipal hall.
+          </Text>
+        </View>
 
         <View className="mb-5 mt-3 flex flex-row">
           <TouchableOpacity className="h-[250px] w-[50%] overflow-hidden" onPress={handlePress(2)}>
@@ -61,7 +64,7 @@ const Section_7 = () => {
 
         <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
           From the Kawasan Tourism Complex, visitors descend a cemented stairway to the falls,
-          enjoying breathtaking river views and cottages. The falls feature a 25-meter cascade into
+          enjoying breathtaking river views and cottages. The falls feature a 25-meter cascade into
           a natural pool, surrounded by lush tropical vegetation and rugged cliffs.
         </Text>
 
@@ -83,10 +86,10 @@ const Section_7 = () => {
         </View>
 
         <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
-          It is easily accessible by any type of vehicle, thanks to a newly constructed concrete
-          road. Visitors can enjoy swimming in the pool at the base of the falls, do a fun
-          paddle activity at the Bantayan River, and appreciate the tranquil atmosphere and clean
-          air. Kawasan Falls was the endpoint of a former Abatan River cruise project.
+          It is easily accessible by any type of vehicle, thanks to a newly constructed concrete
+          road. Visitors can enjoy swimming in the pool at the base of the falls, do a fun paddle
+          activity at the Bantayan River, and appreciate the tranquil atmosphere and clean air.
+          Kawasan Falls was the endpoint of a former Abatan River cruise project.
         </Text>
 
         <View className="mb-5 mt-3 flex flex-row">
@@ -104,7 +107,7 @@ const Section_7 = () => {
           system.
         </Text>
 
-        <View className="mb-5 mt-3 flex flex-row">
+        <View className="mb-3 mt-3 flex flex-row">
           <TouchableOpacity className="h-[250px] w-[50%] overflow-hidden" onPress={handlePress(10)}>
             <Image source={images[10]} className="h-full w-full" />
           </TouchableOpacity>
@@ -112,6 +115,15 @@ const Section_7 = () => {
             <Image source={images[11]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
+
+        <Text
+          className="mb-3 py-1 text-center font-inknut text-[11px]"
+          style={{
+            color: '#B08923',
+            lineHeight: 18, // Tight spacing
+          }}>
+          The Kawasan Falls before the 2013 Bohol earthquake.
+        </Text>
       </CollapsibleSubTitle>
       {/* _______________________________Fullscreen Image Viewer________________________________ */}
       <ImageViewer images={images} visibleIndex={visibleIndex} onClose={onClose} />

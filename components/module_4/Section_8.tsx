@@ -45,9 +45,9 @@ const Section_8 = () => {
       {/* _______________________________SUMAD FESTIVAL________________________________ */}
       <CollapsibleSubTitle name="SUMAD FESTIVAL">
         <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
-          Balilihan's <Text style={{ color: '#0E8341' }}>Sumad Festival</Text>, celebrated annually
+          Balilihan's <Text style={{ color: '#0E8341' }}>Sumad Festival</Text>, celebrated annually
           on September 29th, commemorates the municipality's founding. "Sumad", locally means
-          “anniversary”, signifies the accumulation of wisdom and experience over the years,
+          “anniversary”, signifies the accumulation of wisdom and experience over the years,
           highlighting the community's resilience, perseverance, and faith.
         </Text>
 
@@ -63,18 +63,25 @@ const Section_8 = () => {
           <Image source={images[2]} className="h-full w-full" />
         </TouchableOpacity>
         <TouchableOpacity
-          className="mb-5 h-[250px] w-full overflow-hidden"
+          className="mb-3 h-[250px] w-full overflow-hidden"
           onPress={handlePress(3)}>
           <Image source={images[3]} className="h-full w-full" />
         </TouchableOpacity>
+        <Text
+          className="mb-3 py-1 text-center font-inknut text-[11px]"
+          style={{
+            color: '#B08923',
+            lineHeight: 18, // Tight spacing
+          }}>
+          The Balilihan Sumad celebration then and now.
+        </Text>
 
         <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
-          Officially declared Balilihan Day (or Sumad) in 1993 through Resolution No.
-          93-23-A—sponsored by Hon. Ambrosio L. Bayud, adopted on March 22, 1993, attested by Vice
-          Mayor Dominisio Chatto, and approved by then-Mayor Edgar M. Chatto, with SB
-          Secretary Nimia M. Lungay certifying its correctness—the festival initially featured a
-          one-day celebration including “Pasunding,” a historical street dance drama or
-          “duwa-sayaw”.
+          Officially declared Balilihan Day (or Sumad) in 1993 through Resolution No.
+          93-23-A—sponsored by Hon. Ambrosio L. Bayud, adopted on March 22, 1993, attested by Vice
+          Mayor Dominisio Chatto, and approved by then-Mayor Edgar M. Chatto, with SB Secretary
+          Nimia M. Lungay certifying its correctness—the festival initially featured a one-day
+          celebration including “Pasunding,” a historical street dance drama or “duwa-sayaw”.
         </Text>
 
         <View className="mt-3 flex flex-row">
@@ -97,11 +104,11 @@ const Section_8 = () => {
 
         <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
           This evolved into a two-day event (1994-1997), incorporating an agro-industrial fair, a
-          beauty pageant ("Mutya ng Balilihan"), and a community awards ceremony. In 1998,
-          the SumadFestival expanded to a week-long celebration based on Section 122, Chapter 9 of
-          the Municipal Environment Code, adopted by the Sangguniang Bayan on March 25, 1998,
-          attested by Vice Mayor Dominisio Chatto (presiding officer), and approved by Mayor Eladio
-          I. Chatto on April 13, 1998.
+          beauty pageant ("Mutya ng Balilihan"), and a community awards ceremony. In 1998, the
+          SumadFestival expanded to a week-long celebration based on Section 122, Chapter 9 of the
+          Municipal Environment Code, adopted by the Sangguniang Bayan on March 25, 1998, attested
+          by Vice Mayor Dominisio Chatto (presiding officer), and approved by Mayor Eladio I. Chatto
+          on April 13, 1998.
         </Text>
 
         <View className="mt-3 flex flex-row">
@@ -113,7 +120,7 @@ const Section_8 = () => {
           </TouchableOpacity>
         </View>
 
-        <View className="mb-5 flex flex-row">
+        <View className="mb-3 flex flex-row">
           <TouchableOpacity className="h-[160px] w-[50%] overflow-hidden" onPress={handlePress(10)}>
             <Image source={images[10]} className="h-full w-full" />
           </TouchableOpacity>
@@ -122,12 +129,21 @@ const Section_8 = () => {
           </TouchableOpacity>
         </View>
 
+        <Text
+          className="mb-3 py-1 text-center font-inknut text-[11px]"
+          style={{
+            color: '#B08923',
+            lineHeight: 18, // Tight spacing
+          }}>
+          The annual Balilihan Sumad Agro-Fair.
+        </Text>
+
         <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
-          Today, the festival attracts both local and international tourists, featuring an agro-fair
-          showcasing each barangay's agricultural products, a Sumad Festival King and Queen pageant
-          (with agriculture-themed costumes), a fun run, a food bazaar ("Painit Festival"),
-          a streetdancing, and various other competitions and nightly events. The culmination
-          program honors academic achievers, retirees, and outstanding barangays.
+          Today, the festival attracts both local and international tourists, featuring an agro-fair
+          showcasing each barangay's agricultural products, a Sumad Festival King and Queen pageant
+          (with agriculture-themed costumes), a fun run, a food bazaar ("Painit Festival"), a
+          streetdancing, and various other competitions and nightly events. The culmination program
+          honors academic achievers, retirees, and outstanding barangays.
         </Text>
 
         <View className="mt-3 flex flex-row">
@@ -148,7 +164,7 @@ const Section_8 = () => {
           </TouchableOpacity>
         </View>
 
-        <View className="mb-5 flex flex-row">
+        <View className="mb-3 flex flex-row">
           <TouchableOpacity className="h-[160px] w-[50%] overflow-hidden" onPress={handlePress(16)}>
             <Image source={images[16]} className="h-full w-full" />
           </TouchableOpacity>
@@ -156,6 +172,14 @@ const Section_8 = () => {
             <Image source={images[17]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
+        <Text
+          className="mb-3 py-1 text-center font-inknut text-[11px]"
+          style={{
+            color: '#B08923',
+            lineHeight: 18, // Tight spacing
+          }}>
+          Various events in Balilihan Sumad celebration.
+        </Text>
 
         <View className="mt-3 flex flex-row">
           <TouchableOpacity className="h-[160px] w-[50%] overflow-hidden" onPress={handlePress(18)}>
@@ -176,9 +200,9 @@ const Section_8 = () => {
         </View>
 
         <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
-          The festival holds a particularly poignant significance since the passing
-          of Balilihan's longest-serving mayor, Eladio I. Chatto ("Tiyo Kiking"), on September 29,
-          2001, during the 173rd Foundation Day celebration.
+          The festival holds a particularly poignant significance since the passing of Balilihan's
+          longest-serving mayor, Eladio I. Chatto ("Tiyo Kiking"), on September 29, 2001, during the
+          173rd Foundation Day celebration.
         </Text>
 
         <View className="mb-5 mt-2 flex flex-row">
@@ -202,9 +226,9 @@ const Section_8 = () => {
         <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
           In 2009, Republic Act No. 9706—sponsored by Congressman Edgar M. Chatto and passed by the
           House of Representatives on December 3, 2008, and the Senate on May 26, 2009—officially
-          declared September 29th a special non-working public holiday in Balilihan, signed into law
-          by President Gloria Macapagal-Arroyo on August 7, 2009. The Sumad Festival continues to be
-          a cherished tradition, celebrating Balilihan's history, culture, and community spirit.
+          declared September 29th a special non-working public holiday in Balilihan, signed into law
+          by President Gloria Macapagal-Arroyo on August 7, 2009. The Sumad Festival continues to be
+          a cherished tradition, celebrating Balilihan's history, culture, and community spirit.
         </Text>
 
         <View className="-mt-3 mb-5 flex flex-row">

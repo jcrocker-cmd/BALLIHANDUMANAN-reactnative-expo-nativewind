@@ -23,12 +23,12 @@ const ObjectiveScreen = () => {
     <>
       <SafeAreaView style={{ flex: 1 }}>
         <Container>
-          <TouchableOpacity onPress={() => navigation.goBack()} className="mb-6 pt-10">
+          <TouchableOpacity onPress={() => navigation.goBack()} className="mb-4 pt-10">
             <Ionicons name="arrow-back" size={30} color="#fff" />
           </TouchableOpacity>
 
           <View className="flex items-center justify-center">
-            <Text className="-mt-4 py-1 text-justify font-inknut text-lg text-white">
+            <Text className="-mt-4 py-1 text-justify font-inknut text-[16px] text-white">
               Objectives
             </Text>
             <Image

@@ -28,9 +28,9 @@ const Section_6 = () => {
       {/* _______________________________BALILIHAN’S MUNICIPAL IDENTITY________________________________ */}
       <CollapsibleSubTitle name="BALILIHAN’S MUNICIPAL IDENTITY">
         <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
-          The municipal ordinance under Sections 13 and 14, Chapter 8 of the Code of General
-          Ordinances enacted on March 14, 1995, provided for the adoption of a municipal flag. Here
-          is the flag’s design and symbolism:
+          The municipal ordinance under Sections 13 and 14, Chapter 8 of the Code of General
+          Ordinances enacted on March 14, 1995, provided for the adoption of a municipal flag. Here
+          is the flag’s design and symbolism:
         </Text>
 
         <TouchableOpacity
@@ -55,18 +55,18 @@ const Section_6 = () => {
         </TouchableOpacity>
 
         <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
-          The Balilihan official seal's emblem powerfully symbolizes the town's unity and strength.
+          The Balilihan official seal's emblem powerfully symbolizes the town's unity and strength.
           A small inner circle depicts a united leadership, diverse in personality yet unified in
-          purpose. This inner circle expands into a larger outer circle representing the
-          entire Balilihan community—one in mind and spirit, bound by faith, hope, and love, and
-          sharing the motto "Aim High, BalilihanForever."
+          purpose. This inner circle expands into a larger outer circle representing the entire
+          Balilihan community—one in mind and spirit, bound by faith, hope, and love, and sharing
+          the motto "Aim High, BalilihanForever."
         </Text>
 
         <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
           Three distinct areas outside the central circles showcase the town's abundant agricultural
           bounty, represented by various cultivated crops and plants. A carabao, symbolizing
-          strength and power, highlights agriculture as the cornerstone of Balilihan's economy.
-          Finally, a triangle formed by two lines represents the historic Balilihan belfry, a
+          strength and power, highlights agriculture as the cornerstone of Balilihan's economy.
+          Finally, a triangle formed by two lines represents the historic Balilihan belfry, a
           prominent landmark linking the town's past to its present. The space within the triangle
           symbolizes the community's democratic freedoms, while the triangle itself signifies
           unwavering dedication, love, and devotion—a unity that endures through all challenges.
@@ -84,10 +84,10 @@ const Section_6 = () => {
         </View>
 
         <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
-          "Balilihan sa Kahangturan," with music by Arturo M. Lomantas and lyrics by Evelyn
-          R. Lomantas, was selected as the official municipal hymn following a composition contest
-          held in the late 1980s. Among the judges was Justino "Ning" Romea, renowned composer of
-          the Bohol hymn, "Awit sa Bohol."
+          "Balilihan sa Kahangturan," with music by Arturo M. Lomantas and lyrics by Evelyn R.
+          Lomantas, was selected as the official municipal hymn following a composition contest held
+          in the late 1980s. Among the judges was Justino "Ning" Romea, renowned composer of the
+          Bohol hymn, "Awit sa Bohol."
         </Text>
 
         <Text
@@ -117,13 +117,13 @@ const Section_6 = () => {
             Municipal Tree – Mahogany{'\n'}
             Municipal Flower – Anthurium{'\n'}
             Municipal Plant – Coconut{'\n'}
-            Municipal Fruit – Banana {'\n'}
+            Municipal Fruit – Banana {'\n'}
           </Text>
 
           <Text className="w-1/2 text-balance py-1 text-justify font-inknut text-[10px] leading-[24px]">
             Municipal Fish – Tilapia{'\n'}
             Municipal Bird – Pigeon{'\n'}
-            Municipal Animal – Carabao{'\n'}
+            Municipal Animal – Carabao{'\n'}
           </Text>
         </View>
 

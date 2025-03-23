@@ -16,15 +16,15 @@ const pdfFiles = [
   },
   {
     name: 'Lesson Exemplar (Lesson 2)',
-    path: require('../../assets/module_5/PDF/Lesson Exemplar (Lesson 1).pdf'),
+    path: require('../../assets/module_5/PDF/Lesson Exemplar (Lesson 2).pdf'),
   },
   {
     name: 'Lesson Exemplar (Lesson 3)',
-    path: require('../../assets/module_5/PDF/Lesson Exemplar (Lesson 1).pdf'),
+    path: require('../../assets/module_5/PDF/Lesson Exemplar (Lesson 3).pdf'),
   },
   {
     name: 'Lesson Exemplar (Lesson 4)',
-    path: require('../../assets/module_5/PDF/Lesson Exemplar (Lesson 1).pdf'),
+    path: require('../../assets/module_5/PDF/Lesson Exemplar (Lesson 4).pdf'),
   },
 ];
 

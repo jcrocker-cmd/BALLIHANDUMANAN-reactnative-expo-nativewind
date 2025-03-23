@@ -1,4 +1,4 @@
-import { TouchableOpacity, Text, Image } from 'react-native';
+import { TouchableOpacity, Text, Image, View } from 'react-native';
 import React from 'react';
 import CollapsibleSubTitle from 'components/CollapsibleSubTitle';
 import { useState, useCallback, useMemo } from 'react';
@@ -13,11 +13,13 @@ const Section_6 = () => {
     <>
       {/* _______________________________Time to Shine!________________________________ */}
       <CollapsibleSubTitle name="TIME TO SHINE!">
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
-          Create a timeline showcasing the key events in the origin of Balilihan, including its
-          creation, territorial changes, and annexations. Review the information you’ve learned from
-          the discussions. Organize your timeline using the format provided below.
-        </Text>
+        <View style={{ flex: 1 }}>
+          <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
+            Create a timeline showcasing the key events in the origin of Balilihan, including its
+            creation, territorial changes, and annexations. Review the information you’ve learned
+            from the discussions. Organize your timeline using the format provided below.
+          </Text>
+        </View>
 
         <TouchableOpacity
           className="mb-4 mt-4 h-[320px] w-full overflow-hidden"

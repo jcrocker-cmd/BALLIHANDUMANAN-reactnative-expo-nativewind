@@ -56,57 +56,57 @@ const Module_5 = () => {
         <ScrollView showsVerticalScrollIndicator={false}>
           <View className="flex-1 items-center gap-4">
             <TouchableOpacity
-              className="w-[95%] rounded-lg bg-white px-6 py-3"
+              className="w-[100%] rounded-lg bg-white px-6 py-3"
               onPress={() => navigation.navigate('BarangayQuizScreen')}>
-              <Text className="py-1 text-center font-inknut text-[14px] text-green-800">
+              <Text className="py-1 text-center font-inknut text-[13px] text-green-800">
                 Guess That Barangay!
               </Text>
             </TouchableOpacity>
 
             <TouchableOpacity
-              className="w-[95%] rounded-lg bg-white px-6 py-3"
+              className="w-[100%] rounded-lg bg-white px-6 py-3"
               onPress={() => navigation.navigate('BalilihanExplorerHome')}>
-              <Text className="py-1 text-center font-inknut text-[14px] text-green-800">
+              <Text className="py-1 text-center font-inknut text-[13px] text-green-800">
                 Balilihan, The Explorer!
               </Text>
             </TouchableOpacity>
 
             <TouchableOpacity
-              className="w-[95%] rounded-lg bg-white px-6 py-3"
+              className="w-[100%] rounded-lg bg-white px-6 py-3"
               onPress={() => navigation.navigate('GuessEraQuizScreen')}>
-              <Text className="py-1 text-center font-inknut text-[14px] text-green-800">
+              <Text className="py-1 text-center font-inknut text-[13px] text-green-800">
                 Guess That Era!
               </Text>
             </TouchableOpacity>
 
             <TouchableOpacity
-              className="w-[95%] rounded-lg bg-white px-6 py-3"
+              className="w-[100%] rounded-lg bg-white px-6 py-3"
               onPress={() => navigation.navigate('BalilihanTreasureQuizScreen')}>
-              <Text className="py-1 text-center font-inknut text-[14px] text-green-800">
+              <Text className="py-1 text-center font-inknut text-[13px] text-green-800">
                 Uncover Balilihan's Treasures
               </Text>
             </TouchableOpacity>
 
             <TouchableOpacity
-              className="w-[95%] rounded-lg bg-white px-6 py-3"
+              className="w-[100%] rounded-lg bg-white px-6 py-3"
               onPress={() => navigation.navigate('TakeTheQuizScreen')}>
-              <Text className="py-1 text-center font-inknut text-[14px] text-green-800">
+              <Text className="py-1 text-center font-inknut text-[13px] text-green-800">
                 Take the Quiz!
               </Text>
             </TouchableOpacity>
 
             <TouchableOpacity
-              className="w-[95%] rounded-lg bg-white px-6 py-3"
+              className="w-[100%] rounded-lg bg-white px-6 py-3"
               onPress={() => navigation.navigate('SampleLessonExemplar')}>
-              <Text className="py-1 text-center font-inknut text-[14px] text-green-800">
+              <Text className="py-1 text-center font-inknut text-[13px] text-green-800">
                 Sample Lesson Exemplar
               </Text>
             </TouchableOpacity>
 
             <TouchableOpacity
-              className="w-[95%] rounded-lg bg-white px-6 py-3"
+              className="w-[100%] rounded-lg bg-white px-6 py-3"
               onPress={() => navigation.navigate('AnswerKeysScreen')}>
-              <Text className="py-1 text-center font-inknut text-[14px] text-green-800">
+              <Text className="py-1 text-center font-inknut text-[13px] text-green-800">
                 Answer Keys
               </Text>
             </TouchableOpacity>

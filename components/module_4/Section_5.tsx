@@ -20,7 +20,7 @@ const Section_5 = () => {
       require('../../assets/module_4/2. Churches/3.b Octagonal-shaped ceiling of the cupola.jpg'),
       require('../../assets/module_4/2. Churches/3.c Painting of St. Cecilia with Ray Francias mark.jpg'),
       require('../../assets/module_4/2. Churches/4.b Bell in the Our Lady of Mt. Carmel dated in 1831.jpg'),
-      require('../../assets/module_4/2. Churches/4.c. The Limbarok Bells dated in 1856 & 1950.jpg'),
+      require('../../assets/module_4/2. Churches/4.c The Limbarok Bells dated in 1856_1950.jpg'),
       require('../../assets/module_4/2. Churches/4.a Iron bridge connecting the portico to the bell tower.jpg'),
       require('../../assets/module_4/2. Churches/5.a Restoration of the Balilihan Church.jpg'),
       require('../../assets/module_4/2. Churches/5.b Restored Balilihan Church.jpg'),
@@ -42,15 +42,15 @@ const Section_5 = () => {
         <Text
           className="mt-2 py-2 text-center font-inknut text-[14px] uppercase leading-[24px]"
           style={{ color: '#0E8341' }}>
-          Our Lady of{'\n'}Mt. Carmel Parish Church
+          Our Lady of{'\n'}Mt. Carmel Parish Church
         </Text>
         <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
-          Balilihan boasts two significant churches reflecting its rich history. The 
-          <Text style={{ color: '#0E8341' }}>Our Lady of Mt. Carmel Parish Church</Text>, a striking
-          example of American colonial architecture, stands in mainland Balilihan.
+          Balilihan boasts two significant churches reflecting its rich history. The
+          <Text style={{ color: '#0E8341' }}> Our Lady of Mt. Carmel Parish Church</Text>, a
+          striking example of American colonial architecture, stands in mainland Balilihan.
         </Text>
 
-        <View className="mb-5 mt-2">
+        <View className="mb-3 mt-2">
           <TouchableOpacity className="h-[230px] w-full overflow-hidden" onPress={handlePress(0)}>
             <Image source={images[0]} className="h-full w-full" />
           </TouchableOpacity>
@@ -63,42 +63,87 @@ const Section_5 = () => {
           </TouchableOpacity>
         </View>
 
-        <View className="-mb-2 flex w-full flex-row">
+        <Text
+          className="mb-3 py-1 text-center font-inknut text-[11px]"
+          style={{
+            color: '#B08923',
+            lineHeight: 18, // Tight spacing
+          }}>
+          The Our Lady of Mt. Carmel Parish Church then and now.
+        </Text>
+
+        <View className="mb-1 mt-4 flex w-full flex-row items-start">
+          {/* Justified Text */}
           <Text className="flex-1 py-1 pr-3 text-justify font-inknut text-[12px] leading-[20px]">
             The parish was inaugurated on May 20, 1829, and was placed under the Augustinian
             Recollects who served until the outbreak of the revolution against Spain in Bohol in
-            1898. The currentchurch was constructed of poured concrete by Rev.
-            Eliseo Josol y Villamayor between 1918 and 1930. An earlier church and convent stood
-            opposite the present church but were ruined by a storm in 1863. Later, another church,
-            constructed with wooden panels and a nipa roof, was destroyed by the burning of the town
-            during the Philippine-American War in 1900.
+            1898. The current church was constructed of poured concrete by Rev. Eliseo Josol y
+            Villamayor between 1918 and 1930. An earlier church and convent stood opposite the
+            present church but were ruined by a storm in 1863. Later, another church, constructed
+            with wooden panels and a nipa roof, was destroyed by the burning of the town during the
+            Philippine-American War in 1900.
           </Text>
-          <TouchableOpacity className="h-[430px] w-[45%] overflow-hidden" onPress={handlePress(3)}>
-            <Image source={images[3]} className="h-full w-full" />
-          </TouchableOpacity>
+
+          {/* Image with Caption */}
+          <View className="w-[50%]">
+            <TouchableOpacity className="h-[430px] w-full overflow-hidden" onPress={handlePress(3)}>
+              <Image source={images[3]} className="h-full w-full" />
+            </TouchableOpacity>
+
+            <Text
+              className="py-1 text-justify font-inknut text-[11px]"
+              style={{
+                color: '#B08923',
+                lineHeight: 18, // Tight spacing
+              }}>
+              The historical landmark of the Balilihan Church burned by the American troops.
+            </Text>
+          </View>
         </View>
 
         <TouchableOpacity
-          className="mb-5 mt-3 h-[230px] w-full overflow-hidden"
+          className="mb-3 h-[230px] w-full overflow-hidden"
           onPress={handlePress(4)}>
           <Image source={images[4]} className="h-full w-full" />
         </TouchableOpacity>
 
-        <View className="mb-3 flex w-full flex-row items-center">
-          <TouchableOpacity className="h-[200px] w-[40%] overflow-hidden" onPress={handlePress(5)}>
-            <Image source={images[5]} className="h-full w-full" />
-          </TouchableOpacity>
+        <Text
+          className="mb-3 py-1 text-center font-inknut text-[11px]"
+          style={{
+            color: '#B08923',
+            lineHeight: 18, // Tight spacing
+          }}>
+          Our Lady of Mt. Carmel Parish Church (1939) with Rev. Fr. Aproniano O. Galicia.
+        </Text>
+
+        <View className="mb-4 flex w-full flex-row items-start">
+          {/* Image with Caption */}
+          <View className="w-[40%]">
+            <TouchableOpacity className="h-[200px] w-full overflow-hidden" onPress={handlePress(5)}>
+              <Image source={images[5]} className="h-full w-full" />
+            </TouchableOpacity>
+            <Text
+              className="py-1 text-center font-inknut text-[11px]"
+              style={{
+                color: '#B08923',
+                lineHeight: 18, // Tight spacing
+              }}>
+              Raymundo Francia
+            </Text>
+          </View>
+
+          {/* Justified Text */}
           <Text className="flex-1 py-1 pl-3 text-justify font-inknut text-[12px] leading-[20px]">
-            This cruciform church has a cupola at the center part of the structure. This
-            three-aisled church features stunning ceiling paintings by Cebuano artist 
-            <Text style={{ color: '#0E8341' }}>Raymundo Francia</Text> (1928), known as Cebu’s
-            Michelangelo, depicting the Seven Sacraments, The Last Supper, Old Testament depictions
-            such as The Great Flood, scenes of Heaven illuminated by octagonal clerestory windows,
+            This cruciform church has a cupola at the center part of the structure. This
+            three-aisled church features stunning ceiling paintings by Cebuano artist{' '}
+            <Text style={{ color: '#0E8341' }}>Raymundo Francia</Text> (1928), known as Cebu’s
+            Michelangelo, depicting the Seven Sacraments, The Last Supper, Old Testament depictions
+            such as The Great Flood, scenes of Heaven illuminated by octagonal clerestory windows,
             and other magnificent renditions.
           </Text>
         </View>
 
-        <View className="-mt-2 mb-5 flex flex-row">
+        <View className="-mt-2 mb-3 flex flex-row">
           <TouchableOpacity className="h-[260px] w-[40%] overflow-hidden " onPress={handlePress(6)}>
             <Image source={images[6]} className="h-full w-full" />
           </TouchableOpacity>
@@ -112,13 +157,23 @@ const Section_5 = () => {
           </View>
         </View>
 
+        <Text
+          className="mb-3 py-1 text-center font-inknut text-[11px]"
+          style={{
+            color: '#B08923',
+            lineHeight: 18, // Tight spacing
+          }}>
+          The Balilihan Church Painting is considered the most intact and authentic Ray Francia
+          painting in Bohol.
+        </Text>
+
         <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
           Other notable features include chevron-patterned floor tiles and a neo-Gothic cast iron
           bridge that connects the portico to the bell tower, which is adorned with bells dating
           from the 19th to the 20th century.
         </Text>
 
-        <View className="-mt-2 mb-5 flex flex-row">
+        <View className="-mt-2 mb-3 flex flex-row">
           <View className="w-[60%]">
             <TouchableOpacity className="h-[130px] w-full overflow-hidden" onPress={handlePress(9)}>
               <Image source={images[9]} className="h-full w-full" />
@@ -136,6 +191,16 @@ const Section_5 = () => {
           </TouchableOpacity>
         </View>
 
+        <Text
+          className="mb-3 py-1 text-center font-inknut text-[11px]"
+          style={{
+            color: '#B08923',
+            lineHeight: 18, // Tight spacing
+          }}>
+          The iron bridge connecting the portico to the bell tower, and the bells dated in 1831,
+          1856, and 1950
+        </Text>
+
         <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
           The National Museum of the Philippines recently held a ceremonial turnover and unveiling
           of markers designating the Our Lady of Mount Carmel Parish Church as an Important Cultural
@@ -151,7 +216,7 @@ const Section_5 = () => {
           </TouchableOpacity>
         </View>
 
-        <View className="mb-5 flex w-full flex-row">
+        <View className="mb-3 flex w-full flex-row">
           <TouchableOpacity className="h-[160px] w-[60%] overflow-hidden" onPress={handlePress(14)}>
             <Image source={images[14]} className="h-full w-full" />
           </TouchableOpacity>
@@ -159,18 +224,26 @@ const Section_5 = () => {
             <Image source={images[15]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
+        <Text
+          className="mb-3 py-1 text-center font-inknut text-[11px]"
+          style={{
+            color: '#B08923',
+            lineHeight: 18, // Tight spacing
+          }}>
+          The restored church and convent, and the seal as the Important Cultural Property.
+        </Text>
 
         <View className="mb-3 flex w-full flex-row items-center">
           <TouchableOpacity className="h-[300px] w-[40%] overflow-hidden" onPress={handlePress(16)}>
             <Image source={images[16]} className="h-full w-full" />
           </TouchableOpacity>
           <Text className="flex-1 py-1 pl-3 text-justify font-inknut text-[12px] leading-[20px]">
-            This significant event, marking a milestone in the preservation of Balilihan's cultural
+            This significant event, marking a milestone in the preservation of Balilihan's cultural
             heritage, was made possible through the collaborative efforts of the National Museum -
-            Bohol, the Balilihan municipal government, the parish, and the Diocese of Tagbilaran.
+            Bohol, the Balilihan municipal government, the parish, and the Diocese of Tagbilaran.
             {'\n'}
             {'\n'}
-            The Balilihan community's generous donations have supported additional projects aimed at
+            The Balilihan community's generous donations have supported additional projects aimed at
             beautifying and maintaining the church.
           </Text>
         </View>
@@ -188,13 +261,13 @@ const Section_5 = () => {
         </TouchableOpacity>
 
         <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
-          In the biggest barrio in town, Hanopol, the 
-          <Text style={{ color: '#0E8341' }}>Santo Niño Parish Church</Text>, built in 1932, holds a
-          special place in the community. Initially a chapel, its size reflects the deep faith of
-          the Hanopolresidents, becoming the largest in the diocese.{'\n'}
+          In the biggest barrio in town, Hanopol, the
+          <Text style={{ color: '#0E8341' }}> Santo Niño Parish Church</Text>, built in 1932, holds
+          a special place in the community. Initially a chapel, its size reflects the deep faith of
+          the Hanopolresidents, becoming the largest in the diocese.{'\n'}
           {'\n'}
-          Declared a parish in 1989, with 
-          <Text style={{ color: '#0E8341' }}>Rev. Fr. Florante</Text> Mendaña as its first parish
+          Declared a parish in 1989, with
+          <Text style={{ color: '#0E8341' }}> Rev. Fr. Florante</Text> Mendaña as its first parish
           priest, the church features a long portico, a belfry situated on the epistle side, and a
           curvilinear pediment topped with a globe and cross. The annual Santo Niño feast celebrated
           on January 16th, is a vibrant testament to the community's devotion.
@@ -207,9 +280,9 @@ const Section_5 = () => {
         </TouchableOpacity>
 
         <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
-          Fronting the church is the concrete hugusan, the structure where the child playing as the
-          angel is suspended and lowered during the traditional 
-          <Text style={{ color: '#0E8341' }}>Hugos</Text> during Easter Sunday.
+          Fronting the church is the concrete hugusan, the structure where the child playing as the
+          angel is suspended and lowered during the traditional
+          <Text style={{ color: '#0E8341' }}>Hugos</Text> during Easter Sunday.
         </Text>
 
         <View className="mb-5 mt-2 flex flex-row">

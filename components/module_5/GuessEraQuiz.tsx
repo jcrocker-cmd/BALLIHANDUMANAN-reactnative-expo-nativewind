@@ -15,6 +15,8 @@ import { questions } from '../../assets/quiz/EraQueztions';
 import { Container } from 'components/Container';
 import banner from '../../assets/module_4/banner.png';
 import { useMemo } from 'react';
+import { Ionicons } from '@expo/vector-icons';
+import { useFocusEffect } from '@react-navigation/native';
 
 // Define your navigation types
 type RootStackParamList = {
@@ -47,11 +49,32 @@ const QuizScreen: React.FC = () => {
     []
   );
 
+  useFocusEffect(
+    React.useCallback(() => {
+      setAnswers(Array(questions.length).fill(null));
+    }, [])
+  );
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar barStyle="light-content" />
-      <View className="h-[130px] w-full overflow-hidden">
+      {/* Banner  */}
+      <View className="relative h-[130px] w-full overflow-hidden">
         <Image source={banner} className="h-full w-full" />
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}
+          className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/30 p-2">
+          <Ionicons name="arrow-back" size={30} color="#fff" />
+        </TouchableOpacity>
+        <Text
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/4 py-1 font-inknut text-[16px] text-white"
+          style={{
+            textShadowColor: 'black', // Outline color
+            textShadowOffset: { width: 2, height: 2 }, // Stroke position
+            textShadowRadius: 8, // Spread
+          }}>
+          Guess That Era!
+        </Text>
       </View>
       <Container>
         <FlatList

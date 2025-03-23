@@ -15,6 +15,7 @@ import { questions } from '../../assets/quiz/BalilihanTreasureQueztions';
 import { Container } from 'components/Container';
 import banner from '../../assets/module_4/banner.png';
 import { Ionicons } from '@expo/vector-icons';
+import { useFocusEffect } from '@react-navigation/native';
 
 type RootStackParamList = {
   BalilihanTreasureQuizScreen: undefined;
@@ -39,6 +40,12 @@ const QuizScreen: React.FC = () => {
   const handleSubmit = (): void => {
     navigation.navigate('BalilihanTreasureQuizScreenResult', { answers });
   };
+
+  useFocusEffect(
+    React.useCallback(() => {
+      setAnswers(Array(questions.length).fill(null));
+    }, [])
+  );
 
   return (
     <SafeAreaView style={{ flex: 1 }}>

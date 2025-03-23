@@ -23,7 +23,7 @@ const Section_3 = () => {
         <Text className="py-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
           Before we begin, let's clarify what colonization means.  
         </Text>
-        <View className="mb-5 mt-2">
+        <View className="mt-2">
           <TouchableOpacity className="h-[130px] w-full overflow-hidden" onPress={handlePress(0)}>
             <Image source={images[0]} className="h-full w-full" />
           </TouchableOpacity>
@@ -34,17 +34,23 @@ const Section_3 = () => {
             <Image source={images[2]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
-
-        <Text className="-mb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
-          <Text style={{ color: '#0E8341' }}>Colonization</Text> is the process by which one nation
-          or power establishes and maintains political, economic, and social control over another
-          territory and its people. This often involves the displacement of indigenous populations,
-          the exploitation of resources, and the imposition of new cultural and political systems.
-          {'\n'}
-          {'\n'}
-          Understanding this definition will help us analyze the impact of colonization
-          on Balilihan. Let's begin!
+        <Text className="mb-3 text-center font-inknut text-[11px]" style={{ color: '#B08923' }}>
+          The three periods of colonial influence in the Philippines.
         </Text>
+
+        <View style={{ flex: 1 }}>
+          <Text className="-mb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px] max-xs:text-base">
+            <Text style={{ color: '#0E8341' }}>Colonization</Text> is the process by which one
+            nation or power establishes and maintains political, economic, and social control over
+            another territory and its people. This often involves the displacement of indigenous
+            populations, the exploitation of resources, and the imposition of new cultural and
+            political systems.
+            {'\n'}
+            {'\n'}
+            Understanding this definition will help us analyze the impact of colonization
+            on Balilihan. Let's begin!
+          </Text>
+        </View>
       </CollapsibleSubTitle>
       {/* _______________________________Fullscreen Image Viewer________________________________ */}
       <ImageViewer images={images} visibleIndex={visibleIndex} onClose={onClose} />
