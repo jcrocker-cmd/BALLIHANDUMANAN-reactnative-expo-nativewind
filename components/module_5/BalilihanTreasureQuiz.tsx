@@ -15,6 +15,7 @@ import { questions } from '../../assets/quiz/BalilihanTreasureQueztions';
 import { Container } from 'components/Container';
 import banner from '../../assets/module_4/banner.png';
 import { Ionicons } from '@expo/vector-icons';
+import { useFocusEffect } from '@react-navigation/native';
 
 type RootStackParamList = {
   BalilihanTreasureQuizScreen: undefined;
@@ -40,6 +41,12 @@ const QuizScreen: React.FC = () => {
     navigation.navigate('BalilihanTreasureQuizScreenResult', { answers });
   };
 
+  useFocusEffect(
+    React.useCallback(() => {
+      setAnswers(Array(questions.length).fill(null));
+    }, [])
+  );
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar barStyle="light-content" />
@@ -48,10 +55,10 @@ const QuizScreen: React.FC = () => {
         <TouchableOpacity
           onPress={() => navigation.goBack()}
           className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/30 p-2">
-          <Ionicons name="arrow-back" size={30} color="#fff" />
+          <Ionicons name="arrow-back" size={25} color="#fff" />
         </TouchableOpacity>
         <Text
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/4 py-1 font-inknut text-[16px] text-white"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/4 py-1 font-inknut text-[14px] text-white"
           style={{
             textShadowColor: 'black',
             textShadowOffset: { width: 2, height: 2 },
@@ -63,7 +70,7 @@ const QuizScreen: React.FC = () => {
       <Container>
         <FlatList
           ListHeaderComponent={
-            <Text className="mb-5 py-1 text-justify font-inknut text-base text-white">
+            <Text className="mb-5 py-1 text-justify font-inknut text-[12px] leading-[22px] text-white">
               Identify each cultural asset whether it is Natural, Built, Movable, or Intangible
               heritage. Let's go!
             </Text>
@@ -81,7 +88,7 @@ const QuizScreen: React.FC = () => {
                   style={[styles.option, answers[index] === option && styles.selectedOption]}>
                   <Text
                     style={styles.optionText}
-                    className="font-inknut text-[13px] text-[#0E8341]">
+                    className="font-inknut text-[12px] text-[#0E8341]">
                     {option}
                   </Text>
                 </TouchableOpacity>
@@ -90,7 +97,7 @@ const QuizScreen: React.FC = () => {
           )}
         />
         <TouchableOpacity onPress={handleSubmit} className="rounded-lg bg-[#0E8341] p-3">
-          <Text className="text-center font-inknut text-[#FFF800]">Submit</Text>
+          <Text className="text-center font-inknut text-[12px] text-[#FFF800]">Submit</Text>
         </TouchableOpacity>
       </Container>
     </SafeAreaView>

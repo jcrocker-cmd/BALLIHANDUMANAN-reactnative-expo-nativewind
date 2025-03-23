@@ -48,10 +48,10 @@ const QuizScreen: React.FC = () => {
         <TouchableOpacity
           onPress={() => navigation.goBack()}
           className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/30 p-2">
-          <Ionicons name="arrow-back" size={30} color="#fff" />
+          <Ionicons name="arrow-back" size={25} color="#fff" />
         </TouchableOpacity>
         <Text
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/3 py-1 font-inknut text-[16px] text-white"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/3 py-1 font-inknut text-[14px] text-white"
           style={{
             textShadowColor: 'black', // Outline color
             textShadowOffset: { width: 2, height: 2 }, // Stroke position
@@ -62,8 +62,8 @@ const QuizScreen: React.FC = () => {
       </View>
       <AssesmentContainer>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <Text className="text-center font-inknut text-[16px]"> GUESS THAT BARANGAY!{'\n'}</Text>
-          <Text className="font-inknut text-[12px] ">
+          <Text className="text-center font-inknut text-[14px]"> GUESS THAT BARANGAY!{'\n'}</Text>
+          <Text className="font-inknut text-[11px] ">
             1. Cantalid{'\n'}
             2. Cantomimbo{'\n'}
             3. Cogon{'\n'}
@@ -87,8 +87,16 @@ const QuizScreen: React.FC = () => {
           </Text>
 
           <TableExample></TableExample>
-          <Text className="pt-10 text-center font-inknut text-[16px]">GUESS THAT ERA!{'\n'}</Text>
-          <Text className="font-inknut text-[12px] ">
+
+          <Text className="pt-10 text-center font-inknut text-[14px] uppercase">
+            BEGINNING: TOWN AND ITS PEOPLE{'\n'}
+          </Text>
+          <Text className="font-inknut text-[11px] ">
+            • Orig{'\n'}• Dangoy{'\n'}• Racho{'\n'}• Maniwang{'\n'}• Lacea{'\n'}• Pongase{'\n'}
+          </Text>
+
+          <Text className="pt-10 text-center font-inknut text-[14px]">GUESS THAT ERA!{'\n'}</Text>
+          <Text className="font-inknut text-[11px] ">
             1. Spanish Occupation{'\n'}
             2. American Occupation{'\n'}
             3. Japanese Occupation{'\n'}
@@ -101,27 +109,27 @@ const QuizScreen: React.FC = () => {
             10. American Occupation
           </Text>
 
-          <Text className="pt-10 text-center font-inknut text-[16px] uppercase">
+          <Text className="pt-10 text-center font-inknut text-[14px] uppercase">
             Uncover Balilihan’s Treasures{'\n'}
           </Text>
-          <Text className="font-inknut text-[12px] ">
-            1. Kawasan Falls - Tangible Heritage{'\n'}
-            2. Balilihan Belfry - Tangible Heritage{'\n'}
+          <Text className="font-inknut text-[11px] ">
+            1. Kawasan Falls - Natural Heritage{'\n'}
+            2. Balilihan Belfry - Built Heritage{'\n'}
             3. Sumad Festival - Intangible Heritage{'\n'}
             4. Hugos - Intangible Heritage{'\n'}
             5. Tagbo - Intangible Heritage{'\n'}
-            6. Manlawi Peak - Tangible Heritage{'\n'}
-            7. Balilihan Association of Women for Development (Bawod) - Intangible Heritage
+            6. Manlawi Peak - Natural Heritage{'\n'}
+            7. Santo Entierro - Movable Heritage
             {'\n'}
-            8. Our Lady of Mt. Carmel Parish Church - Tangible Heritage{'\n'}
-            9. Old Municipal Hall - Tangible Heritage{'\n'}
+            8. Our Lady of Mt. Carmel Parish Church - Built Heritage{'\n'}
+            9. Old Municipal Hall - Built Heritage{'\n'}
             10. Kumparsa - Intangible Heritage
           </Text>
 
-          <Text className="pt-10 text-center font-inknut text-[16px] uppercase">
+          <Text className="pt-10 text-center font-inknut text-[14px] uppercase">
             Take the Quiz{'\n'}
           </Text>
-          <Text className="font-inknut text-[12px] ">
+          <Text className="font-inknut text-[11px] ">
             1. Bay sa Iring{'\n'}
             2. Hanopol{'\n'}
             3. Baclayon{'\n'}

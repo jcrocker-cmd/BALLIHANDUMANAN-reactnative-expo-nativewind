@@ -40,12 +40,12 @@ const Module_4 = () => {
       <SafeAreaView style={{ flex: 1 }}>
         <StatusBar barStyle="light-content" />
 
-        <View className="relative mb-4 h-[130px] w-full overflow-hidden">
+        <View className="relative h-[130px] w-full overflow-hidden">
           <Image source={banner} className="h-full w-full" />
           <TouchableOpacity
             onPress={() => navigation.goBack()}
             className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/30 p-2">
-            <Ionicons name="arrow-back" size={30} color="#fff" />
+            <Ionicons name="arrow-back" size={25} color="#fff" />
           </TouchableOpacity>
         </View>
 

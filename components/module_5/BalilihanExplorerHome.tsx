@@ -25,10 +25,10 @@ const Module_5 = () => {
         <TouchableOpacity
           onPress={() => navigation.navigate('Module_5')}
           className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/30 p-2">
-          <Ionicons name="arrow-back" size={30} color="#fff" />
+          <Ionicons name="arrow-back" size={25} color="#fff" />
         </TouchableOpacity>
         <Text
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/4 py-1 font-inknut text-[16px] text-white"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/4 py-1 font-inknut text-[14px] text-white"
           style={{
             textShadowColor: 'black', // Outline color
             textShadowOffset: { width: 2, height: 2 }, // Stroke position
@@ -41,28 +41,28 @@ const Module_5 = () => {
       {/* Gradient Background & Buttons */}
       <AssesmentContainer>
         <View className="flex-1 items-center gap-4">
-          <Text className="w-[95%] py-1 text-center font-inknut text-base text-black">
+          <Text className="w-[100%] py-1 text-justify font-inknut text-[12px] leading-[22px] text-black">
             Welcome to "Balilihan, The Explorer"! You'll be using your knowledge of Balilihan's
             barangays and map skills to pinpoint their locations on a blank map. Remember, Balilihan
             has 31 barangays in total. Get ready to explore!
           </Text>
 
           <TouchableOpacity
-            className="w-[95%] rounded-lg bg-white px-6 py-3"
+            className="w-[100%] rounded-lg bg-white px-6 py-3"
             onPress={() => navigation.navigate('BalilihanExplorer_1')}>
-            <Text className="py-1 text-center font-inknut text-[14px] text-green-800">Level 1</Text>
+            <Text className="py-1 text-center font-inknut text-[13px] text-green-800">Level 1</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
-            className="w-[95%] rounded-lg bg-white px-6 py-3"
+            className="w-[100%] rounded-lg bg-white px-6 py-3"
             onPress={() => navigation.navigate('BalilihanExplorer_2')}>
-            <Text className="py-1 text-center font-inknut text-[14px] text-green-800">Level 2</Text>
+            <Text className="py-1 text-center font-inknut text-[13px] text-green-800">Level 2</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
-            className="w-[95%] rounded-lg bg-white px-6 py-3"
+            className="w-[100%] rounded-lg bg-white px-6 py-3"
             onPress={() => navigation.navigate('BalilihanExplorer_3')}>
-            <Text className="py-1 text-center font-inknut text-[14px] text-green-800">Level 3</Text>
+            <Text className="py-1 text-center font-inknut text-[13px] text-green-800">Level 3</Text>
           </TouchableOpacity>
         </View>
       </AssesmentContainer>

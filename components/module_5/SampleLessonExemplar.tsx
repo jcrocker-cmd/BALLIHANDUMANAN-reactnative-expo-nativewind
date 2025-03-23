@@ -16,15 +16,15 @@ const pdfFiles = [
   },
   {
     name: 'Lesson Exemplar (Lesson 2)',
-    path: require('../../assets/module_5/PDF/Lesson Exemplar (Lesson 1).pdf'),
+    path: require('../../assets/module_5/PDF/Lesson Exemplar (Lesson 2).pdf'),
   },
   {
     name: 'Lesson Exemplar (Lesson 3)',
-    path: require('../../assets/module_5/PDF/Lesson Exemplar (Lesson 1).pdf'),
+    path: require('../../assets/module_5/PDF/Lesson Exemplar (Lesson 3).pdf'),
   },
   {
     name: 'Lesson Exemplar (Lesson 4)',
-    path: require('../../assets/module_5/PDF/Lesson Exemplar (Lesson 1).pdf'),
+    path: require('../../assets/module_5/PDF/Lesson Exemplar (Lesson 4).pdf'),
   },
 ];
 
@@ -70,10 +70,10 @@ const Module_5 = () => {
         <TouchableOpacity
           onPress={() => navigation.goBack()}
           className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/30 p-2">
-          <Ionicons name="arrow-back" size={30} color="#fff" />
+          <Ionicons name="arrow-back" size={25} color="#fff" />
         </TouchableOpacity>
         <Text
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/3 py-1 font-inknut text-[16px] text-white"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/3 py-1 font-inknut text-[14px] text-white"
           style={{
             textShadowColor: 'black',
             textShadowOffset: { width: 2, height: 2 },
@@ -89,10 +89,10 @@ const Module_5 = () => {
           {pdfFiles.map((pdf, index) => (
             <TouchableOpacity
               key={index}
-              className="w-[95%] flex-row items-center justify-center gap-2 rounded-lg bg-white px-6 py-3"
+              className="w-[100%] flex-row items-center justify-center gap-2 rounded-lg bg-white px-6 py-3"
               onPress={() => copyAndSharePDF(pdf.path, `${pdf.name}.pdf`)}>
               <Ionicons name="document-text-outline" size={20} color="green" />
-              <Text className="py-1 text-center font-inknut text-[14px] text-green-800">
+              <Text className="py-1 text-center font-inknut text-[13px] text-green-800">
                 {pdf.name}
               </Text>
             </TouchableOpacity>

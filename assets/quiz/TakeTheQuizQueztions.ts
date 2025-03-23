@@ -292,8 +292,8 @@ export const questions: Question[] = [
   },
   {
     question: 'In which years was the Balilihan Belfry constructed?',
-    options: ['1932-1952', '1835-1846', '1850-1866', '1965-1972'],
-    correctAnswer: '1835-1846',
+    options: ['1932-1952', '1835-1844', '1850-1866', '1965-1972'],
+    correctAnswer: '1835-1844',
   },
   {
     question: 'What event caused the collapse of the Balilihan Belfry?',

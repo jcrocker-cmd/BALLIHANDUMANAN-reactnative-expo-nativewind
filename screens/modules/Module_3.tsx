@@ -21,27 +21,26 @@ const Module_3 = () => {
     <>
       <SafeAreaView style={{ flex: 1 }}>
         <StatusBar barStyle="light-content" />
-        <ScrollView showsVerticalScrollIndicator={false}>
-          <View className="relative mb-4 h-[130px] w-full overflow-hidden">
-            <Image source={banner} className="h-full w-full" />
-            <TouchableOpacity
-              onPress={() => navigation.goBack()}
-              className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/30 p-2">
-              <Ionicons name="arrow-back" size={30} color="#fff" />
-            </TouchableOpacity>
-          </View>
+        <View className="relative h-[130px] w-full overflow-hidden">
+          <Image source={banner} className="h-full w-full" />
+          <TouchableOpacity
+            onPress={() => navigation.goBack()}
+            className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/30 p-2">
+            <Ionicons name="arrow-back" size={25} color="#fff" />
+          </TouchableOpacity>
+        </View>
 
-          <NormalContainer>
-            <Title>
-              Balilihan in the{'\n'}
-              Postwar Era and Beyond
-            </Title>
-
+        <NormalContainer>
+          <Title>
+            Balilihan in the{'\n'}
+            Postwar Era and Beyond
+          </Title>
+          <ScrollView showsVerticalScrollIndicator={false}>
             <Section_1 />
             <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
             <Section_2 />
             <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
-            {/* <Section_3 />
+            <Section_3 />
             <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
             <Section_4 />
             <View className="mb-4 mt-2 h-[1px] w-full bg-[#0E8341]" />
@@ -53,9 +52,9 @@ const Module_3 = () => {
             <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
             <Section_8 />
             <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E8341]" />
-            <Section_9 /> */}
-          </NormalContainer>
-        </ScrollView>
+            <Section_9 />
+          </ScrollView>
+        </NormalContainer>
       </SafeAreaView>
     </>
   );

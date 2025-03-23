@@ -20,9 +20,9 @@ export default function AdvancedTable() {
   return (
     <View>
       <Text
-        style={{ fontSize: 16, textAlign: 'center', marginBottom: 10 }}
-        className="pt-8 font-inknut">
-        2. Balilihan, THE EXPLORER!
+        style={{ fontSize: 14, textAlign: 'center', marginBottom: 10 }}
+        className="pt-8 font-inknut uppercase">
+        Balilihan, THE EXPLORER!
       </Text>
       <Table borderStyle={{ borderWidth: 1, borderColor: '#000' }} className="font-inknut">
         <Row
@@ -34,7 +34,7 @@ export default function AdvancedTable() {
         <Rows
           data={tableData}
           textStyle={{ textAlign: 'left' }}
-          className="px-1 font-inknut text-[12px]"
+          className="px-1 font-inknut text-[11px]"
         />
       </Table>
     </View>

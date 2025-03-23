@@ -1,22 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
+import MapView, { Marker, Region } from 'react-native-maps';
 
 const GoogleMapsView = () => {
+  // Define the region with zoom
+  const [region, setRegion] = useState<Region>({
+    latitude: 9.754947, // Correct Latitude
+    longitude: 123.971301, // Correct Longitude
+    latitudeDelta: 0.05, // Zoom Level
+    longitudeDelta: 0.05, // Zoom Level
+  });
+
   return (
-    <View style={styles.container} className="h-[380px] w-full border border-black">
+    <View style={styles.container} className="h-[380px] w-full">
       <MapView
-        style={{ width: '100%', height: '100%' }} // Set height directly
-        initialRegion={{
-          latitude: 9.79599,
-          longitude: 124.264934,
-          latitudeDelta: 0.01,
-          longitudeDelta: 0.01,
-        }}>
+        style={{ width: '100%', height: '100%' }}
+        region={region} // ✅ Use `region` to control zoom dynamically
+        mapType="hybrid" // Use hybrid (satellite + labels)
+      >
+        {/* Marker for Balilihan Municipal Hall */}
         <Marker
-          coordinate={{ latitude: 9.79599, longitude: 124.264934 }}
-          title="My Location"
-          description="This is a marker for my location"
+          coordinate={{ latitude: 9.754947, longitude: 123.971301 }}
+          title="Balilihan Municipal Hall"
+          description="Municipal Hall of Balilihan, Bohol"
         />
       </MapView>
     </View>
@@ -25,13 +31,10 @@ const GoogleMapsView = () => {
 
 const styles = StyleSheet.create({
   container: {
-    borderColor: 'black',
-    borderWidth: 1,
     paddingTop: 10,
     paddingBottom: 10,
     width: '100%',
     height: 400,
-    // Removed flex: 1 so it respects the height from className
   },
 });
 

@@ -47,9 +47,9 @@ const Section_5 = () => {
     <>
       {/* _______________________________BALILIHAN TODAY________________________________ */}
       <CollapsibleSubTitle name="BALILIHAN TODAY">
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
-          Nearly two centuries after its founding, Balilihan has earned a respected name in Bohol
-          andacross the country. This success is largely due to the visionary leadership of its
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
+          Nearly two centuries after its founding, Balilihan has earned a respected name in Bohol
+          and across the country. This success is largely due to the visionary leadership of its
           spiritual and political guides throughout the years.
         </Text>
 
@@ -61,17 +61,17 @@ const Section_5 = () => {
           />
         </View>
 
-        <Text className="text-balance py-2 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
           Their enduring legacies—evident in the landmarks and traditions they left behind—stand as
           testaments to their tireless efforts, sacrifices, and unwavering dedication to the people
-          of Balilihan.{'\n'}
+          of Balilihan.{'\n'}
           The town's enduring strength lies in the resilience, perseverance, and faith of its
           people. Their unwavering commitment to God and country, coupled with an openness to
-          embracing progress and innovation, has propelled Balilihan forward, constantly striving
-          for greater achievements. This continuous improvement spirit defines Balilihan, a
+          embracing progress and innovation, has propelled Balilihan forward, constantly striving
+          for greater achievements. This continuous improvement spirit defines Balilihan, a
           community forever moving towards a brighter future.
         </Text>
-        <View className="mb-4 mt-2">
+        <View className="mb-4">
           <TouchableOpacity className="h-[230px] w-full overflow-hidden" onPress={handlePress(1)}>
             <Image source={images[1]} className="h-full w-full" />
           </TouchableOpacity>
@@ -80,10 +80,19 @@ const Section_5 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-2 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text
+          className="mb-3 py-1 text-center font-inknut text-[11px]"
+          style={{
+            color: '#B08923',
+            lineHeight: 18, // Tight spacing
+          }}>
+          Then and now: municipal officials and employees in Balilihan.
+        </Text>
+
+        <Text className="text-balance py-2 text-justify font-inknut text-[11px] leading-[24px]">
           According to the Philippine Statistics Authority, the municipality boasts a substantial
-          population of 18,694 as of 2020. Improvements in education and healthcare have
-          significantly shaped Balilihan's social landscape. Community-based organizations and
+          population of 18,694 as of 2020. Improvements in education and healthcare have
+          significantly shaped Balilihan's social landscape. Community-based organizations and
           initiatives play a vital role in fostering social development and strengthening community
           bonds.
         </Text>
@@ -92,23 +101,55 @@ const Section_5 = () => {
           <TouchableOpacity className="h-[180px] w-full overflow-hidden" onPress={handlePress(3)}>
             <Image source={images[3]} className="h-full w-full" />
           </TouchableOpacity>
-          <TouchableOpacity className="h-[180px] w-full overflow-hidden" onPress={handlePress(4)}>
+          <TouchableOpacity
+            className="mb-2 h-[180px] w-full overflow-hidden"
+            onPress={handlePress(4)}>
             <Image source={images[4]} className="h-full w-full" />
           </TouchableOpacity>
+          <Text
+            className="mb-4 py-1 text-center font-inknut text-[11px]"
+            style={{
+              color: '#B08923',
+              lineHeight: 18, // Tight spacing
+            }}>
+            Groundbreaking of the BISU Tourism and Sports Institute in Balilihan.
+          </Text>
+
           <TouchableOpacity className="h-[180px] w-full overflow-hidden" onPress={handlePress(5)}>
             <Image source={images[5]} className="h-full w-full" />
           </TouchableOpacity>
-          <TouchableOpacity className="h-[180px] w-full overflow-hidden" onPress={handlePress(6)}>
+          <TouchableOpacity
+            className="mb-2 h-[180px] w-full overflow-hidden"
+            onPress={handlePress(6)}>
             <Image source={images[6]} className="h-full w-full" />
           </TouchableOpacity>
-          <TouchableOpacity className="h-[180px] w-full overflow-hidden" onPress={handlePress(7)}>
+          <Text
+            className="mb-4 py-1 text-center font-inknut text-[11px]"
+            style={{
+              color: '#B08923',
+              lineHeight: 18, // Tight spacing
+            }}>
+            The award-winning Balilihan Congressional District Library - one of only three
+            congressional district libraries in the Philippines.
+          </Text>
+          <TouchableOpacity
+            className="mb-2 h-[180px] w-full overflow-hidden"
+            onPress={handlePress(7)}>
             <Image source={images[7]} className="h-full w-full" />
           </TouchableOpacity>
+          <Text
+            className="mb-4 py-1 text-center font-inknut text-[11px]"
+            style={{
+              color: '#B08923',
+              lineHeight: 18, // Tight spacing
+            }}>
+            The newly-constructed Balilihan Municipal Health Building.
+          </Text>
         </View>
 
-        <Text className="text-balance py-2 text-justify font-inknut text-[12px] leading-[24px]">
-          Balilihan's vibrant cultural life is reflected in its annual celebrations.
-          The Sumad Festival, held every September 29th, commemorates the town's founding.
+        <Text className="text-balance py-2 text-justify font-inknut text-[11px] leading-[24px]">
+          Balilihan's vibrant cultural life is reflected in its annual celebrations. The Sumad
+          Festival, held every September 29th, commemorates the town's founding.
         </Text>
 
         <TouchableOpacity
@@ -117,9 +158,9 @@ const Section_5 = () => {
           <Image source={images[8]} className="h-full w-full" />
         </TouchableOpacity>
 
-        <Text className="text-balance py-2 text-justify font-inknut text-[12px] leading-[24px]">
+        <Text className="text-balance py-2 text-justify font-inknut text-[11px] leading-[24px]">
           Religious festivities include the fiesta honoring Our Lady of Mount Carmel on July 16th
-          and the celebration in honor of the Santo Niño at the Hanopol barrio on January 16th.
+          and the celebration in honor of the Santo Niño at the Hanopol barrio on January 16th.
         </Text>
 
         <View className="mb-5 mt-2">
@@ -131,17 +172,17 @@ const Section_5 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-2 text-justify font-inknut text-[12px] leading-[24px]">
-          These events unite the community, fostering a strong sense of shared identity and cultural
-          pride, with the nightly activities adding a special dimension to the celebrations.{'\n'}
-          Furthermore, Balilihan's rich heritage is preserved and celebrated through several sites
+        <Text className="text-balance py-2 text-justify font-inknut text-[11px] leading-[24px]">
+          These events unite the community, fostering a strong sense of shared identity and cultural
+          pride, with the nightly activities adding a special dimension to the celebrations.{'\n'}
+          Furthermore, Balilihan's rich heritage is preserved and celebrated through several sites
           recognized as Important Cultural Properties by the National Museum of the Philippines.
-          These designations highlight the historical and cultural significance of these municipal
-          heritages. These designations not only preserve the past but also contribute to the
-          ongoing development of Balilihan's cultural tourism potential.
+          These designations highlight the historical and cultural significance of these municipal
+          heritages. These designations not only preserve the past but also contribute to the
+          ongoing development of Balilihan's cultural tourism potential.
         </Text>
 
-        <View className="mb-5 mt-3">
+        <View className="mb-4 mt-3">
           <TouchableOpacity className="h-[230px] w-full overflow-hidden" onPress={handlePress(11)}>
             <Image source={images[11]} className="h-full w-full" />
           </TouchableOpacity>
@@ -150,14 +191,24 @@ const Section_5 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-2 text-justify font-inknut text-[12px] leading-[24px]">
-          Balilihan's economy is built on a foundation of agriculture, with rice, corn,
-          and livestock farming, and basket weaving forming its core. However, recognizing the
-          potential for growth beyond agriculture, the municipality is actively developing its
-          tourism sector.
+        <Text
+          className="mb-3 py-1 text-center font-inknut text-[11px]"
+          style={{
+            color: '#B08923',
+            lineHeight: 18, // Tight spacing
+          }}>
+          The National Museum of the Philippines has recognized the Our Lady of Mt. Carmel Parish
+          Church and the Old Municipal Hall as Important Cultural Properties.
         </Text>
 
-        <View className="mb-5 mt-3">
+        <Text className="text-balance py-2 text-justify font-inknut text-[11px] leading-[24px]">
+          Balilihan's is built on a foundation of{' '}
+          <Text style={{ color: '#0E8341' }}>agriculture</Text>, with rice, corn, and livestock
+          farming, and basket weaving forming its core. However, recognizing the potential for
+          growth beyond agriculture, the municipality is actively developing its tourism sector.
+        </Text>
+
+        <View className="mb-4 mt-3">
           <TouchableOpacity className="h-[150px] w-full overflow-hidden" onPress={handlePress(13)}>
             <Image source={images[13]} className="h-full w-full" />
           </TouchableOpacity>
@@ -170,8 +221,16 @@ const Section_5 = () => {
             </TouchableOpacity>
           </View>
         </View>
+        <Text
+          className="mb-3 py-1 text-center font-inknut text-[11px]"
+          style={{
+            color: '#B08923',
+            lineHeight: 18, // Tight spacing
+          }}>
+          Agriculture in Balilihan
+        </Text>
 
-        <View className="mb-5 mt-2 flex flex-row">
+        <View className="mb-4 mt-2 flex flex-row">
           <TouchableOpacity className="h-[230px] w-1/2 overflow-hidden" onPress={handlePress(16)}>
             <Image source={images[16]} className="h-full w-full" />
           </TouchableOpacity>
@@ -179,11 +238,20 @@ const Section_5 = () => {
             <Image source={images[17]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
+        <Text
+          className="mb-3 py-1 text-center font-inknut text-[11px]"
+          style={{
+            color: '#B08923',
+            lineHeight: 18, // Tight spacing
+          }}>
+          Basket weaving in Balilihan.
+        </Text>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
-          This involves showcasing Balilihan's natural attractions, such as its picturesque
-          waterfalls and other scenic locations, and the restoration of historically significant
-          sites to create appealing destinations for visitors.
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
+          In the <Text style={{ color: '#0E8341' }}>tourism sector</Text>, this involves showcasing
+          Balilihan's natural attractions, such as its picturesque waterfalls and other scenic
+          locations, and the restoration of historically significant sites to create appealing
+          destinations for visitors.
         </Text>
 
         <View className="mb-5 mt-2 flex flex-row">
@@ -204,13 +272,16 @@ const Section_5 = () => {
           </View>
         </View>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
-          This involves showcasing Balilihan's natural attractions, such as its picturesque
-          waterfalls and other scenic locations, and the restoration of historically significant
-          sites to create appealing destinations for visitors.
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
+          A key component of this strategy is{' '}
+          <Text style={{ color: '#0E8341' }}>infrastructure development</Text>. Significant
+          investments are being made in the construction and maintenance of roads and bridges. This
+          collaborative effort, funded by local, provincial, and national government agencies, aims
+          to improve transportation throughout the municipality, making it more accessible for both
+          residents and tourists.
         </Text>
 
-        <View className="mb-5 mt-2">
+        <View className="mb-5 mt-3">
           <TouchableOpacity className="h-[180px] w-full overflow-hidden" onPress={handlePress(21)}>
             <Image source={images[21]} className="h-full w-full" />
           </TouchableOpacity>
@@ -222,11 +293,11 @@ const Section_5 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
-          Through the years, Balilihan's political landscape reflects a history of consistent
-          progress and achievement. Recently, the municipality has earned numerous awards at the
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
+          Through the years, Balilihan's political landscape reflects a history of consistent
+          progress and achievement. Recently, the municipality has earned numerous awards at the
           provincial, regional, and national levels, culminating in its recent reclassification from
-          a 4th class to a 3rd class municipality in 2024. This advancement is a testament to
+          a 4th class to a 3rd class municipality in 2024. This advancement is a testament to
           effective governance and financial management.
         </Text>
 
@@ -236,8 +307,8 @@ const Section_5 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
-          Balilihan consistently meets the Department of the Interior and Local Government's (DILG)
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
+          Balilihan consistently meets the Department of the Interior and Local Government's (DILG)
           Good Financial Housekeeping Standards, demonstrating adherence to rigorous accounting,
           auditing, and transparency practices, including full disclosure of its budget and
           finances.
@@ -249,17 +320,16 @@ const Section_5 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[12px] leading-[24px]">
-          A key driver of Balilihan's success is its flagship Countryside Action Program (CAP). In
+        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
+          A key driver of Balilihan's success is its flagship Countryside Action Program (CAP). In
           2024, CAP's impact was recognized with the prestigious Consistent Regional Outstanding
           Winner in Nutrition (CROWN) Award, highlighting its exceptional performance in 2023. This
           holistic approach to social development, focusing on health, nutrition, and sanitation,
-          has previously earned Balilihan multiple Green Banner awards.{'\n'}
-          (Photo of Plaque Green Banner award, CROWN Award, and Outstanding Anti-Drug Drive) Beyond
-          its achievements in health and nutrition, Balilihan has also garnered significant
+          has previously earned Balilihan multiple Green Banner awards.{'\n'}
+          Beyond its achievements in health and nutrition, Balilihan has also garnered significant
           recognition for its commitment to peace and order. In 2019, it received a national award
-          for Outstanding Anti-Drug Drive from the DILG, and in 2024, it was honored with
-          the BansiwagGovernance Award for its Anti-Drug Abuse Council and Peace and Order Council.
+          for Outstanding Anti-Drug Drive from the DILG, and in 2024, it was honored with the
+          Bansiwag Governance Award for its Anti-Drug Abuse Council and Peace and Order Council.
         </Text>
 
         <View className="mb-5 mt-2 flex w-full flex-row">
@@ -274,8 +344,8 @@ const Section_5 = () => {
           </TouchableOpacity>
         </View>
 
-        <Text className="text-balance pb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px]">
-          These accolades demonstrate Balilihan's dedication to effective governance, community
+        <Text className="text-balance pb-5 pt-2 text-justify font-inknut text-[11px] leading-[22px]">
+          These accolades demonstrate Balilihan's dedication to effective governance, community
           well-being, and public safety.
         </Text>
       </CollapsibleSubTitle>

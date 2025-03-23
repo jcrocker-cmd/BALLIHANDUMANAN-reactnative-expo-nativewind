@@ -27,7 +27,7 @@ const CollapsibleSubTitle = ({ name, children }: CollapsibleSubTitleProps) => {
       {/* Clickable Header */}
       <TouchableOpacity onPress={toggleCollapse}>
         <View style={styles.container} className="py-4">
-          <Text style={styles.text} className="font-inknut text-[15px] font-semibold">
+          <Text style={styles.text} className="font-inknut text-[14px] font-semibold">
             {name}
           </Text>
           <Image source={icon} resizeMode="contain" style={styles.icon} />
@@ -62,8 +62,8 @@ const styles = StyleSheet.create({
     color: '#0E8341',
   },
   icon: {
-    width: 30,
-    height: 30,
+    width: 27,
+    height: 27,
   },
   contentContainer: {
     width: '100%',

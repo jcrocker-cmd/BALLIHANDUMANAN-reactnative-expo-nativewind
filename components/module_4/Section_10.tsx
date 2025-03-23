@@ -7,14 +7,14 @@ const Section_10 = () => {
     <>
       {/* _______________________________LET’S REFLECT!________________________________ */}
       <CollapsibleSubTitle name="LET’S REFLECT!">
-        <Text className="text-balance pb-5 pt-2 text-justify font-inknut text-[12px] leading-[24px]">
-          After learning about Balilihan's rich cultural heritage, take some time for reflection
+        <Text className="text-balance pb-5 pt-2 text-justify font-inknut text-[11px] leading-[24px]">
+          After learning about Balilihan's rich cultural heritage, take some time for reflection
           using the following guide questions:{'\n'}
-          1. What aspects of Balilihan's history and culture resonated most with you, and why?
+          1. What aspects of Balilihan's history and culture resonated most with you, and why?
           {'\n'}
-          2. What are the most significant contributions of Balilihan to Bohol's overall culture and
+          2. What are the most significant contributions of Balilihan to Bohol's overall culture and
           history?{'\n'}
-          3. How can we ensure that Balilihan's cultural heritage is preserved and celebrated for
+          3. How can we ensure that Balilihan's cultural heritage is preserved and celebrated for
           future generations?
         </Text>
       </CollapsibleSubTitle>
