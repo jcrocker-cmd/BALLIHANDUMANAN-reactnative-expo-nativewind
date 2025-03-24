@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
-import banner from '../../assets/module_4/banner.png';
+import banner from '../../assets/module_5/banner.jpg';
 import { AssesmentContainer } from 'components/AssesmentContainer';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';

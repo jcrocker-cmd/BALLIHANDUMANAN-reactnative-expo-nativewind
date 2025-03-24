@@ -3,6 +3,7 @@ import React from 'react';
 import { useState, useMemo, useCallback } from 'react';
 import CollapsibleSubTitle from 'components/CollapsibleSubTitle';
 import ImageViewer from 'components/common/ImageViewer';
+import FastImage from 'expo-fast-image';
 
 const Section_4 = () => {
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
@@ -14,20 +15,62 @@ const Section_4 = () => {
   const onImageVisible = (index: number) => {
     setVisibleImages((prev) => ({ ...prev, [index]: true }));
   };
+  // const images = useMemo(
+  //   () => [
+  //     require('../../assets/module_4/1. Belfry/1.Old Photo Belfry 2.jpg'),
+  //     require('../../assets/module_4/1. Belfry/1.Old Photo Belfry 1.jpg'),
+  //     require('../../assets/module_4/1. Belfry/2. Photo Belfry.jpg'),
+  //     require('../../assets/module_4/1. Belfry/3. Old Photo Belfry (1987).jpg'),
+  //     require('../../assets/module_4/1. Belfry/4.Rehabilitation of the Belfry.jpg'),
+  //     require('../../assets/module_4/1. Belfry/4.Destruction of the Belfry after the 2013 Bohol Earthquake.jpg'),
+  //     require('../../assets/module_4/1. Belfry/4.Putting back of the Balilihan Belfry Marker during the restoration.jpg'),
+  //     require('../../assets/module_4/1. Belfry/5.b Turnover and Acceptance Ceremonies in 2017.jpg'),
+  //     require('../../assets/module_4/1. Belfry/5.a Turnover and Acceptance Ceremonies in 2017.jpg'),
+  //     require('../../assets/module_4/1. Belfry/6.a. The Restored Balilihan Belfry.jpeg'),
+  //     require('../../assets/module_4/1. Belfry/6.b. Inside the Restored Balilihan Belfry.jpg'),
+  //     require('../../assets/module_4/1. Belfry/6.c The Restored Balilihan Belfry.jpg'),
+  //   ],
+  //   []
+  // );
+
   const images = useMemo(
     () => [
-      require('../../assets/module_4/1. Belfry/1.Old Photo Belfry 2.jpg'),
-      require('../../assets/module_4/1. Belfry/1.Old Photo Belfry 1.jpg'),
-      require('../../assets/module_4/1. Belfry/2. Photo Belfry.jpg'),
-      require('../../assets/module_4/1. Belfry/3. Old Photo Belfry (1987).jpg'),
-      require('../../assets/module_4/1. Belfry/4.Rehabilitation of the Belfry.jpg'),
-      require('../../assets/module_4/1. Belfry/4.Destruction of the Belfry after the 2013 Bohol Earthquake.jpg'),
-      require('../../assets/module_4/1. Belfry/4.Putting back of the Balilihan Belfry Marker during the restoration.jpg'),
-      require('../../assets/module_4/1. Belfry/5.b Turnover and Acceptance Ceremonies in 2017.jpg'),
-      require('../../assets/module_4/1. Belfry/5.a Turnover and Acceptance Ceremonies in 2017.jpg'),
-      require('../../assets/module_4/1. Belfry/6.a. The Restored Balilihan Belfry.jpeg'),
-      require('../../assets/module_4/1. Belfry/6.b. Inside the Restored Balilihan Belfry.jpg'),
-      require('../../assets/module_4/1. Belfry/6.c The Restored Balilihan Belfry.jpg'),
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742741514/1.Old_Photo_Belfry_2_nghf3d.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742741516/1.Old_Photo_Belfry_1_dh6ff6.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742741515/2._Photo_Belfry_c2xf7y.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742741514/3._Old_Photo_Belfry_1987_ckhaoz.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742741516/4.Rehabilitation_of_the_Belfry_eqaqgi.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742741515/4.Destruction_of_the_Belfry_after_the_2013_Bohol_Earthquake_hsd9bo.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742741515/4.Putting_back_of_the_Balilihan_Belfry_Marker_during_the_restoration_x3v9wo.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742741515/5.b_Turnover_and_Acceptance_Ceremonies_in_2017_xymeki.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742557985/5.a_Turnover_and_Acceptance_Ceremonies_in_2017_kh83qy.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742741516/6.a._The_Restored_Balilihan_Belfry_skabyf.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742741516/6.b._Inside_the_Restored_Balilihan_Belfry_as5qtv.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742741516/6.c_The_Restored_Balilihan_Belfry_zuwyib.jpg',
+      },
     ],
     []
   );
@@ -36,21 +79,11 @@ const Section_4 = () => {
       {/* _______________________________BALILIHAN BELFRY________________________________ */}
       <CollapsibleSubTitle name="BALILIHAN BELFRY">
         <View className="mb-5 mt-2 flex w-full flex-row">
-          <TouchableOpacity
-            className="h-[250px] w-1/2 overflow-hidden"
-            onPress={handlePress(0)}
-            onLayout={() => onImageVisible(0)}>
-            {visibleImages[0] && (
-              <Image source={images[0]} className="h-full w-full object-contain" />
-            )}
+          <TouchableOpacity className="h-[250px] w-1/2 overflow-hidden" onPress={handlePress(0)}>
+            <FastImage source={images[0]} className="h-full w-full object-contain" />
           </TouchableOpacity>
-          <TouchableOpacity
-            className="h-[250px] w-1/2 overflow-hidden"
-            onPress={handlePress(1)}
-            onLayout={() => onImageVisible(1)}>
-            {visibleImages[1] && (
-              <Image source={images[1]} className="h-full w-full object-contain" />
-            )}
+          <TouchableOpacity className="h-[250px] w-1/2 overflow-hidden" onPress={handlePress(1)}>
+            <FastImage source={images[1]} className="h-full w-full object-contain" />
           </TouchableOpacity>
         </View>
         <Text className="py-2 text-justify font-inknut text-[11px] leading-[24px] max-xs:text-base">
@@ -65,13 +98,8 @@ const Section_4 = () => {
         </Text>
 
         <View className="mb-1 mt-2 flex w-full flex-row items-start">
-          <TouchableOpacity
-            className="h-[250px] w-[45%] overflow-hidden"
-            onPress={handlePress(2)}
-            onLayout={() => onImageVisible(2)}>
-            {visibleImages[2] && (
-              <Image source={images[2]} className="h-full w-full object-contain" />
-            )}
+          <TouchableOpacity className="h-[250px] w-[45%] overflow-hidden" onPress={handlePress(2)}>
+            <FastImage source={images[2]} className="h-full w-full object-contain" />
           </TouchableOpacity>
           <Text className="flex-1 py-1 pl-3 text-justify font-inknut text-[11px] leading-[20px]">
             This quadrilateral tower made of cut coral stone, transported from Baclayon by foot, is
@@ -89,41 +117,21 @@ const Section_4 = () => {
             It withstood numerous typhoons until the devastating 7.2 magnitude earthquake of October
             15, 2013, caused its collapse.
           </Text>
-          <TouchableOpacity
-            className="h-[200px] w-[45%] overflow-hidden"
-            onPress={handlePress(3)}
-            onLayout={() => onImageVisible(3)}>
-            {visibleImages[3] && (
-              <Image source={images[3]} className="h-full w-full object-contain" />
-            )}
+          <TouchableOpacity className="h-[200px] w-[45%] overflow-hidden" onPress={handlePress(3)}>
+            <FastImage source={images[3]} className="h-full w-full object-contain" />
           </TouchableOpacity>
         </View>
 
         <View className="mb-5 flex flex-row">
-          <TouchableOpacity
-            className="h-[240px] w-[40%] overflow-hidden"
-            onPress={handlePress(4)}
-            onLayout={() => onImageVisible(4)}>
-            {visibleImages[4] && (
-              <Image source={images[4]} className="h-full w-full object-contain" />
-            )}
+          <TouchableOpacity className="h-[240px] w-[40%] overflow-hidden" onPress={handlePress(4)}>
+            <FastImage source={images[4]} className="h-full w-full object-contain" />
           </TouchableOpacity>
           <View className="w-[60%]">
-            <TouchableOpacity
-              className="h-[120px] w-full overflow-hidden"
-              onPress={handlePress(5)}
-              onLayout={() => onImageVisible(5)}>
-              {visibleImages[5] && (
-                <Image source={images[5]} className="h-full w-full object-contain" />
-              )}
+            <TouchableOpacity className="h-[120px] w-full overflow-hidden" onPress={handlePress(5)}>
+              <FastImage source={images[5]} className="h-full w-full object-contain" />
             </TouchableOpacity>
-            <TouchableOpacity
-              className="h-[120px] w-full overflow-hidden"
-              onPress={handlePress(7)}
-              onLayout={() => onImageVisible(6)}>
-              {visibleImages[6] && (
-                <Image source={images[6]} className="h-full w-full object-contain" />
-              )}
+            <TouchableOpacity className="h-[120px] w-full overflow-hidden" onPress={handlePress(7)}>
+              <FastImage source={images[6]} className="h-full w-full object-contain" />
             </TouchableOpacity>
           </View>
         </View>
@@ -138,21 +146,11 @@ const Section_4 = () => {
         </View>
 
         <View className="mb-4 mt-2">
-          <TouchableOpacity
-            className="h-[230px] w-full overflow-hidden"
-            onPress={handlePress(7)}
-            onLayout={() => onImageVisible(7)}>
-            {visibleImages[7] && (
-              <Image source={images[7]} className="h-full w-full object-contain" />
-            )}
+          <TouchableOpacity className="h-[230px] w-full overflow-hidden" onPress={handlePress(7)}>
+            <FastImage source={images[7]} className="h-full w-full object-contain" />
           </TouchableOpacity>
-          <TouchableOpacity
-            className="h-[230px] w-full overflow-hidden"
-            onPress={handlePress(8)}
-            onLayout={() => onImageVisible(8)}>
-            {visibleImages[8] && (
-              <Image source={images[8]} className="h-full w-full object-contain" />
-            )}
+          <TouchableOpacity className="h-[230px] w-full overflow-hidden" onPress={handlePress(8)}>
+            <FastImage source={images[8]} className="h-full w-full object-contain" />
           </TouchableOpacity>
         </View>
 
@@ -175,30 +173,19 @@ const Section_4 = () => {
         </Text>
 
         <View className="mb-5 mt-3 flex flex-row">
-          <TouchableOpacity
-            className="h-[260px] w-[40%] overflow-hidden"
-            onPress={handlePress(9)}
-            onLayout={() => onImageVisible(9)}>
-            {visibleImages[9] && (
-              <Image source={images[9]} className="h-full w-full object-contain" />
-            )}
+          <TouchableOpacity className="h-[260px] w-[40%] overflow-hidden" onPress={handlePress(9)}>
+            <FastImage source={images[9]} className="h-full w-full object-contain" />
           </TouchableOpacity>
           <View className="w-[60%]">
             <TouchableOpacity
               className="h-[130px] w-full overflow-hidden"
-              onPress={handlePress(10)}
-              onLayout={() => onImageVisible(10)}>
-              {visibleImages[10] && (
-                <Image source={images[10]} className="h-full w-full object-contain" />
-              )}
+              onPress={handlePress(10)}>
+              <FastImage source={images[10]} className="h-full w-full object-contain" />
             </TouchableOpacity>
             <TouchableOpacity
-              className="h-[130px] w-full overflow-hidden"
-              onPress={handlePress(11)}
-              onLayout={() => onImageVisible(11)}>
-              {visibleImages[11] && (
-                <Image source={images[11]} className="h-full w-full object-contain" />
-              )}
+              className="h-[130px] w-full items-start overflow-hidden"
+              onPress={handlePress(11)}>
+              <FastImage source={images[11]} className="h-full w-full" />
             </TouchableOpacity>
           </View>
         </View>
