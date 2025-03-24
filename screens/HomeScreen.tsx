@@ -94,7 +94,7 @@ export default function App() {
 
       {/* Towergrass Image */}
       <Image
-        className="absolute bottom-0 -mb-2 w-full"
+        className="absolute bottom-0 -mb-4 w-full"
         source={images.towergrass_small}
         style={{
           width: width,

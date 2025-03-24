@@ -3,38 +3,112 @@ import React from 'react';
 import { useState, useMemo, useCallback } from 'react';
 import CollapsibleSubTitle from 'components/CollapsibleSubTitle';
 import ImageViewer from 'components/common/ImageViewer';
+import FastImage from 'expo-fast-image';
 
 const Section_5 = () => {
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
   const onClose = useCallback(() => setVisibleIndex(null), []);
   const handlePress = useCallback((index: number) => () => setVisibleIndex(index), []);
+  // const images = useMemo(
+  //   () => [
+  //     require('../../assets/module_4/2. Churches/1.a Our Lady of Mt. Carmel Parish Church (1954).jpg'),
+  //     require('../../assets/module_4/2. Churches/1.b New Balilihan Church.jpg'),
+  //     require('../../assets/module_4/2. Churches/1.c Restored Our Lady of Mt. Carmel Parish Church.jpeg'),
+  //     require('../../assets/module_4/2. Churches/2.a Marker of the Old Church burned by the Americans in 1900.jpg'),
+  //     require('../../assets/module_4/2. Churches/2.b Our Lady of Mt. Carmel Parish Church (1939) with Rev. Fr. Aproniano Ochuga Galacia.jpg'),
+  //     require('../../assets/module_4/2. Churches/3.e Portrait of Ray Francia, Cebu_s Michelangelo.png'),
+  //     require('../../assets/module_4/2. Churches/3.Inside the Church.jpg'),
+  //     require('../../assets/module_4/2. Churches/3.b Octagonal-shaped ceiling of the cupola.jpg'),
+  //     require('../../assets/module_4/2. Churches/3.c Painting of St. Cecilia with Ray Francias mark.jpg'),
+  //     require('../../assets/module_4/2. Churches/4.b Bell in the Our Lady of Mt. Carmel dated in 1831.jpg'),
+  //     require('../../assets/module_4/2. Churches/4.c The Limbarok Bells dated in 1856_1950.jpg'),
+  //     require('../../assets/module_4/2. Churches/4.a Iron bridge connecting the portico to the bell tower.jpg'),
+  //     require('../../assets/module_4/2. Churches/5.a Restoration of the Balilihan Church.jpg'),
+  //     require('../../assets/module_4/2. Churches/5.b Restored Balilihan Church.jpg'),
+  //     require('../../assets/module_4/2. Churches/5.c Convent of Our Lady of Mt. Carmel Parish.jpeg'),
+  //     require('../../assets/module_4/2. Churches/5.d Important Cultural Property Marker of the Church.jpg'),
+  //     require('../../assets/module_4/2. Churches/6. Image of Our Lady of Mt. Carmel.jpg'),
+  //     require('../../assets/module_4/2. Churches/7.a Santo Nino Parish Church.jpg'),
+  //     require('../../assets/module_4/2. Churches/7.b Inside the Sto. Nino Church.jpg'),
+  //     require('../../assets/module_4/2. Churches/8.a Image of the Sto. Nino.jpg'),
+  //     require('../../assets/module_4/2. Churches/8.b The Altar.jpg'),
+  //     require('../../assets/module_4/2. Churches/8.c Hugusan in front of the Church.jpg'),
+  //   ],
+  //   []
+  // );
+
   const images = useMemo(
     () => [
-      require('../../assets/module_4/2. Churches/1.a Our Lady of Mt. Carmel Parish Church (1954).jpg'),
-      require('../../assets/module_4/2. Churches/1.b New Balilihan Church.jpg'),
-      require('../../assets/module_4/2. Churches/1.c Restored Our Lady of Mt. Carmel Parish Church.jpeg'),
-      require('../../assets/module_4/2. Churches/2.a Marker of the Old Church burned by the Americans in 1900.jpg'),
-      require('../../assets/module_4/2. Churches/2.b Our Lady of Mt. Carmel Parish Church (1939) with Rev. Fr. Aproniano Ochuga Galacia.jpg'),
-      require('../../assets/module_4/2. Churches/3.e Portrait of Ray Francia, Cebu_s Michelangelo.png'),
-      require('../../assets/module_4/2. Churches/3.Inside the Church.jpg'),
-      require('../../assets/module_4/2. Churches/3.b Octagonal-shaped ceiling of the cupola.jpg'),
-      require('../../assets/module_4/2. Churches/3.c Painting of St. Cecilia with Ray Francias mark.jpg'),
-      require('../../assets/module_4/2. Churches/4.b Bell in the Our Lady of Mt. Carmel dated in 1831.jpg'),
-      require('../../assets/module_4/2. Churches/4.c The Limbarok Bells dated in 1856_1950.jpg'),
-      require('../../assets/module_4/2. Churches/4.a Iron bridge connecting the portico to the bell tower.jpg'),
-      require('../../assets/module_4/2. Churches/5.a Restoration of the Balilihan Church.jpg'),
-      require('../../assets/module_4/2. Churches/5.b Restored Balilihan Church.jpg'),
-      require('../../assets/module_4/2. Churches/5.c Convent of Our Lady of Mt. Carmel Parish.jpeg'),
-      require('../../assets/module_4/2. Churches/5.d Important Cultural Property Marker of the Church.jpg'),
-      require('../../assets/module_4/2. Churches/6. Image of Our Lady of Mt. Carmel.jpg'),
-      require('../../assets/module_4/2. Churches/7.a Santo Nino Parish Church.jpg'),
-      require('../../assets/module_4/2. Churches/7.b Inside the Sto. Nino Church.jpg'),
-      require('../../assets/module_4/2. Churches/8.a Image of the Sto. Nino.jpg'),
-      require('../../assets/module_4/2. Churches/8.b The Altar.jpg'),
-      require('../../assets/module_4/2. Churches/8.c Hugusan in front of the Church.jpg'),
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790608/1.a_Our_Lady_of_Mt._Carmel_Parish_Church_1954_g0wbgu.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790608/1.b_New_Balilihan_Church_zshicd.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790609/1.c_Restored_Our_Lady_of_Mt._Carmel_Parish_Church_weqq61.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790610/2.a_Marker_of_the_Old_Church_burned_by_the_Americans_in_1900_jy1ml2.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790608/2.b_Our_Lady_of_Mt._Carmel_Parish_Church_1939_with_Rev._Fr._Aproniano_Ochuga_Galacia_jv3l13.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790610/3.e_Portrait_of_Ray_Francia_Cebu_s_Michelangelo_aj8ifx.png',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790610/3.Inside_the_Church_ba6gzj.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790608/3.b_Octagonal-shaped_ceiling_of_the_cupola_kibwig.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790608/3.c_Painting_of_St._Cecilia_with_Ray_Francias_mark_wkm1aw.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790611/4.b_Bell_in_the_Our_Lady_of_Mt._Carmel_dated_in_1831_nyrqut.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790611/4.c_The_Limbarok_Bells_dated_in_1856_1950_dhz6ek.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790610/4.a_Iron_bridge_connecting_the_portico_to_the_bell_tower_dcjpyv.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790611/5.a_Restoration_of_the_Balilihan_Church_nnpzte.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790611/5.b_Restored_Balilihan_Church_odnlsy.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790611/5.c_Convent_of_Our_Lady_of_Mt._Carmel_Parish_yokeiy.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790612/5.d_Important_Cultural_Property_Marker_of_the_Church_aktnxo.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790612/6._Image_of_Our_Lady_of_Mt._Carmel_o08jfl.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790612/7.a_Santo_Nino_Parish_Church_v9ldqr.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790612/7.b_Inside_the_Sto._Nino_Church_gvupu6.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790612/8.a_Image_of_the_Sto._Nino_jkjpvt.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790613/8.b_The_Altar_at3n3w.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742790613/8.c_Hugusan_in_front_of_the_Church_glvskj.jpg',
+      },
     ],
     []
   );
+
   return (
     <>
       {/* _______________________________BALILIHAN CHURCHES________________________________ */}
@@ -52,14 +126,14 @@ const Section_5 = () => {
 
         <View className="mb-3 mt-2">
           <TouchableOpacity className="h-[230px] w-full overflow-hidden" onPress={handlePress(0)}>
-            <Image source={images[0]} className="h-full w-full" />
+            <FastImage source={images[0]} className="h-full w-full" />
           </TouchableOpacity>
           <TouchableOpacity className="h-[230px] w-full overflow-hidden" onPress={handlePress(1)}>
-            <Image source={images[1]} className="h-full w-full" />
+            <FastImage source={images[1]} className="h-full w-full" />
           </TouchableOpacity>
 
           <TouchableOpacity className="h-[230px] w-full overflow-hidden" onPress={handlePress(2)}>
-            <Image source={images[2]} className="h-full w-full" />
+            <FastImage source={images[2]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
 
@@ -87,7 +161,7 @@ const Section_5 = () => {
           {/* Image with Caption */}
           <View className="w-[50%]">
             <TouchableOpacity className="h-[430px] w-full overflow-hidden" onPress={handlePress(3)}>
-              <Image source={images[3]} className="h-full w-full" />
+              <FastImage source={images[3]} className="h-full w-full" />
             </TouchableOpacity>
 
             <Text
@@ -104,7 +178,7 @@ const Section_5 = () => {
         <TouchableOpacity
           className="mb-3 h-[230px] w-full overflow-hidden"
           onPress={handlePress(4)}>
-          <Image source={images[4]} className="h-full w-full" />
+          <FastImage source={images[4]} className="h-full w-full" />
         </TouchableOpacity>
 
         <Text
@@ -120,7 +194,7 @@ const Section_5 = () => {
           {/* Image with Caption */}
           <View className="w-[40%]">
             <TouchableOpacity className="h-[200px] w-full overflow-hidden" onPress={handlePress(5)}>
-              <Image source={images[5]} className="h-full w-full" />
+              <FastImage source={images[5]} className="h-full w-full" />
             </TouchableOpacity>
             <Text
               className="py-1 text-center font-inknut text-[11px]"
@@ -145,14 +219,14 @@ const Section_5 = () => {
 
         <View className="-mt-2 mb-3 flex flex-row">
           <TouchableOpacity className="h-[260px] w-[40%] overflow-hidden " onPress={handlePress(6)}>
-            <Image source={images[6]} className="h-full w-full" />
+            <FastImage source={images[6]} className="h-full w-full" />
           </TouchableOpacity>
           <View className="w-[60%]">
             <TouchableOpacity className="h-[130px] w-full overflow-hidden" onPress={handlePress(7)}>
-              <Image source={images[7]} className="h-full w-full" />
+              <FastImage source={images[7]} className="h-full w-full" />
             </TouchableOpacity>
             <TouchableOpacity className="h-[130px] w-full overflow-hidden" onPress={handlePress(8)}>
-              <Image source={images[8]} className="h-full w-full" />
+              <FastImage source={images[8]} className="h-full w-full" />
             </TouchableOpacity>
           </View>
         </View>
@@ -176,18 +250,18 @@ const Section_5 = () => {
         <View className="mb-3 mt-3 flex flex-row">
           <View className="w-[60%]">
             <TouchableOpacity className="h-[130px] w-full overflow-hidden" onPress={handlePress(9)}>
-              <Image source={images[9]} className="h-full w-full" />
+              <FastImage source={images[9]} className="h-full w-full" />
             </TouchableOpacity>
             <TouchableOpacity
               className="h-[130px] w-full overflow-hidden"
               onPress={handlePress(10)}>
-              <Image source={images[10]} className="h-full w-full" />
+              <FastImage source={images[10]} className="h-full w-full" />
             </TouchableOpacity>
           </View>
           <TouchableOpacity
             className="h-[260px] w-[40%] overflow-hidden "
             onPress={handlePress(11)}>
-            <Image source={images[11]} className="h-full w-full" />
+            <FastImage source={images[11]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
 
@@ -209,19 +283,19 @@ const Section_5 = () => {
 
         <View className="mt-3 flex w-full flex-row">
           <TouchableOpacity className="h-[250px] w-1/2 overflow-hidden" onPress={handlePress(12)}>
-            <Image source={images[12]} className="h-full w-full" />
+            <FastImage source={images[12]} className="h-full w-full" />
           </TouchableOpacity>
           <TouchableOpacity className="h-[250px] w-1/2 overflow-hidden" onPress={handlePress(13)}>
-            <Image source={images[13]} className="h-full w-full" />
+            <FastImage source={images[13]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
 
         <View className="mb-3 flex w-full flex-row">
           <TouchableOpacity className="h-[160px] w-[60%] overflow-hidden" onPress={handlePress(14)}>
-            <Image source={images[14]} className="h-full w-full" />
+            <FastImage source={images[14]} className="h-full w-full" />
           </TouchableOpacity>
           <TouchableOpacity className="h-[160px] w-[40%] overflow-hidden" onPress={handlePress(15)}>
-            <Image source={images[15]} className="h-full w-full" />
+            <FastImage source={images[15]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
         <Text
@@ -235,7 +309,7 @@ const Section_5 = () => {
 
         <View className="mb-3 flex w-full flex-row items-center">
           <TouchableOpacity className="h-[300px] w-[40%] overflow-hidden" onPress={handlePress(16)}>
-            <Image source={images[16]} className="h-full w-full" />
+            <FastImage source={images[16]} className="h-full w-full" />
           </TouchableOpacity>
           <Text className="flex-1 py-1 pl-3 text-justify font-inknut text-[11px] leading-[20px]">
             This significant event, marking a milestone in the preservation of Balilihan's cultural
@@ -257,7 +331,7 @@ const Section_5 = () => {
         <TouchableOpacity
           className="mb-5 mt-3 h-[230px] w-full overflow-hidden"
           onPress={handlePress(17)}>
-          <Image source={images[17]} className="h-full w-full" />
+          <FastImage source={images[17]} className="h-full w-full" />
         </TouchableOpacity>
 
         <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
@@ -276,7 +350,7 @@ const Section_5 = () => {
         <TouchableOpacity
           className="mb-4 mt-2 h-[250px] w-full overflow-hidden"
           onPress={handlePress(18)}>
-          <Image source={images[18]} className="h-full w-full" />
+          <FastImage source={images[18]} className="h-full w-full" />
         </TouchableOpacity>
 
         <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
@@ -289,18 +363,18 @@ const Section_5 = () => {
           <TouchableOpacity
             className="h-[240px] w-[40%] overflow-hidden "
             onPress={handlePress(19)}>
-            <Image source={images[19]} className="h-full w-full" />
+            <FastImage source={images[19]} className="h-full w-full" />
           </TouchableOpacity>
           <View className="w-[60%]">
             <TouchableOpacity
               className="h-[120px] w-full overflow-hidden"
               onPress={handlePress(20)}>
-              <Image source={images[20]} className="h-full w-full" />
+              <FastImage source={images[20]} className="h-full w-full" />
             </TouchableOpacity>
             <TouchableOpacity
               className="h-[120px] w-full overflow-hidden"
               onPress={handlePress(21)}>
-              <Image source={images[21]} className="h-full w-full" />
+              <FastImage source={images[21]} className="h-full w-full" />
             </TouchableOpacity>
           </View>
         </View>

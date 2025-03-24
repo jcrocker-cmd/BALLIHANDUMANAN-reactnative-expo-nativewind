@@ -18,7 +18,7 @@ const Section_4 = () => {
       <CollapsibleSubTitle name="BALILIHAN DURING THE POST-WAR">
         <TouchableOpacity
           className="mt-4 h-[240px] w-full overflow-hidden"
-          onPress={() => handlePress(0)}>
+          onPress={handlePress(0)}>
           <Image source={images[0]} className="h-full w-full" />
         </TouchableOpacity>
 
@@ -39,7 +39,7 @@ const Section_4 = () => {
 
         <TouchableOpacity
           className="mb-4 mt-4 h-[240px] w-full overflow-hidden"
-          onPress={() => handlePress(1)}>
+          onPress={handlePress(1)}>
           <Image source={images[1]} className="h-full w-full" />
         </TouchableOpacity>
 

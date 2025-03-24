@@ -71,7 +71,7 @@ const Section_5 = () => {
           the town began to transform.
         </Text>
 
-        <View className="mb-1 mt-4 flex w-full flex-row items-start">
+        <View className="mb-5 mt-3 flex w-full flex-row items-start">
           {/* Image with Caption */}
           <View className="w-[40%]">
             <TouchableOpacity className="h-[200px] w-full overflow-hidden" onPress={handlePress(2)}>

@@ -10,29 +10,6 @@ const Section_4 = () => {
   const onClose = useCallback(() => setVisibleIndex(null), []);
   const handlePress = useCallback((index: number) => () => setVisibleIndex(index), []);
 
-  const [visibleImages, setVisibleImages] = useState<{ [key: number]: boolean }>({});
-
-  const onImageVisible = (index: number) => {
-    setVisibleImages((prev) => ({ ...prev, [index]: true }));
-  };
-  // const images = useMemo(
-  //   () => [
-  //     require('../../assets/module_4/1. Belfry/1.Old Photo Belfry 2.jpg'),
-  //     require('../../assets/module_4/1. Belfry/1.Old Photo Belfry 1.jpg'),
-  //     require('../../assets/module_4/1. Belfry/2. Photo Belfry.jpg'),
-  //     require('../../assets/module_4/1. Belfry/3. Old Photo Belfry (1987).jpg'),
-  //     require('../../assets/module_4/1. Belfry/4.Rehabilitation of the Belfry.jpg'),
-  //     require('../../assets/module_4/1. Belfry/4.Destruction of the Belfry after the 2013 Bohol Earthquake.jpg'),
-  //     require('../../assets/module_4/1. Belfry/4.Putting back of the Balilihan Belfry Marker during the restoration.jpg'),
-  //     require('../../assets/module_4/1. Belfry/5.b Turnover and Acceptance Ceremonies in 2017.jpg'),
-  //     require('../../assets/module_4/1. Belfry/5.a Turnover and Acceptance Ceremonies in 2017.jpg'),
-  //     require('../../assets/module_4/1. Belfry/6.a. The Restored Balilihan Belfry.jpeg'),
-  //     require('../../assets/module_4/1. Belfry/6.b. Inside the Restored Balilihan Belfry.jpg'),
-  //     require('../../assets/module_4/1. Belfry/6.c The Restored Balilihan Belfry.jpg'),
-  //   ],
-  //   []
-  // );
-
   const images = useMemo(
     () => [
       {
@@ -130,7 +107,7 @@ const Section_4 = () => {
             <TouchableOpacity className="h-[120px] w-full overflow-hidden" onPress={handlePress(5)}>
               <FastImage source={images[5]} className="h-full w-full object-contain" />
             </TouchableOpacity>
-            <TouchableOpacity className="h-[120px] w-full overflow-hidden" onPress={handlePress(7)}>
+            <TouchableOpacity className="h-[120px] w-full overflow-hidden" onPress={handlePress(6)}>
               <FastImage source={images[6]} className="h-full w-full object-contain" />
             </TouchableOpacity>
           </View>

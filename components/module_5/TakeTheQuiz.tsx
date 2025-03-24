@@ -92,11 +92,12 @@ const QuizScreen: React.FC = () => {
               ))}
             </View>
           )}
+          ListFooterComponent={
+            <TouchableOpacity onPress={handleSubmit} className="rounded-lg bg-[#0E8341] p-3">
+              <Text className="text-center font-inknut text-[12px] text-[#FFF800]">Submit</Text>
+            </TouchableOpacity>
+          }
         />
-
-        <TouchableOpacity onPress={handleSubmit} className="rounded-lg bg-[#0E8341] p-3">
-          <Text className="text-center font-inknut text-[12px] text-[#FFF800]">Submit</Text>
-        </TouchableOpacity>
       </Container>
     </SafeAreaView>
   );

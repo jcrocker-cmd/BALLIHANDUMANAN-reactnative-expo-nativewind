@@ -73,7 +73,7 @@ export default function BarangayResultScreen() {
           <TouchableOpacity
             className="mt-2 rounded-lg bg-[#0E8341] py-3"
             onPress={() => navigation.navigate('BalilihanExplorerHome')}>
-            <Text className="text-center font-inknut text-[1px] text-white">Exit</Text>
+            <Text className="text-center font-inknut text-[13px] text-white">Exit</Text>
           </TouchableOpacity>
         </ScrollView>
       </SafeAreaView>

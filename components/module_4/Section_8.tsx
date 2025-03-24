@@ -3,43 +3,132 @@ import React from 'react';
 import { useState, useMemo, useCallback } from 'react';
 import CollapsibleSubTitle from 'components/CollapsibleSubTitle';
 import ImageViewer from 'components/common/ImageViewer';
+import FastImage from 'expo-fast-image';
 
 const Section_8 = () => {
   const [visibleIndex, setVisibleIndex] = useState<number | null>(null);
   const onClose = useCallback(() => setVisibleIndex(null), []);
   const handlePress = useCallback((index: number) => () => setVisibleIndex(index), []);
+  // const images = useMemo(
+  //   () => [
+  //     require('../../assets/module_4/5. Sumad Festival/1.a Balilihan Sumad 1994.png'),
+  //     require('../../assets/module_4/5. Sumad Festival/1.b Balilihan Sumad 1995.png'),
+  //     require('../../assets/module_4/5. Sumad Festival/1.c Balilihan Sumad 2021.jpg'),
+  //     require('../../assets/module_4/5. Sumad Festival/1.d Balilihan Sumad 2024.jpg'),
+  //     require('../../assets/module_4/5. Sumad Festival/2.b Duwa-Sayaw in the _90s.png'),
+  //     require('../../assets/module_4/5. Sumad Festival/2.c Sumad celebration in the 90_s.png'),
+  //     require('../../assets/module_4/5. Sumad Festival/2.d Pasunding current.jpg'),
+  //     require('../../assets/module_4/5. Sumad Festival/2.e Pasunding current.jpg'),
+  //     require('../../assets/module_4/5. Sumad Festival/3.a Agro-air.jpg'),
+  //     require('../../assets/module_4/5. Sumad Festival/3.c Booths in Agro-Fair.jpg'),
+  //     require('../../assets/module_4/5. Sumad Festival/3.d Booths in Agro-Fair.jpg'),
+  //     require('../../assets/module_4/5. Sumad Festival/3.e Booths in Agro-Fair.jpg'),
+  //     require('../../assets/module_4/5. Sumad Festival/4.a Sumad Festival King and Queen.jpg'),
+  //     require('../../assets/module_4/5. Sumad Festival/4.c Mutya sa Balilihan.jpg'),
+  //     require('../../assets/module_4/5. Sumad Festival/4.b Sumad Festival King and Queen.jpg'),
+  //     require('../../assets/module_4/5. Sumad Festival/4.d Fun Run for a cause - Dagan para sa Katawhan.jpg'),
+  //     require('../../assets/module_4/5. Sumad Festival/4.e Awarding and Recognition of Honorees.jpg'),
+  //     require('../../assets/module_4/5. Sumad Festival/4.f Awarding of Achievers.jpg'),
+  //     require('../../assets/module_4/5. Sumad Festival/5.a Sumad Streetdancing in 2009.jpg'),
+  //     require('../../assets/module_4/5. Sumad Festival/5.b Sumad Streetdancing in 2009.jpg'),
+  //     require('../../assets/module_4/5. Sumad Festival/5.e Sumad Streetdancing in 2024.jpg'),
+  //     require('../../assets/module_4/5. Sumad Festival/5.d Sumad Streetdancing in 2024.png'),
+  //     require('../../assets/module_4/5. Sumad Festival/6.c Tiyo Kiking.jpg'),
+  //     require('../../assets/module_4/5. Sumad Festival/6.b Tiyo Kiking at Sambag Cemetery.jpg'),
+  //     require('../../assets/module_4/5. Sumad Festival/6.a Eladio I. Chatto - Tiyo Kiking.png'),
+  //     require('../../assets/module_4/5. Sumad Festival/7.b Republic Act No. 9706.png'),
+  //     require('../../assets/module_4/5. Sumad Festival/7.c Republic Act No. 9706.png'),
+  //   ],
+  //   []
+  // );
+
   const images = useMemo(
     () => [
-      require('../../assets/module_4/5. Sumad Festival/1.a Balilihan Sumad 1994.png'),
-      require('../../assets/module_4/5. Sumad Festival/1.b Balilihan Sumad 1995.png'),
-      require('../../assets/module_4/5. Sumad Festival/1.c Balilihan Sumad 2021.jpg'),
-      require('../../assets/module_4/5. Sumad Festival/1.d Balilihan Sumad 2024.jpg'),
-      require('../../assets/module_4/5. Sumad Festival/2.b Duwa-Sayaw in the _90s.png'),
-      require('../../assets/module_4/5. Sumad Festival/2.c Sumad celebration in the 90_s.png'),
-      require('../../assets/module_4/5. Sumad Festival/2.d Pasunding current.jpg'),
-      require('../../assets/module_4/5. Sumad Festival/2.e Pasunding current.jpg'),
-      require('../../assets/module_4/5. Sumad Festival/3.a Agro-air.jpg'),
-      require('../../assets/module_4/5. Sumad Festival/3.c Booths in Agro-Fair.jpg'),
-      require('../../assets/module_4/5. Sumad Festival/3.d Booths in Agro-Fair.jpg'),
-      require('../../assets/module_4/5. Sumad Festival/3.e Booths in Agro-Fair.jpg'),
-      require('../../assets/module_4/5. Sumad Festival/4.a Sumad Festival King and Queen.jpg'),
-      require('../../assets/module_4/5. Sumad Festival/4.c Mutya sa Balilihan.jpg'),
-      require('../../assets/module_4/5. Sumad Festival/4.b Sumad Festival King and Queen.jpg'),
-      require('../../assets/module_4/5. Sumad Festival/4.d Fun Run for a cause - Dagan para sa Katawhan.jpg'),
-      require('../../assets/module_4/5. Sumad Festival/4.e Awarding and Recognition of Honorees.jpg'),
-      require('../../assets/module_4/5. Sumad Festival/4.f Awarding of Achievers.jpg'),
-      require('../../assets/module_4/5. Sumad Festival/5.a Sumad Streetdancing in 2009.jpg'),
-      require('../../assets/module_4/5. Sumad Festival/5.b Sumad Streetdancing in 2009.jpg'),
-      require('../../assets/module_4/5. Sumad Festival/5.e Sumad Streetdancing in 2024.jpg'),
-      require('../../assets/module_4/5. Sumad Festival/5.d Sumad Streetdancing in 2024.png'),
-      require('../../assets/module_4/5. Sumad Festival/6.c Tiyo Kiking.jpg'),
-      require('../../assets/module_4/5. Sumad Festival/6.b Tiyo Kiking at Sambag Cemetery.jpg'),
-      require('../../assets/module_4/5. Sumad Festival/6.a Eladio I. Chatto - Tiyo Kiking.png'),
-      require('../../assets/module_4/5. Sumad Festival/7.b Republic Act No. 9706.png'),
-      require('../../assets/module_4/5. Sumad Festival/7.c Republic Act No. 9706.png'),
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803697/1.a_Balilihan_Sumad_1994_tm8mef.png',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803697/1.b_Balilihan_Sumad_1995_j6zpky.png',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803697/1.c_Balilihan_Sumad_2021_jvbnjr.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803697/1.d_Balilihan_Sumad_2024_ricymb.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803699/2.b_Duwa-Sayaw_in_the__90s_ztw5xw.png',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803700/2.c_Sumad_celebration_in_the_90_s_pfnwlw.png',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803701/2.d_Pasunding_current_pdox7m.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803702/2.e_Pasunding_current_rccqbr.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803703/3.a_Agro-air_ey8qms.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803705/3.c_Booths_in_Agro-Fair_jvk4hl.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803706/3.d_Booths_in_Agro-Fair_zyuadq.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803707/3.e_Booths_in_Agro-Fair_ow62g5.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803708/4.a_Sumad_Festival_King_and_Queen_ahklal.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803710/4.c_Mutya_sa_Balilihan_wts6us.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803709/4.b_Sumad_Festival_King_and_Queen_lhmvk4.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803711/4.d_Fun_Run_for_a_cause_-_Dagan_para_sa_Katawhan_r7as6x.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803712/4.e_Awarding_and_Recognition_of_Honorees_pkfixt.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803713/4.f_Awarding_of_Achievers_bcb9v3.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803715/5.a_Sumad_Streetdancing_in_2009_hswwgq.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803717/5.b_Sumad_Streetdancing_in_2009_uqramh.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803719/5.e_Sumad_Streetdancing_in_2024_pflto2.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803721/5.d_Sumad_Streetdancing_in_2024_zaxpka.png',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803722/6.c_Tiyo_Kiking_s4pzgs.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803723/6.b_Tiyo_Kiking_at_Sambag_Cemetery_nshmv2.jpg',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803720/6.a_Eladio_I._Chatto_-_Tiyo_Kiking_vclgzt.png',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803724/7.b_Republic_Act_No._9706_jqdwkz.png',
+      },
+      {
+        uri: 'https://res.cloudinary.com/dnh4lkqlw/image/upload/v1742803725/7.c_Republic_Act_No._9706_ox23l2.png',
+      },
     ],
     []
   );
+
   return (
     <>
       {/* _______________________________SUMAD FESTIVAL________________________________ */}
@@ -53,19 +142,19 @@ const Section_8 = () => {
 
         <View className="mt-3 flex flex-row">
           <TouchableOpacity className="h-[180px] w-[50%] overflow-hidden" onPress={handlePress(0)}>
-            <Image source={images[0]} className="h-full w-full" />
+            <FastImage source={images[0]} className="h-full w-full" />
           </TouchableOpacity>
           <TouchableOpacity className="h-[180px] w-[50%] overflow-hidden" onPress={handlePress(1)}>
-            <Image source={images[1]} className="h-full w-full" />
+            <FastImage source={images[1]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
         <TouchableOpacity className="h-[150px] w-full overflow-hidden" onPress={handlePress(2)}>
-          <Image source={images[2]} className="h-full w-full" />
+          <FastImage source={images[2]} className="h-full w-full" />
         </TouchableOpacity>
         <TouchableOpacity
           className="mb-3 h-[250px] w-full overflow-hidden"
           onPress={handlePress(3)}>
-          <Image source={images[3]} className="h-full w-full" />
+          <FastImage source={images[3]} className="h-full w-full" />
         </TouchableOpacity>
         <Text
           className="mb-3 py-1 text-center font-inknut text-[11px]"
@@ -86,19 +175,19 @@ const Section_8 = () => {
 
         <View className="mt-3 flex flex-row">
           <TouchableOpacity className="h-[180px] w-[50%] overflow-hidden" onPress={handlePress(4)}>
-            <Image source={images[4]} className="h-full w-full" />
+            <FastImage source={images[4]} className="h-full w-full" />
           </TouchableOpacity>
           <TouchableOpacity className="h-[180px] w-[50%] overflow-hidden" onPress={handlePress(5)}>
-            <Image source={images[5]} className="h-full w-full" />
+            <FastImage source={images[5]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
 
         <View className="mb-5 flex flex-row">
           <TouchableOpacity className="h-[180px] w-[50%] overflow-hidden" onPress={handlePress(6)}>
-            <Image source={images[6]} className="h-full w-full" />
+            <FastImage source={images[6]} className="h-full w-full" />
           </TouchableOpacity>
           <TouchableOpacity className="h-[180px] w-[50%] overflow-hidden" onPress={handlePress(7)}>
-            <Image source={images[7]} className="h-full w-full" />
+            <FastImage source={images[7]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
 
@@ -113,19 +202,19 @@ const Section_8 = () => {
 
         <View className="mt-3 flex flex-row">
           <TouchableOpacity className="h-[160px] w-[50%] overflow-hidden" onPress={handlePress(8)}>
-            <Image source={images[8]} className="h-full w-full" />
+            <FastImage source={images[8]} className="h-full w-full" />
           </TouchableOpacity>
           <TouchableOpacity className="h-[160px] w-[50%] overflow-hidden" onPress={handlePress(9)}>
-            <Image source={images[9]} className="h-full w-full" />
+            <FastImage source={images[9]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
 
         <View className="mb-3 flex flex-row">
           <TouchableOpacity className="h-[160px] w-[50%] overflow-hidden" onPress={handlePress(10)}>
-            <Image source={images[10]} className="h-full w-full" />
+            <FastImage source={images[10]} className="h-full w-full" />
           </TouchableOpacity>
           <TouchableOpacity className="h-[160px] w-[50%] overflow-hidden" onPress={handlePress(11)}>
-            <Image source={images[11]} className="h-full w-full" />
+            <FastImage source={images[11]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
 
@@ -148,28 +237,28 @@ const Section_8 = () => {
 
         <View className="mt-3 flex flex-row">
           <TouchableOpacity className="h-[160px] w-[50%] overflow-hidden" onPress={handlePress(12)}>
-            <Image source={images[12]} className="h-full w-full" />
+            <FastImage source={images[12]} className="h-full w-full" />
           </TouchableOpacity>
           <TouchableOpacity className="h-[160px] w-[50%] overflow-hidden" onPress={handlePress(13)}>
-            <Image source={images[13]} className="h-full w-full" />
+            <FastImage source={images[13]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
 
         <View className="flex flex-row">
           <TouchableOpacity className="h-[160px] w-[50%] overflow-hidden" onPress={handlePress(14)}>
-            <Image source={images[14]} className="h-full w-full" />
+            <FastImage source={images[14]} className="h-full w-full" />
           </TouchableOpacity>
           <TouchableOpacity className="h-[160px] w-[50%] overflow-hidden" onPress={handlePress(15)}>
-            <Image source={images[15]} className="h-full w-full" />
+            <FastImage source={images[15]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
 
         <View className="mb-3 flex flex-row">
           <TouchableOpacity className="h-[160px] w-[50%] overflow-hidden" onPress={handlePress(16)}>
-            <Image source={images[16]} className="h-full w-full" />
+            <FastImage source={images[16]} className="h-full w-full" />
           </TouchableOpacity>
           <TouchableOpacity className="h-[160px] w-[50%] overflow-hidden" onPress={handlePress(17)}>
-            <Image source={images[17]} className="h-full w-full" />
+            <FastImage source={images[17]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
         <Text
@@ -183,19 +272,19 @@ const Section_8 = () => {
 
         <View className="mt-3 flex flex-row">
           <TouchableOpacity className="h-[160px] w-[50%] overflow-hidden" onPress={handlePress(18)}>
-            <Image source={images[18]} className="h-full w-full" />
+            <FastImage source={images[18]} className="h-full w-full" />
           </TouchableOpacity>
           <TouchableOpacity className="h-[160px] w-[50%] overflow-hidden" onPress={handlePress(19)}>
-            <Image source={images[19]} className="h-full w-full" />
+            <FastImage source={images[19]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
 
         <View className="mb-5 flex flex-row">
           <TouchableOpacity className="h-[160px] w-[50%] overflow-hidden" onPress={handlePress(20)}>
-            <Image source={images[20]} className="h-full w-full" />
+            <FastImage source={images[20]} className="h-full w-full" />
           </TouchableOpacity>
           <TouchableOpacity className="h-[160px] w-[50%] overflow-hidden" onPress={handlePress(21)}>
-            <Image source={images[21]} className="h-full w-full" />
+            <FastImage source={images[21]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
 
@@ -207,18 +296,18 @@ const Section_8 = () => {
 
         <View className="mb-5 mt-2 flex flex-row">
           <TouchableOpacity className="h-[240px] w-1/2 overflow-hidden" onPress={handlePress(22)}>
-            <Image source={images[22]} className="h-full w-full" />
+            <FastImage source={images[22]} className="h-full w-full" />
           </TouchableOpacity>
           <View className="w-1/2">
             <TouchableOpacity
               className="h-[120px] w-full overflow-hidden"
               onPress={handlePress(23)}>
-              <Image source={images[23]} className="h-full w-full" />
+              <FastImage source={images[23]} className="h-full w-full" />
             </TouchableOpacity>
             <TouchableOpacity
               className="h-[120px] w-full overflow-hidden"
               onPress={handlePress(24)}>
-              <Image source={images[24]} className="h-full w-full" />
+              <FastImage source={images[24]} className="h-full w-full" />
             </TouchableOpacity>
           </View>
         </View>
@@ -233,10 +322,10 @@ const Section_8 = () => {
 
         <View className="-mt-3 mb-5 flex flex-row">
           <TouchableOpacity className="h-[280px] w-[50%] overflow-hidden" onPress={handlePress(25)}>
-            <Image source={images[25]} className="h-full w-full" />
+            <FastImage source={images[25]} className="h-full w-full" />
           </TouchableOpacity>
           <TouchableOpacity className="h-[280px] w-[50%] overflow-hidden" onPress={handlePress(26)}>
-            <Image source={images[26]} className="h-full w-full" />
+            <FastImage source={images[26]} className="h-full w-full" />
           </TouchableOpacity>
         </View>
       </CollapsibleSubTitle>

@@ -103,7 +103,7 @@ const AboutScreen = () => {
 
         {/* Towergrass Image */}
         <Image
-          className="absolute bottom-0 -mb-1 w-full"
+          className="absolute bottom-0 -mb-2 w-full"
           source={images.towergrass}
           style={{
             width: width,
