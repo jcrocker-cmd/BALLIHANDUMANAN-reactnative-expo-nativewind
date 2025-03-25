@@ -9,7 +9,10 @@ const Section_4 = () => {
   const onClose = useCallback(() => setVisibleIndex(null), []);
   const handlePress = useCallback((index: number) => () => setVisibleIndex(index), []);
   const images = useMemo(
-    () => [require('../../assets/module_3/pic_1.png'), require('../../assets/module_3/pic_2.png')],
+    () => [
+      { uri: Image.resolveAssetSource(require('../../assets/module_3/pic_1.png')).uri },
+      { uri: Image.resolveAssetSource(require('../../assets/module_3/pic_2.png')).uri },
+    ],
     []
   );
   return (
@@ -19,7 +22,7 @@ const Section_4 = () => {
         <TouchableOpacity
           className="mt-4 h-[240px] w-full overflow-hidden"
           onPress={handlePress(0)}>
-          <Image source={images[0]} className="h-full w-full" />
+          <Image source={require('../../assets/module_3/pic_1.png')} className="h-full w-full" />
         </TouchableOpacity>
 
         <Text className="-mb-3 text-center font-inknut text-[11px]" style={{ color: '#B08923' }}>
@@ -40,7 +43,7 @@ const Section_4 = () => {
         <TouchableOpacity
           className="mb-4 mt-4 h-[240px] w-full overflow-hidden"
           onPress={handlePress(1)}>
-          <Image source={images[1]} className="h-full w-full" />
+          <Image source={require('../../assets/module_3/pic_2.png')} className="h-full w-full" />
         </TouchableOpacity>
 
         <Text

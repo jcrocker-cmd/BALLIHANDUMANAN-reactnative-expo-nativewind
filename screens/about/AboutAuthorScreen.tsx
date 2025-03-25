@@ -52,7 +52,11 @@ const AboutScreen = () => {
               Chapter, actively promoting and preserving cultural heritage. His dedication earned
               him first place in the first-ever Bohol Sandugo Kulturo Competition in 2024. Beyond
               teaching, Kristian Nikko is a freelance event and choral singer and adviser to the
-              HNHS Supreme Secondary Learner Government and Choir.K
+              HNHS Supreme Secondary Learner Government and Choir. This project would not have been
+              possible without the contributions of graphic designer and developer Dan Dave Igcol
+              (UI Designer) and John Christian Narbaja (Lead Developer & Backend), whose time,
+              effort, and patience were invaluable. The author expresses sincere gratitude for their
+              collaboration and support.
               {'\n'}
               {'\n'}
               {'\n'}

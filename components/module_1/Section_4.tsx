@@ -41,8 +41,9 @@ const Section_4 = () => {
             style={{ textAlign: 'justify' }}
             className="py-2 font-inknut text-[11px] leading-[24px] max-xs:text-base">
             <Text style={{ color: '#0E8341' }}>Balilihan</Text> is an interior town, located 22
-            kilometers northeast of Tagbilaran City, the capital of Bohol. The town is situated on a
-            low, rolling plateau with verdant hills, mostly covered in trees and vegetation. The
+            kilometers northeast of Tagbilaran City, the capital of Bohol. The town, composed of 31
+            barangays with approximately 127.27 square kilometers of total land area, is situated on
+            a low, rolling plateau with verdant hills, mostly covered in trees and vegetation. The
             lowlands are usually converted into rice fields, while the hillsides are typically
             planted with corn, root crops, and coconuts.
             {'\n'}

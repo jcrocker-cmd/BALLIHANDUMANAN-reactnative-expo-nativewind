@@ -1,10 +1,11 @@
 {
   "expo": {
-    "name": "balilihandumanan",
+    "name": "Balilihandumanan",
     "slug": "balilihandumanan",
     "version": "1.0.3",
     "experiments": {
-      "tsconfigPaths": true
+      "tsconfigPaths": true,
+      "newArchEnabled": true
     },
     "plugins": [
       "expo-video",
@@ -22,9 +23,11 @@
       "supportsTablet": true
     },
     "android": {
+      "enableHermes": true,
       "adaptiveIcon": {
         "foregroundImage": "./assets/app-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#ffffff",
+        "resizeMode": "contain"
       },
       "package": "com.jcrocker.balilihandumanan"
     },

@@ -29,8 +29,8 @@ const Section_3 = () => {
           (stories, songs, sayings, and language),
           <Text style={{ color: '#0E8341' }}>Social Practices, Rituals/Festive Events </Text>
           (celebrations and ceremonies),
-          <Text style={{ color: '#0E8341' }}>Performing Arts</Text> (music, dance, theater), or
-          <Text style={{ color: '#0E8341' }}>Traditional Skills and Craftsmanship </Text>
+          <Text style={{ color: '#0E8341' }}> Performing Arts</Text> (music, dance, theater), or
+          <Text style={{ color: '#0E8341' }}> Traditional Skills and Craftsmanship </Text>
           (specialized skills passed down through generations).{'\n'}
           {'\n'}
           With this understanding, we're ready to discover the incredible cultural heritage of
