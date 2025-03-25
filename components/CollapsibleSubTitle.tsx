@@ -2,6 +2,7 @@ import { View, Text, Image, StyleSheet, TouchableOpacity, Animated } from 'react
 import { ReactNode, useState, useRef } from 'react';
 import React from 'react';
 import icon from '../assets/bulb_icon.png';
+import { Platform } from 'react-native';
 
 interface CollapsibleSubTitleProps {
   name: string;
@@ -27,7 +28,7 @@ const CollapsibleSubTitle = ({ name, children }: CollapsibleSubTitleProps) => {
       {/* Clickable Header */}
       <TouchableOpacity onPress={toggleCollapse}>
         <View style={styles.container} className="py-4">
-          <Text style={styles.text} className="font-inknut text-[14px] font-semibold">
+          <Text style={styles.text} className={`font-inknut text-[14px] font-semibold ${Platform.OS === 'ios' ? 'text-[16px]' : ''}`}>
             {name}
           </Text>
           <Image source={icon} resizeMode="contain" style={styles.icon} />

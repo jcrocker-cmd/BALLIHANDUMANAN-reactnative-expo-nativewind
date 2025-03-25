@@ -13,6 +13,7 @@ import IconButton from 'components/Button';
 import { useMemo } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import * as SplashScreen from 'expo-splash-screen';
+import { Platform } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 type RootStackParamList = {
   Module_1: undefined;
@@ -48,7 +49,7 @@ export default function App() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <Container>
-        <TouchableOpacity className="mt-10 items-end" onPress={() => navigation.navigate('About')}>
+        <TouchableOpacity className="mt-6 items-end" onPress={() => navigation.navigate('About')}>
           <Image source={images.bulbIcon} resizeMode="contain" style={{ width: 30, height: 30 }} />
         </TouchableOpacity>
 
@@ -60,28 +61,28 @@ export default function App() {
         <ScrollView contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}>
           <View className="flex gap-2 py-2">
             <IconButton source={images.Module_1_bg} onPress={() => navigation.navigate('Module_1')}>
-              <Text className="-mb-14 py-2 text-left font-inknut text-[13px] leading-[16px] text-white">
+              <Text className="-mb-14 py-2 text-left font-inknut text-[13px] leading-[16px] text-white" style={Platform.OS === 'ios' ? { fontSize: 15 } : {}}>
                 Beginning: Town and its People
               </Text>
             </IconButton>
             <IconButton source={images.Module_2_bg} onPress={() => navigation.navigate('Module_2')}>
-              <Text className="-mb-8 py-2 text-left font-inknut text-[13px] leading-[16px] text-white">
+              <Text className="-mb-8 py-2 text-left font-inknut text-[13px] leading-[16px] text-white" style={Platform.OS === 'ios' ? { fontSize: 15 } : {}}>
                 Balilihan’s Journey: Three{'\n'}Periods of Colonial influence
               </Text>
             </IconButton>
-            <IconButton source={images.Module_3_bg} onPress={() => navigation.navigate('Module_3')}>
-              <Text className="-mb-8 py-2 text-left font-inknut text-[13px] leading-[16px] text-white">
+            <IconButton source={images.Module_3_bg} onPress={() => navigation.navigate('Module_3')} >
+              <Text className="-mb-8 py-2 text-left font-inknut text-[13px] leading-[16px] text-white" style={Platform.OS === 'ios' ? { fontSize: 15 } : {}}>
                 Balilihan in the{'\n'}Postwar Era and Beyond
               </Text>
             </IconButton>
             <IconButton source={images.Module_4_bg} onPress={() => navigation.navigate('Module_4')}>
-              <Text className="-mb-14 py-2 text-left font-inknut text-[13px] leading-[16px] text-white">
+              <Text className="-mb-14 py-2 text-left font-inknut text-[13px] leading-[16px] text-white" style={Platform.OS === 'ios' ? { fontSize: 15 } : {}}>
                 Balilihan’s Cultural Heritage
               </Text>
             </IconButton>
 
             <IconButton source={images.Module_5_bg} onPress={() => navigation.navigate('Module_5')}>
-              <Text className="-mb-14 py-2 text-left font-inknut text-[13px] leading-[16px] text-white">
+              <Text className="-mb-14 py-2 text-left font-inknut text-[13px] leading-[16px] text-white" style={Platform.OS === 'ios' ? { fontSize: 15 } : {}}>
                 Assessment and Activities
               </Text>
             </IconButton>

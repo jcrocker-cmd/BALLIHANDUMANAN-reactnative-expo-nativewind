@@ -27,7 +27,7 @@ const SourcesScreen = () => {
     <>
       <SafeAreaView style={{ flex: 1 }}>
         <Container>
-          <TouchableOpacity onPress={() => navigation.goBack()} className="mb-4 pt-10">
+          <TouchableOpacity onPress={() => navigation.goBack()} className="mb-4 pt-5">
             <Ionicons name="arrow-back" size={30} color="#fff" />
           </TouchableOpacity>
 
@@ -260,7 +260,7 @@ const SourcesScreen = () => {
         </Container>
 
         <Image
-          className="absolute bottom-0 -mb-2 w-full"
+          className="absolute bottom-0 -mb-4 w-full"
           source={images.towergrass_small}
           style={{
             width: width,
