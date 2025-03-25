@@ -43,7 +43,7 @@ export default function LoadingScreen({ navigation }: { navigation: any }) {
       <StatusBar style="auto" />
 
       <Container>
-        <Text style={{ color: '#fff' }} className="py-2 pt-32 text-center font-inknut text-sm">
+        <Text style={{ color: '#fff' }} className="py-2 pt-24 text-center font-inknut text-sm">
           Learn and Discover Balilihan:{'\n'}Splendor behind the Greens
         </Text>
         <View className="py-1" style={{ alignItems: 'center', marginBottom: 5 }}>
