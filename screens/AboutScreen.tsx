@@ -6,6 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { useMemo } from 'react';
+import { Platform } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
 
@@ -32,7 +33,7 @@ const AboutScreen = () => {
     <>
       <SafeAreaView style={{ flex: 1 }}>
         <Container>
-          <TouchableOpacity onPress={() => navigation.goBack()} className="mb-8 pt-10">
+          <TouchableOpacity onPress={() => navigation.goBack()} className="mb-8 pt-5">
             <Ionicons name="arrow-back" size={30} color="#fff" />
           </TouchableOpacity>
 
@@ -42,7 +43,12 @@ const AboutScreen = () => {
                 <View className="flex items-center justify-center">
                   <Image source={images.appIcon} style={{ width: ICON_SIZE, height: ICON_SIZE }} />
                   <Text
-                    style={{ fontSize: TEXT_SIZE }}
+                    style={{
+                      fontSize: TEXT_SIZE,
+                      ...(Platform.OS === 'ios' ? { fontSize: TEXT_SIZE * 1.1 } : {}),
+                    }}
+
+
                     className="py-2 text-center font-inknut text-white">
                     About the App
                   </Text>
@@ -56,7 +62,10 @@ const AboutScreen = () => {
                     style={{ width: ICON_SIZE, height: ICON_SIZE }}
                   />
                   <Text
-                    style={{ fontSize: TEXT_SIZE }}
+                    style={{
+                      fontSize: TEXT_SIZE,
+                      ...(Platform.OS === 'ios' ? { fontSize: TEXT_SIZE * 1.1 } : {}),
+                    }}
                     className=" py-2 text-center font-inknut text-white">
                     The Author
                   </Text>
@@ -72,7 +81,10 @@ const AboutScreen = () => {
                     style={{ width: ICON_SIZE, height: ICON_SIZE }}
                   />
                   <Text
-                    style={{ fontSize: TEXT_SIZE }}
+                    style={{
+                      fontSize: TEXT_SIZE,
+                      ...(Platform.OS === 'ios' ? { fontSize: TEXT_SIZE * 1.1 } : {}),
+                    }}
                     className="py-2 text-center font-inknut text-white">
                     Objectives
                   </Text>
@@ -86,12 +98,18 @@ const AboutScreen = () => {
                     style={{ width: ICON_SIZE, height: ICON_SIZE }}
                   />
                   <Text
-                    style={{ fontSize: TEXT_SIZE }}
+                    style={{
+                      fontSize: TEXT_SIZE,
+                      ...(Platform.OS === 'ios' ? { fontSize: TEXT_SIZE * 1.1 } : {}),
+                    }}
                     className="py-2 text-center font-inknut text-white">
                     Acknowledgment
                   </Text>
                   <Text
-                    style={{ fontSize: TEXT_SIZE }}
+                    style={{
+                      fontSize: TEXT_SIZE,
+                      ...(Platform.OS === 'ios' ? { fontSize: TEXT_SIZE * 1.1 } : {}),
+                    }}
                     className="-mt-5 text-center font-inknut text-white">
                     and Sources
                   </Text>

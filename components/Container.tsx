@@ -1,5 +1,6 @@
-import React, { useMemo } from 'react';
-import { ImageBackground, SafeAreaView, StyleSheet } from 'react-native';
+import { ImageBackground } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { useMemo } from 'react';
 
 export const Container = ({ children }: { children: React.ReactNode }) => {
   const images = useMemo(
@@ -10,19 +11,8 @@ export const Container = ({ children }: { children: React.ReactNode }) => {
   );
 
   return (
-    <ImageBackground source={images.bg} style={styles.background} resizeMode="cover">
-      <SafeAreaView style={styles.safeArea}>{children}</SafeAreaView>
+    <ImageBackground source={images.bg} className="h-screen flex-1" resizeMode="cover">
+      <SafeAreaView className="flex-1 p-8">{children}</SafeAreaView>
     </ImageBackground>
   );
 };
-
-const styles = StyleSheet.create({
-  background: {
-    flex: 1,
-    height: '100%',
-  },
-  safeArea: {
-    flex: 1,
-    padding: 8,
-  },
-});

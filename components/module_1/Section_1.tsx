@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import CollapsibleSubTitle from '../../components/CollapsibleSubTitle';
+import { Platform } from 'react-native';
 
 const Section_1 = () => {
   return (
@@ -9,8 +10,8 @@ const Section_1 = () => {
       <CollapsibleSubTitle name="What I need to know?">
         <View style={{ flex: 1 }}>
           <Text
-            style={{ textAlign: 'justify' }}
-            className="mb-5 py-2 font-inknut text-[11px] leading-[24px]">
+          style={Platform.OS === 'ios' ? { fontSize: 13 } : {}}
+            className="mb-5 py-2 font-inknut text-[11px] text-justify leading-[24px]">
             Have you ever wondered how Balilihan, the town we know and love today, came to be? How
             did it transition from a humble settlement to a thriving municipality? This chapter
             invites you on a journey to uncover the captivating story of Balilihan's beginnings.

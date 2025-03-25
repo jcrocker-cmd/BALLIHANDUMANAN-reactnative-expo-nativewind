@@ -19,7 +19,7 @@ const ItemSeparator = () => <View className="mb-2 mt-2 h-[1px] w-full bg-[#0E834
 const Module_1 = () => {
   const navigation = useNavigation();
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1 }}> 
       <StatusBar barStyle="light-content" />
 
       <View className="relative h-[130px] w-full overflow-hidden">
