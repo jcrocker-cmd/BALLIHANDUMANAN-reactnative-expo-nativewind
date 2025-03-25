@@ -10,13 +10,24 @@ const Section_4 = () => {
   const handlePress = useCallback((index: number) => () => setVisibleIndex(index), []);
   const images = useMemo(
     () => [
-      require('../../assets/module_2/2. Sample Spanish Garrison in the Philippines.jpg'),
-      require('../../assets/module_2/3. Bay sa Iring in Datag.png'),
-      require('../../assets/module_2/pic_6.png'),
-      require('../../assets/module_2/pic_7.png'),
-      require('../../assets/module_2/pic_8.png'),
-      require('../../assets/module_2/5. Spanish Belfry.jpg'),
-      require('../../assets/module_2/6. A punishment being drawn behind a horse.jpg'),
+      {
+        uri: Image.resolveAssetSource(
+          require('../../assets/module_2/2. Sample Spanish Garrison in the Philippines.jpg')
+        ).uri,
+      },
+      {
+        uri: Image.resolveAssetSource(require('../../assets/module_2/3. Bay sa Iring in Datag.png'))
+          .uri,
+      },
+      { uri: Image.resolveAssetSource(require('../../assets/module_2/pic_6.png')).uri },
+      { uri: Image.resolveAssetSource(require('../../assets/module_2/pic_7.png')).uri },
+      { uri: Image.resolveAssetSource(require('../../assets/module_2/pic_8.png')).uri },
+      { uri: Image.resolveAssetSource(require('../../assets/module_2/5. Spanish Belfry.jpg')).uri },
+      {
+        uri: Image.resolveAssetSource(
+          require('../../assets/module_2/6. A punishment being drawn behind a horse.jpg')
+        ).uri,
+      },
     ],
     []
   );
@@ -27,7 +38,10 @@ const Section_4 = () => {
         <TouchableOpacity
           className="mt-4 h-[240px] w-full overflow-hidden"
           onPress={handlePress(0)}>
-          <Image source={images[0]} className="h-full w-full" />
+          <Image
+            source={require('../../assets/module_2/2. Sample Spanish Garrison in the Philippines.jpg')}
+            className="h-full w-full"
+          />
         </TouchableOpacity>
 
         <Text className="mb-3 text-center font-inknut text-[11px]" style={{ color: '#B08923' }}>
@@ -46,7 +60,10 @@ const Section_4 = () => {
         <TouchableOpacity
           className="mb-4 mt-4 h-[240px] w-full overflow-hidden"
           onPress={handlePress(1)}>
-          <Image source={images[1]} className="h-full w-full" />
+          <Image
+            source={require('../../assets/module_2/3. Bay sa Iring in Datag.png')}
+            className="h-full w-full"
+          />
         </TouchableOpacity>
 
         <Text className="py-2 text-justify font-inknut text-[11px] leading-[24px] max-xs:text-base">
@@ -60,7 +77,7 @@ const Section_4 = () => {
         <TouchableOpacity
           className="mb-2 mt-3 h-[230px] w-full overflow-hidden"
           onPress={handlePress(2)}>
-          <Image source={images[2]} className="h-full w-full" />
+          <Image source={require('../../assets/module_2/pic_6.png')} className="h-full w-full" />
         </TouchableOpacity>
 
         <Text
@@ -85,10 +102,10 @@ const Section_4 = () => {
 
         <View className=" mt-2 flex flex-row">
           <TouchableOpacity className="h-[230px] w-1/2 overflow-hidden" onPress={handlePress(3)}>
-            <Image source={images[3]} className="h-full w-full" />
+            <Image source={require('../../assets/module_2/pic_7.png')} className="h-full w-full" />
           </TouchableOpacity>
           <TouchableOpacity className="h-[230px] w-1/2 overflow-hidden" onPress={handlePress(4)}>
-            <Image source={images[4]} className="h-full w-full" />
+            <Image source={require('../../assets/module_2/pic_8.png')} className="h-full w-full" />
           </TouchableOpacity>
         </View>
 
@@ -106,7 +123,10 @@ const Section_4 = () => {
 
         <View className="mb-1 mt-4 flex w-full flex-row items-start">
           <TouchableOpacity className="h-[200px] w-[50%] overflow-hidden" onPress={handlePress(5)}>
-            <Image source={images[5]} className="h-full w-full" />
+            <Image
+              source={require('../../assets/module_2/5. Spanish Belfry.jpg')}
+              className="h-full w-full"
+            />
           </TouchableOpacity>
           <Text className="flex-1 py-1 pl-3 text-justify font-inknut text-[11px] leading-[20px]">
             The tower itself is a blend of adobe and coral stones, each piece carried on foot from
@@ -127,14 +147,17 @@ const Section_4 = () => {
         <TouchableOpacity
           className=" mt-4 h-[230px] w-full overflow-hidden"
           onPress={handlePress(6)}>
-          <Image source={images[6]} className="h-full w-full" />
+          <Image
+            source={require('../../assets/module_2/6. A punishment being drawn behind a horse.jpg')}
+            className="h-full w-full"
+          />
         </TouchableOpacity>
 
         <Text className="mb-3 text-center font-inknut text-[11px]" style={{ color: '#B08923' }}>
           A punishment inflicted by Fray Grayoa on Tan Tome.
         </Text>
 
-        <Text className="text-balance py-1 text-justify font-inknut text-[11px] leading-[24px]">
+        <Text className="text-balance py-1 pb-5 text-justify font-inknut text-[11px] leading-[24px]">
           Fray Grayoa's response was brutal where he imprisoned and then cruelly punished Tan Tome,
           dragging him through the streets behind his horse. This act of violence instilled fear,
           causing many residents to flee Balilihan to other provinces like Leyte, Surigao, and

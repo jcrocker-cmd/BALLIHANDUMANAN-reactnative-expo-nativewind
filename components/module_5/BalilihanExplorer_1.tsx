@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   View,
   Text,
@@ -44,6 +44,7 @@ export default function App() {
   const [score, setScore] = useState(0); // Stores the user's score
   const [timeLeft, setTimeLeft] = useState(120); // 2-minute timer (120 seconds)
   const [userAnswers, setUserAnswers] = useState<(string | null)[]>([]);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   useFocusEffect(
     React.useCallback(() => {
@@ -63,20 +64,28 @@ export default function App() {
   };
 
   useEffect(() => {
-    let timer: NodeJS.Timeout;
-
     if (timeLeft > 0) {
-      timer = setInterval(() => {
+      timerRef.current = setInterval(() => {
         setTimeLeft((prev) => prev - 1);
       }, 1000);
     } else {
+      // Stop the timer before navigating
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+
       navigation.reset({
         index: 0,
         routes: [{ name: 'BalilihanExplorer_1_Result', params: { answers: userAnswers, score } }],
       });
     }
 
-    return () => clearInterval(timer);
+    // Cleanup: Stop the timer when component unmounts or when navigating away
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+    };
   }, [timeLeft, navigation, userAnswers, score]);
 
   const handleGuess = () => {

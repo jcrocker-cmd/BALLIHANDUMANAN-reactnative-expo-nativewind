@@ -61,7 +61,7 @@ export default function LoadingScreen({ navigation }: { navigation: any }) {
       </Container>
 
       <Image
-        className="absolute bottom-0 -mb-1 w-full"
+        className="absolute bottom-0 -mb-4 w-full"
         source={towergrass}
         style={{
           width: width,

@@ -35,9 +35,9 @@ export default function App() {
       bulbIcon: require('../assets/bulb_icon_white.png'),
       Module_1_bg: require('../assets/button/Module 1.png'),
       Module_2_bg: require('../assets/button/Module 2.png'),
-      Module_3_bg: require('../assets/button/Module 3.png'),
+      Module_3_bg: require('../assets/button/Module 3.jpg'),
       Module_4_bg: require('../assets/button/Module 4.png'),
-      Module_5_bg: require('../assets/button/Module 5.png'),
+      Module_5_bg: require('../assets/button/Module 5.jpg'),
       towergrass_small: require('../assets/towergrass-small.png'),
     }),
     []
@@ -94,7 +94,7 @@ export default function App() {
 
       {/* Towergrass Image */}
       <Image
-        className="absolute bottom-0 -mb-2 w-full"
+        className="absolute bottom-0 -mb-4 w-full"
         source={images.towergrass_small}
         style={{
           width: width,

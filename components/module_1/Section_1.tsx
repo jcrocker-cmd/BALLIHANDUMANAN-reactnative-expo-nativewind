@@ -8,7 +8,9 @@ const Section_1 = () => {
       {/* _______________________________What I need to know?________________________________ */}
       <CollapsibleSubTitle name="What I need to know?">
         <View style={{ flex: 1 }}>
-          <Text className="py-2 text-justify font-inknut text-[11px] leading-[24px]">
+          <Text
+            style={{ textAlign: 'justify' }}
+            className="mb-5 py-2 font-inknut text-[11px] leading-[24px]">
             Have you ever wondered how Balilihan, the town we know and love today, came to be? How
             did it transition from a humble settlement to a thriving municipality? This chapter
             invites you on a journey to uncover the captivating story of Balilihan's beginnings.

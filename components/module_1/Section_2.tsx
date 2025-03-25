@@ -26,7 +26,7 @@ const Section_2 = () => {
             B. Now that you've reflected on the "Guess that Barangay!" activity, it's time to put
             your knowledge into action!{'\n'}• Get ready for{' '}
             <Text style={{ color: '#0E8341' }}>"Balilinhon, the Explorer,"</Text> where you'll use
-            your knowledge of barangays and map skills to locate them on a blank map.
+            your knowledge of barangay and map skills to locate them on a blank map.
             {'\n'}• You can find this activity in the Quizzes/Activities section of the app
           </Text>
         </View>
